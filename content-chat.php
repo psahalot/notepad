@@ -8,6 +8,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="box-wrap">
 	<header class="entry-header">
 		<?php notepad_posted_on(); ?>
 	</header> <!-- /.entry-header -->
@@ -31,4 +32,5 @@
 		} ?>
 		<?php edit_post_link( esc_html__( 'Edit', 'notepad' ) . ' <i class="fa fa-angle-right"></i>', '<div class="edit-link">', '</div>' ); ?>
 	</footer> <!-- /.entry-meta -->
+    </div>
 </article> <!-- /#post -->

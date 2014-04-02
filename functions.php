@@ -9,7 +9,6 @@
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
 include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config file 
 include( get_stylesheet_directory() . '/inc/widgets/image-widget/image-widget.php' ); // Image widget 
-include( get_stylesheet_directory() . '/inc/widgets/social-icons/simple-social-icons.php' ); // Social Icons widget 
 
 /* Include plugin activation file to install plugins */
 include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
@@ -158,7 +157,7 @@ function notepad_fonts_url() {
 		$font_families = array();
 
 		if ( 'off' !== $pt_sans )
-			$font_families[] = 'Open+Sans:400,300,400italic,700,700italic';
+			$font_families[] = 'Droid+Serif:400,300,400italic,700,700italic';
 
 		if ( 'off' !== $montserrat )
 			$font_families[] = 'Montserrat:400,700';
@@ -714,7 +713,7 @@ add_filter( 'the_content_more_link', 'notepad_remove_more_jump_link' );
  * @return string The 'Continue reading' link
  */
 function notepad_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'notepad' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'notepad' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 

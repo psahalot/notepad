@@ -8,6 +8,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="box-wrap">
 	<header class="entry-header">
 		<?php notepad_posted_on(); ?>
 	</header> <!-- /.entry-header -->
@@ -35,4 +36,5 @@
 			get_template_part( 'author-bio' );
 		} ?>
 	</footer> <!-- /.entry-meta -->
+    </div>
 </article> <!-- /#post -->

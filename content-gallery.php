@@ -8,6 +8,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="box-wrap">
 	<header class="entry-header">
 		<?php if ( is_single() ) { ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -43,4 +44,5 @@
 			get_template_part( 'author-bio' );
 		} ?>
 	</footer> <!-- /.entry-meta -->
+    </div> <!-- /.box-wrap -->
 </article> <!-- /#post -->
