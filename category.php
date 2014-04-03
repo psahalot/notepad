@@ -12,7 +12,7 @@ get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
 
-		<div class="col grid_8_of_12">
+		<div class="col grid_12_of_12">
 
                     <div class="main-content">
                         
@@ -30,7 +30,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
-
+                                 <?php get_sidebar(); ?>
 				<?php notepad_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
@@ -38,11 +38,11 @@ get_header(); ?>
 				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
 			<?php endif; // end have_posts() check ?>
-                    
+                   
                     </div> <!-- /.main-content -->
 
-		</div> <!-- /.col.grid_8_of_12 -->
-		<?php get_sidebar(); ?>
+		</div> <!-- /.col.grid_12_of_12 -->
+		
 
 	</div> <!-- /#primary.site-content.row -->
 

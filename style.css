@@ -74,7 +74,7 @@ img {
 	border: 0;
 	max-width: 100%;
 	height: auto;
-}
+            }
 
 .entry-content img,
 .comment-content img,
@@ -718,10 +718,12 @@ select {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
-	font-size: 1.4rem;
+	font-size: 24px;
+	font-size: 2.4rem;
 	line-height: 2;
 	text-transform: uppercase;
+        color:#fff;
+        text-align:center;
 }
 
 
@@ -894,7 +896,8 @@ article.sticky {
 	word-wrap: break-word;
 }
 
-.blog .site-content article{
+.blog .site-content article,
+.archive .site-content article{
     padding:0;
     background:#fff;
 }
@@ -904,7 +907,8 @@ article.sticky {
 }
 
 .blog .entry-header,
-.page .entry-header .entry-title{
+.page .entry-header .entry-title,
+.archive .entry-header{
     text-align:center;
 }
 img.wp-post-image{
@@ -929,16 +933,23 @@ img.wp-post-image{
 .single-post .fa-pencil,
 .single-post .author,
 .single-post .post-categories,
-.single-post .comments-link{
+.single-post .comments-link,
+.archive .fa-calendar,
+.archive .fa-pencil,
+.archive .author,
+.archive .post-categories,
+.archive .comments-link{
     display:none;
 }
 .blog .header-meta,
-.single-post .header-meta{
+.single-post .header-meta,
+.archive .header-meta{
     border:none;
     padding:0;
 }
 
-.single-post .main-content{
+.single-post .main-content,
+.category .main-content{
     background:#fff;
 }
 
@@ -1344,7 +1355,6 @@ img.wp-post-image{
 .page-header {
 	margin-bottom: 32px;
 	margin-bottom: 2rem;
-	border-bottom: 1px solid #CCCCCC;
 }
 
 .archive-meta {
@@ -1416,7 +1426,7 @@ img.wp-post-image{
 
 .comments-area article header time {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-style: italic;
+	font-style: normal;
 	font-weight: 400;
 	line-height: 1.8;
 	text-decoration: none;

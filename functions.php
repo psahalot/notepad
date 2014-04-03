@@ -174,6 +174,88 @@ function notepad_fonts_url() {
 }
 
 
+
+
+/**
+
+ * Infinite Scroll
+
+ */
+
+function custom_infinite_scroll_js() {
+
+    if( ! is_singular() ) { ?>
+
+    <script>
+
+    var infinite_scroll = {
+
+        loading: {
+
+            img: "<?php echo get_template_directory_uri(); ?>/images/ajax-loader.gif",
+
+            msgText: "<?php _e( 'Loading the next set of posts...', 'custom' ); ?>",
+
+            finishedMsg: "<?php _e( 'All posts loaded.', 'custom' ); ?>"
+
+        },
+
+        "nextSelector":"#nav-below .page-numbers a",
+
+        "navSelector":"#nav-below",
+
+        "itemSelector":".post",
+
+        "contentSelector":".main-content"
+
+    };
+
+    jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
+
+    </script>
+
+    <?php
+
+    }
+
+}
+
+// add_action( 'wp_footer', 'custom_infinite_scroll_js',100 );
+
+
+
+
+/**
+
+ * If we go beyond the last page and request a page that doesn't exist,
+
+ * force WordPress to return a 404.
+
+ * See http://core.trac.wordpress.org/ticket/15770
+
+ */
+
+function custom_paged_404_fix( ) {
+
+    global $wp_query;
+
+    if ( is_404() || !is_paged() || 0 != count( $wp_query->posts ) )
+
+        return;
+
+    $wp_query->set_404();
+
+    status_header( 404 );
+
+    nocache_headers();
+
+}
+
+add_action( 'wp', 'custom_paged_404_fix' );
+
+
+
+
 /**
  * Adds additional stylesheets to the TinyMCE editor if needed.
  *
@@ -330,7 +412,13 @@ function notepad_scripts_styles() {
 	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
 	wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
 	wp_enqueue_script( 'modernizr' );
-
+        
+        // Load infinite scroll
+	wp_register_script( 'infinitescroll', trailingslashit( get_template_directory_uri() ) . 'js/jquery.infinitescroll.min.js', array(),  false );
+	wp_enqueue_script( 'infinitescroll' );
+        
+     
+        
 	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
