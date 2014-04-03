@@ -311,10 +311,17 @@ blockquote p {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 14px;
+	font-size: 1.4rem;
         margin-bottom: 10px; 
 	margin-bottom: 1rem;
+}
+
+.format-quote blockquote p{
+        font-size:4rem;
+        text-align:center;
+        font-weight:700;
+        font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 blockquote.pull-right p, blockquote.pull-right small {
@@ -366,6 +373,10 @@ code, pre {
         border-radius: 3px;
 }
 
+iframe,
+audio{
+    width:100%;
+}
 pre {
         white-space: pre;
         word-wrap: normal;
@@ -718,12 +729,13 @@ select {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 24px;
-	font-size: 2.4rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 	line-height: 2;
 	text-transform: uppercase;
-        color:#fff;
+        color:#333;
         text-align:center;
+        margin:20px 0;
 }
 
 
@@ -829,6 +841,10 @@ select {
     background:#fff;
 }
 
+.category .site-content{
+    background:#fff;
+}
+
 .main-content:after
 {
     display:block;
@@ -916,7 +932,15 @@ img.wp-post-image{
 }
 
 .box-wrap{
-    padding:2% 20%;
+    padding:2% 15%;
+}
+
+.single .box-wrap{
+    border-bottom:1px solid #efefef;
+}
+.format-quote .box-wrap{
+    background:#282d30;
+    color:#fff;
 }
 
 .single-post .entry-header{
@@ -955,7 +979,7 @@ img.wp-post-image{
 
 .single-post .site-content nav{
     background:#f9f9f9;
-    padding:2% 20%;
+    padding:4% 15%;
 }
 .header-meta {
 	border-top: 1px solid #ccc;
@@ -1069,9 +1093,13 @@ img.wp-post-image{
 
 .more-link {
 	text-decoration: none;
-        width:100%;
-        display:inline-block;
+        width:180px;
+        display:block;
         text-align:center;
+        padding:5px 15px;
+        border:solid 3px #333;
+        margin:0 auto;
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 .post-edit-link {
@@ -1378,7 +1406,7 @@ img.wp-post-image{
     clear:both;
 }
 .comment-wrap{
-    padding:4% 20%;
+    padding:4% 15%;
     background:#f9f9f9;
 }
 .comments-title {
@@ -1570,6 +1598,9 @@ a.comment-reply-link:hover {
 	color: #5e5e5e;
 }
 
+.form-allowed-tags{
+    display:none;
+}
 #respond form p.form-allowed-tags code {
 	background: none;
 	border: none;
@@ -1706,7 +1737,7 @@ form label.error {
 .sidebar{
     margin-left:0;
     background:#fff;
-    padding:2% 20%;
+    padding:4% 15%;
 }
 
 .sidebar a {
@@ -1883,6 +1914,13 @@ form label.error {
 .nav-previous a,
 .nav-next a {
 	text-decoration: none;
+        
+}
+
+.single .nav-previous a,
+.single .nav-next a{
+    padding:8px 15px;
+    border:1px solid #999;
 }
 
 .nav-next,
@@ -1936,11 +1974,7 @@ li span.current {
 	color: #fff;
 }
 
-li a.prev,
-li a.next,
-li span.dots {
-	border: none;
-}
+
 
 
 /* ==========================================================================

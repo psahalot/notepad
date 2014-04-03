@@ -8,6 +8,29 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php $videourl = get_post_meta($post->ID, 'videourl', true); if ( $videourl != '' ) : ?>
+
+			<div class="featured-media">
+			
+				<?php if (strpos($videourl,'.mp4') !== true) : ?>
+			
+					<?php 
+					
+						$embed_code = wp_oembed_get($videourl); 
+						
+						echo $embed_code;
+						
+					?>
+															
+				<?php elseif (strpos($videourl,'.mp4') !== false) : ?>
+					
+					[video src="<?php echo $videourl; ?>"]
+						
+				<?php endif; ?>
+				
+			</div>
+		
+		<?php endif; ?>
     <div class="box-wrap">
 	<header class="entry-header">
 		<?php if ( is_single() ) { ?>

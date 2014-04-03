@@ -25,7 +25,5 @@
 			'link_after' => '</span>'
 		) ); ?>
 	</div><!-- /.entry-content -->
-	<footer class="entry-meta">
-		<?php edit_post_link( esc_html__( 'Edit', 'notepad' ) . ' <i class="fa fa-angle-right"></i>', '<div class="edit-link">', '</div>' ); ?>
-	</footer><!-- /.entry-meta -->
+	
 </article><!-- /#post -->

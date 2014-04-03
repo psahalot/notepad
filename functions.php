@@ -224,7 +224,6 @@ function custom_infinite_scroll_js() {
 
 
 
-
 /**
 
  * If we go beyond the last page and request a page that doesn't exist,
@@ -254,6 +253,64 @@ function custom_paged_404_fix( ) {
 add_action( 'wp', 'custom_paged_404_fix' );
 
 
+
+
+
+// Add and save meta boxes for post links
+add_action( 'add_meta_boxes', 'cd_meta_box_add' );
+function cd_meta_box_add() {
+	add_meta_box( 'postaudio-box', __('Post format audio url', 'lingonberry'), 'cd_meta_box_cb', 'post', 'side', 'high' );
+	add_meta_box( 'postvideo-box', __('Post format video url', 'lingonberry'), 'cd_meta_box_cc', 'post', 'side', 'high' );
+}
+
+function cd_meta_box_cb( $post ) {
+	$values = get_post_custom( $post->ID );
+	$text_audiourl = isset( $values['audiourl'] ) ? esc_attr( $values['audiourl'][0] ) : '';
+	wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
+	?>
+		<p>
+			<input type="text" name="audiourl" id="audiourl" value="<?php echo $text_audiourl; ?>" />
+		</p>
+	<?php		
+}
+
+function cd_meta_box_cc( $post ) {
+	$values = get_post_custom( $post->ID );
+	$text_videourl = isset( $values['videourl'] ) ? esc_attr( $values['videourl'][0] ) : '';
+	wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
+	?>
+		<p>
+			<input type="text" name="videourl" id="videourl" value="<?php echo $text_videourl; ?>" />
+		</p>
+	<?php		
+}
+
+add_action( 'save_post', 'cd_meta_box_save' );
+function cd_meta_box_save( $post_id ) {
+	// Bail if we're doing an auto save
+	if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	
+	// if our nonce isn't there, or we can't verify it, bail
+	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return;
+	
+	// if our current user can't edit this post, bail
+	if( !current_user_can( 'edit_post' ) ) return;
+	
+	// now we can actually save the data
+	$allowed = array( 
+		'a' => array( // on allow a tags
+			'href' => array() // and those anchords can only have href attribute
+		)
+	);
+	
+	// Probably a good idea to make sure the data is set		
+	if( isset( $_POST['audiourl'] ) )
+		update_post_meta( $post_id, 'audiourl', wp_kses( $_POST['audiourl'], $allowed ) );		
+
+	if( isset( $_POST['videourl'] ) )
+		update_post_meta( $post_id, 'videourl', wp_kses( $_POST['videourl'], $allowed ) );		
+
+}
 
 
 /**

@@ -8,6 +8,20 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php $audiourl = get_post_meta($post->ID, 'audiourl', true); 
+	if ( $audiourl != '' ) : ?>
+	
+		<div class="featured-media">
+		
+			<audio controls="controls" id="audio-player">
+			
+				<source src="<?php echo $audiourl; ?>" />
+				
+			</audio>
+		
+		</div>
+	
+	<?php endif; ?>
     <div class="box-wrap">
 	<header class="entry-header">
 		<?php if ( is_single() ) { ?>
