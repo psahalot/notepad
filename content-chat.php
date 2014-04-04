@@ -24,13 +24,15 @@
 			'link_after' => '</span>'
 		) ); ?>
 	</div> <!-- /.entry-content -->
-
-	<footer class="entry-meta">
+    </div>
+   
+    
+        <footer class="entry-meta">
 		<?php if ( is_singular() ) {
 			// Only show the tags on the Single Post page
 			notepad_entry_meta();
 		} ?>
 		
 	</footer> <!-- /.entry-meta -->
-    </div>
+    
 </article> <!-- /#post -->

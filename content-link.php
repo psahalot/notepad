@@ -25,17 +25,21 @@
 		) ); ?>
 	</div> <!-- /.entry-content -->
     </div>
-    <div class="meta-content">
-        <footer class="entry-meta">
-		<?php if ( is_singular() ) {
+        
+        <?php if(is_single()) { ?>
+            <div class="tag-meta">
+                <?php if ( is_singular() ) {
 			// Only show the tags on the Single Post page
 			notepad_entry_meta();
 		} ?>
-		
+            </div>
+        <?php } ?>
+    
+        <footer class="entry-meta">
 		<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) {
 			// If a user has filled out their description and this is a multi-author blog, show their bio
 			get_template_part( 'author-bio' );
 		} ?>
 	</footer> <!-- /.entry-meta -->
-    </div>
+    
 </article> <!-- /#post -->

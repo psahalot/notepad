@@ -693,7 +693,7 @@ input[type="submit"],
 .entry-content .button {
 	background-color: #fff;
 	border:1px solid #ccc;
-	border-radius: 0px;
+	border-radius: 3px;
 	box-shadow: none;
 	color: #333;
 	cursor: pointer;
@@ -847,9 +847,6 @@ select {
     background:#fff;
 }
 
-.category .site-content{
-    background:#fff;
-}
 
 .main-content:after
 {
@@ -979,8 +976,7 @@ img.wp-post-image{
     padding:0;
 }
 
-.single-post .main-content,
-.category .main-content{
+.single-post .main-content{
     background:#fff;
 }
 
@@ -998,6 +994,13 @@ img.wp-post-image{
 
 .tag .archive-title{
     color:#fff;
+}
+
+.category .archive-title{
+    color:#fff;
+    font-weight:400;
+    font-size:20px;
+    
 }
 
 .tag .archive-meta{
@@ -1030,9 +1033,15 @@ img.wp-post-image{
     margin-top:0;
 }
 
-.meta-content{
+.single .entry-meta{
     padding:4% 15%;
-    border-bottom:2px solid #f7f7f7;
+    border-bottom:1px solid #efefef;
+}
+
+.tag-meta{
+    padding: 2% 15%;
+    background: #eee;
+    text-align: center;
 }
 .header-meta {
 	border-top: 1px solid #ccc;
@@ -1093,11 +1102,13 @@ img.wp-post-image{
 }
 
 .post-tags a {
-        background: #eee;
+        background: none;
         padding: 3px 10px;
         padding: 0.3rem 1rem; 
-        border: solid 1px #ddd;
+        border: 0;
         color: #999;
+        margin-right:20px;
+        display:inline-block;
 }
 
 .entry-header address,
@@ -1584,6 +1595,10 @@ a.comment-reply-link:hover {
 	color: #21759b;
 }
 
+.comment-reply-title{
+    font-size:34px;
+    text-transform:uppercase;
+}
 .commentlist .pingback {
 	line-height: 1.8;
 	margin-bottom: 24px;
