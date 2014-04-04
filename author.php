@@ -23,16 +23,16 @@ get_header(); ?>
 				// We reset this later so we can run the loop properly with a call to rewind_posts().
 				the_post();
 				?>
+                               <div class="archive-author">
+                                    <header class="archive-header">
+                                            <h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'notepad' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
+                                    </header><!-- .archive-header -->
 
-				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'notepad' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
-				</header><!-- .archive-header -->
-
-				<?php // If a user has filled out their description, show a bio on their entries.
-				if ( get_the_author_meta( 'description' ) ) {
-					get_template_part( 'author-bio' );
-				} ?>
-
+                                    <?php // If a user has filled out their description, show a bio on their entries.
+                                    if ( get_the_author_meta( 'description' ) ) {
+                                            get_template_part( 'author-bio' );
+                                    } ?>
+                               </div>
 				<?php
 				// Since we called the_post() above, we need to rewind the loop back to the beginning that way we can run the loop properly, in full.
 				rewind_posts();
@@ -54,7 +54,7 @@ get_header(); ?>
                     </div> <!-- /.main-content -->
                     
 		</div> <!-- /.col.grid_12_of_12 -->
-		<?php get_sidebar(); ?>
+		
 
 	</div> <!-- /#primary.site-content.row -->
 

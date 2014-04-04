@@ -30,7 +30,7 @@
 			// Only show the tags on the Single Post page
 			notepad_entry_meta();
 		} ?>
-		<?php edit_post_link( esc_html__( 'Edit', 'notepad' ) . ' <i class="fa fa-angle-right"></i>', '<div class="edit-link">', '</div>' ); ?>
+		
 	</footer> <!-- /.entry-meta -->
     </div>
 </article> <!-- /#post -->

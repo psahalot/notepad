@@ -324,6 +324,12 @@ blockquote p {
         font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+.format-quote .author-description h2{
+    color:#fff;
+}
+.format-quote .author-info{
+    border:0;
+}
 blockquote.pull-right p, blockquote.pull-right small {
 	text-align: right;
 }
@@ -646,7 +652,7 @@ input[type="submit"].btn-small {
 input,
 select,
 textarea {
-	background-color: #f5f5f5;
+	background-color: #fff;
 	border: 1px solid #ddd;
 	box-shadow: 1px 1px 3px #eee inset;
 	color: #222;
@@ -816,8 +822,8 @@ select {
 	width: 100%;
         margin-top: 140px; 
         margin-top: 4rem;
-        margin-bottom: 40px;
-        margin-bottom: 4rem;
+        margin-bottom: 60px;
+        margin-bottom: 6rem;
 }
 
 
@@ -897,7 +903,6 @@ article.sticky {
         padding: 20px 30px; 
 	padding: 2rem 3rem;
         background: #eee;
-        border: solid 1px #f1f1f1;
 }
 
 .blog .article.sticky{
@@ -919,20 +924,22 @@ article.sticky {
 }
 
 .page .site-content article{
-    padding:2% 20%;
+    padding:4% 20%;
+    margin-bottom:0;
 }
 
 .blog .entry-header,
 .page .entry-header .entry-title,
 .archive .entry-header{
     text-align:center;
+    text-transform:uppercase;
 }
 img.wp-post-image{
     width:100%;
 }
 
 .box-wrap{
-    padding:2% 15%;
+    padding:4% 15%;
 }
 
 .single .box-wrap{
@@ -980,6 +987,52 @@ img.wp-post-image{
 .single-post .site-content nav{
     background:#f9f9f9;
     padding:4% 15%;
+}
+
+.author .archive-title,
+.tag .archive-title{
+    color:#333;
+    font-size:20px;
+    font-weight:400;
+}
+
+.tag .archive-title{
+    color:#fff;
+}
+
+.tag .archive-meta{
+    text-align:center;
+}
+.author .author-description{
+    width:90%;
+}
+
+.author .author-info{
+    text-align:center;
+}
+
+.author .author-avatar,
+.author .author-description{
+    width:100%;
+}
+
+.author .author-avatar img{
+    border-radius:50%;
+}
+.author .archive-author{
+    background: #fff;
+    padding: 1% 15%;
+    margin-bottom: 20px;
+}
+
+.author .author-description h2{
+    color:#333;
+    margin-top:0;
+}
+
+.meta-content{
+    padding:4% 15%;
+    border-bottom:2px solid #f7f7f7;
 }
 .header-meta {
 	border-top: 1px solid #ccc;
@@ -1100,6 +1153,14 @@ img.wp-post-image{
         border:solid 3px #333;
         margin:0 auto;
         font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        border-radius:3px;
+        background:#333;
+        color:#fff;
+}
+
+.more-link:hover{
+    background:#42A2CE;
+    color:#fff;
 }
 
 .post-edit-link {
@@ -1209,8 +1270,8 @@ img.wp-post-image{
 }
 
 .author-info {
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	border-top: 0;
+	border-bottom: 0;
 	margin: 24px 0;
 	margin: 2.4rem 0;
 	padding: 24px 0;
@@ -1584,6 +1645,7 @@ a.comment-reply-link:hover {
 	padding: 8px;
 	padding: 0.8rem;
 	width: 100%;
+        border-radius:3px;
 }
 
 #respond form input[type="text"] {
@@ -1647,6 +1709,26 @@ form label.error {
     color:#fff;
 }
 
+
+/* ==========================================================================
+  Contact form
+   ========================================================================== */
+
+div.wpcf7{
+    padding:20px;
+    background:#f7f7f7;
+    color:#333;
+    border-radius:3px;
+}
+
+.wpcf7 input[type="submit"]{
+    padding:1rem 4rem;
+    border-radius:3px;
+}
+
+.wpcf7 p{
+    line-height:2.5;
+}
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -1696,6 +1778,7 @@ form label.error {
 
 .site-footer .widget ul li{
     padding-bottom:10px;
+    margin-bottom:10px;
 }
 
 #footer-widget1,
@@ -1907,8 +1990,11 @@ form label.error {
 .nav-previous,
 .previous-image {
 	float: left;
-	width: 50%;
+	width: 49%;
 	line-height: 1.3;
+        padding:10px;
+        border:solid 3px;
+        text-align:center;
 }
 
 .nav-previous a,
@@ -1919,16 +2005,17 @@ form label.error {
 
 .single .nav-previous a,
 .single .nav-next a{
-    padding:8px 15px;
-    border:1px solid #999;
+   line-height:1.5;
 }
 
 .nav-next,
 .next-image {
 	float: right;
-	text-align: right;
-	width: 50%;
+	text-align: center;
+	width: 49%;
 	line-height: 1.3;
+        padding:10px;
+        border:solid 3px;
 }
 
 .nav-single + .comments-area,
@@ -1946,11 +2033,13 @@ ul.page-numbers {
 
 li a.page-numbers,
 li span.page-numbers {
-	padding: 5px 20px;
-	padding: 0.5rem 2rem;
-	border: 1px solid #999;
+	padding: 10px 25px;
+	padding: 1rem 2.5rem;
 	text-decoration: none;
         color:#fff;
+        font-size:20px;
+        background:#333;
+        font-family:"Montserrat";
 }
 
 
@@ -1962,15 +2051,16 @@ li a:hover.page-numbers {
 li a:hover.prev,
 li a:hover.next {
 	background-color:#42A2CE ;
-	color: #222146;
+	color: #fff;
 }
 
 .page-numbers li {
 	display: inline;
+        margin-right:10px;
 }
 
 li span.current {
-	background-color: #42A2CE;
+	background-color: #111;
 	color: #fff;
 }
 
@@ -2239,7 +2329,8 @@ img#wpstats {
         background:#dd5d65;
 }
 
-.notepad-red ::selection
+.notepad-red ::selection,
+.notepad-red .more-link:hover
 {
     background:#ef7a7a;
     color:#fff;
@@ -2286,7 +2377,8 @@ img#wpstats {
     color:#fff;
 }
 
-.notepad-green ::selection
+.notepad-green ::selection,
+.notepad-green .more-link:hover
 {
     background:#77dfba;
     color:#fff;
@@ -2333,7 +2425,8 @@ img#wpstats {
     color:#fff;
 }
 
-.notepad-pink ::selection
+.notepad-pink ::selection,
+.notepad-pink .more-link:hover
 {
     background:#ed409f;
     color:#fff;
@@ -2381,7 +2474,8 @@ img#wpstats {
     color:#fff;
 }
 
-.notepad-gray ::selection
+.notepad-gray ::selection,
+.notepad-gray .more-link:hover
 {
     background:#8e8e8e;
     color:#fff;
@@ -2429,7 +2523,8 @@ img#wpstats {
     color:#fff;
 }
 
-.notepad-brown ::selection
+.notepad-brown ::selection,
+.notepad-brown .more-link:hover
 {
     background:#875608;
     color:#fff;
@@ -2476,7 +2571,8 @@ img#wpstats {
     color:#fff;
 }
 
-.notepad-purple ::selection
+.notepad-purple ::selection,
+.notepad-purple .more-link:hover
 {
     background:#a678d3;
     color:#fff;
@@ -2523,7 +2619,8 @@ img#wpstats {
     color:#fff;
 }
 
-.notepad-orange ::selection
+.notepad-orange ::selection,
+.notepad-orange .more-link:hover
 {
     background:#fa7f53;
     color:#fff;
