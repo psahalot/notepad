@@ -7,8 +7,6 @@
  */
 
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
-include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config file 
-include( get_stylesheet_directory() . '/inc/widgets/image-widget/image-widget.php' ); // Image widget 
 
 /* Include plugin activation file to install plugins */
 include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
@@ -120,7 +118,7 @@ add_action( 'after_setup_theme', 'notepad_setup' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of Open Sans and Gafata by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
+ * The use of Droid Serif and Montserrat by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
  *
  * @since Notepad 1.2.5
  *
@@ -130,15 +128,15 @@ function notepad_fonts_url() {
 	$fonts_url = '';
 	$subsets = 'latin';
 
-	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'.
+	/* translators: If there are characters in your language that are not supported by Droid Serif, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$pt_sans = _x( 'on', 'Open Sans font: on or off', 'notepad' );
+	$pt_sans = _x( 'on', 'Droid Serif font: on or off', 'notepad' );
 
-	/* translators: To add an additional Open Sans character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
+	/* translators: To add an additional Droid Serif character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
 	 * Do not translate into your own language.
 	 */
-	$subset = _x( 'no-subset', 'Open Sans font: add new subset (cyrillic)', 'notepad' );
+	$subset = _x( 'no-subset', 'Droid Serif font: add new subset (cyrillic)', 'notepad' );
 
 	if ( 'cyrillic' == $subset )
 		$subsets .= ',cyrillic';
@@ -152,7 +150,7 @@ function notepad_fonts_url() {
 		$font_families = array();
 
 		if ( 'off' !== $pt_sans )
-			$font_families[] = 'Droid+Serif:400,300,400italic,700,700italic';
+			$font_families[] = 'Droid+Serif:400,400italic,700,700italic';
 
 		if ( 'off' !== $montserrat )
 			$font_families[] = 'Montserrat:400,700';
@@ -166,14 +164,82 @@ function notepad_fonts_url() {
 	}
 
 	return $fonts_url;
-        
-        
-         // Register and enqueue our icon font
-    // We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-    wp_register_style('fontawesome', trailingslashit(get_template_directory_uri()) . 'css/font-awesome.min.css', array(), '4.0.3', 'all');
-    wp_enqueue_style('fontawesome');
+         
 }
 
+
+/**
+ * Enqueue scripts and styles
+ *
+ * @since Notepad 1.0
+ *
+ * @return void
+ */
+function notepad_scripts_styles() {
+
+	/**
+	 * Register and enqueue our stylesheets
+	 */
+
+	// Register and enqueue our icon font
+	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
+	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'assets/css/font-awesome.min.css' , array(), '4.0.3', 'all' );
+	wp_enqueue_style( 'fontawesome' );
+
+	/*
+	 * Load our Google Fonts.
+	 *
+	 * To disable in a child theme, use wp_dequeue_style()
+	 * function mytheme_dequeue_fonts() {
+	 *     wp_dequeue_style( 'notepad-fonts' );
+	 * }
+	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
+	 */
+	$fonts_url = notepad_fonts_url();
+	if ( !empty( $fonts_url ) ) {
+		wp_enqueue_style( 'notepad-fonts', esc_url_raw( $fonts_url ), array(), null );
+	}
+
+	// Enqueue the default WordPress stylesheet
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.2.3', 'all' );
+
+
+	/**
+	 * Register and enqueue our scripts
+	 */
+
+	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
+	wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
+        
+        // Load infinite scroll
+	wp_enqueue_script( 'infinitescroll', trailingslashit( get_template_directory_uri() ) . 'assets/js/jquery.infinitescroll.min.js', array(),  false );
+	
+	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	// Load jQuery Validation as well as the initialiser to provide client side comment form validation
+	// Using the 1.11.0pre version as it fixes an error that causes the email validation to fire immediately when text is entered in the field
+	// You can change the validation error messages below
+	if ( is_singular() && comments_open() ) {
+		wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'assets/js/jquery.validate.min.1.11.0pre.js', array( 'jquery' ), '1.11.0', true );
+		wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'assets/js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.11.0', true );
+
+		wp_enqueue_script( 'commentvalidate' );
+		wp_localize_script( 'commentvalidate', 'comments_object', array(
+			'req' => get_option( 'require_name_email' ),
+			'author'  => esc_html__( 'Please enter your name', 'notepad' ),
+			'email'  => esc_html__( 'Please enter a valid email address', 'notepad' ),
+			'comment' => esc_html__( 'Please add a comment', 'notepad' ) )
+		);
+	}
+
+	// Include this script to envoke a button toggle for the main navigation menu on small screens
+	wp_enqueue_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'assets/js/small-menu.js', array( 'jquery' ), '20130130', true );
+	
+}
+add_action( 'wp_enqueue_scripts', 'notepad_scripts_styles' );
 
 
 
@@ -193,7 +259,7 @@ function custom_infinite_scroll_js() {
 
         loading: {
 
-            img: "<?php echo get_template_directory_uri(); ?>/images/ajax-loader.gif",
+            img: "<?php echo get_template_directory_uri(); ?>/assets/images/ajax-loader.gif",
 
             msgText: "<?php _e( 'Loading the next set of posts...', 'custom' ); ?>",
 
@@ -255,19 +321,17 @@ add_action( 'wp', 'custom_paged_404_fix' );
 
 
 
-
-
 // Add and save meta boxes for post links
-add_action( 'add_meta_boxes', 'cd_meta_box_add' );
-function cd_meta_box_add() {
-	add_meta_box( 'postaudio-box', __('Post format audio url', 'lingonberry'), 'cd_meta_box_cb', 'post', 'side', 'high' );
-	add_meta_box( 'postvideo-box', __('Post format video url', 'lingonberry'), 'cd_meta_box_cc', 'post', 'side', 'high' );
+add_action( 'add_meta_boxes', 'notepad_meta_box_add' );
+function notepad_meta_box_add() {
+	add_meta_box( 'postaudio-box', __('Post format audio url', 'notepad'), 'notepad_meta_box_cb', 'post', 'side', 'high' );
+	add_meta_box( 'postvideo-box', __('Post format video url', 'notepad'), 'notepad_meta_box_cc', 'post', 'side', 'high' );
 }
 
-function cd_meta_box_cb( $post ) {
+function notepad_meta_box_cb( $post ) {
 	$values = get_post_custom( $post->ID );
 	$text_audiourl = isset( $values['audiourl'] ) ? esc_attr( $values['audiourl'][0] ) : '';
-	wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
+	wp_nonce_field( 'notepad_meta_box_nonce', 'meta_box_nonce' );
 	?>
 		<p>
 			<input type="text" name="audiourl" id="audiourl" value="<?php echo $text_audiourl; ?>" />
@@ -275,10 +339,10 @@ function cd_meta_box_cb( $post ) {
 	<?php		
 }
 
-function cd_meta_box_cc( $post ) {
+function notepad_meta_box_cc( $post ) {
 	$values = get_post_custom( $post->ID );
 	$text_videourl = isset( $values['videourl'] ) ? esc_attr( $values['videourl'][0] ) : '';
-	wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
+	wp_nonce_field( 'notepad_meta_box_nonce', 'meta_box_nonce' );
 	?>
 		<p>
 			<input type="text" name="videourl" id="videourl" value="<?php echo $text_videourl; ?>" />
@@ -286,13 +350,14 @@ function cd_meta_box_cc( $post ) {
 	<?php		
 }
 
-add_action( 'save_post', 'cd_meta_box_save' );
-function cd_meta_box_save( $post_id ) {
+add_action( 'save_post', 'notepad_meta_box_save' );
+
+function notepad_meta_box_save( $post_id ) {
 	// Bail if we're doing an auto save
 	if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	
 	// if our nonce isn't there, or we can't verify it, bail
-	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return;
+	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'notepad_meta_box_nonce' ) ) return;
 	
 	// if our current user can't edit this post, bail
 	if( !current_user_can( 'edit_post' ) ) return;
@@ -358,8 +423,6 @@ function notepad_widgets_init() {
 			'after_title' => '</h3>'
 		) );
         
-        
-
 	register_sidebar( array(
 			'name' => esc_html__( 'Footer #1', 'notepad' ),
 			'id' => 'sidebar-footer1',
@@ -392,94 +455,6 @@ function notepad_widgets_init() {
 
 }
 add_action( 'widgets_init', 'notepad_widgets_init' );
-
-
-/**
- * Enqueue scripts and styles
- *
- * @since Notepad 1.0
- *
- * @return void
- */
-function notepad_scripts_styles() {
-
-	/**
-	 * Register and enqueue our stylesheets
-	 */
-
-	// Start off with a clean base by using normalise. If you prefer to use a reset stylesheet or something else, simply replace this
-	wp_register_style( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '2.1.3', 'all' );
-	wp_enqueue_style( 'normalize' );
-
-	// Register and enqueue our icon font
-	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array(), '4.0.3', 'all' );
-	wp_enqueue_style( 'fontawesome' );
-
-	// Our styles for setting up the grid.
-	// If you prefer to use a different grid system, simply replace this and perform a find/replace in the php for the relevant styles. I'm nice like that!
-	wp_register_style( 'gridsystem', trailingslashit( get_template_directory_uri() ) . 'css/grid.css' , array(), '1.0.0', 'all' );
-	wp_enqueue_style( 'gridsystem' );
-
-	/*
-	 * Load our Google Fonts.
-	 *
-	 * To disable in a child theme, use wp_dequeue_style()
-	 * function mytheme_dequeue_fonts() {
-	 *     wp_dequeue_style( 'notepad-fonts' );
-	 * }
-	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
-	 */
-	$fonts_url = notepad_fonts_url();
-	if ( !empty( $fonts_url ) ) {
-		wp_enqueue_style( 'notepad-fonts', esc_url_raw( $fonts_url ), array(), null );
-	}
-
-	// Enqueue the default WordPress stylesheet
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.2.3', 'all' );
-
-
-	/**
-	 * Register and enqueue our scripts
-	 */
-
-	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-	wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
-	wp_enqueue_script( 'modernizr' );
-        
-        // Load infinite scroll
-	wp_register_script( 'infinitescroll', trailingslashit( get_template_directory_uri() ) . 'js/jquery.infinitescroll.min.js', array(),  false );
-	wp_enqueue_script( 'infinitescroll' );
-        
-     
-        
-	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	// Load jQuery Validation as well as the initialiser to provide client side comment form validation
-	// Using the 1.11.0pre version as it fixes an error that causes the email validation to fire immediately when text is entered in the field
-	// You can change the validation error messages below
-	if ( is_singular() && comments_open() ) {
-		wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.11.0pre.js', array( 'jquery' ), '1.11.0', true );
-		wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.11.0', true );
-
-		wp_enqueue_script( 'commentvalidate' );
-		wp_localize_script( 'commentvalidate', 'comments_object', array(
-			'req' => get_option( 'require_name_email' ),
-			'author'  => esc_html__( 'Please enter your name', 'notepad' ),
-			'email'  => esc_html__( 'Please enter a valid email address', 'notepad' ),
-			'comment' => esc_html__( 'Please add a comment', 'notepad' ) )
-		);
-	}
-
-	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '20130130', true );
-	wp_enqueue_script( 'small-menu' );
-
-}
-add_action( 'wp_enqueue_scripts', 'notepad_scripts_styles' );
 
 
 /**
@@ -791,21 +766,6 @@ if ( ! function_exists( 'notepad_entry_meta' ) ) {
 	}
 }
 
-
-/**
- * Adjusts content_width value for full-width templates and attachments
- *
- * @since notepad 1.0
- *
- * @return void
- */
-function notepad_content_width() {
-	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() ) {
-		global $content_width;
-		$content_width = 1200;
-	}
-}
-add_action( 'template_redirect', 'notepad_content_width' );
 
 
 /**
