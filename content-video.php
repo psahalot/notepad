@@ -57,7 +57,7 @@
 	</div> <!-- /.entry-content -->
     </div>
     
-    <?php if(is_single()) { ?>
+    <?php if(get_the_tag_list() && is_single()) { ?>
         <div class="tag-meta">
             <?php if ( is_singular() ) {
                             // Only show the tags on the Single Post page

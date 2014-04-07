@@ -73,11 +73,6 @@ if ( ! function_exists( 'notepad_setup' ) ) {
 		// Create an extra image size for the Post thumbnail image
 		add_image_size( 'post_feature_thumb', 368, 243, true );
                 
-                // hard crop store front and taxonomy product images for downloads
-                add_image_size( 'product-image-large', 680, 300, true );
-                
-                // hard crop store front and taxonomy product images thumbnail for downloads
-                add_image_size( 'product-image-thumb', 370, 243, true );
 
                 // add support for widget customizer
                 add_theme_support( 'widget-customizer' );
@@ -171,6 +166,12 @@ function notepad_fonts_url() {
 	}
 
 	return $fonts_url;
+        
+        
+         // Register and enqueue our icon font
+    // We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
+    wp_register_style('fontawesome', trailingslashit(get_template_directory_uri()) . 'css/font-awesome.min.css', array(), '4.0.3', 'all');
+    wp_enqueue_style('fontawesome');
 }
 
 
@@ -337,30 +338,6 @@ function notepad_mce_css( $mce_css ) {
 	return $mce_css;
 }
 add_filter( 'mce_css', 'notepad_mce_css' );
-
-// Add specific CSS class by filter
-add_filter('body_class','notepad_class_names');
-function notepad_class_names($classes) {
-    
-        if ( is_page_template( 'page-templates/front-page.php' )) {
-            $classes[] = 'notepad-front-page';
-        }
-        
-        // check if right sidebar is active, if yes, return container wide body class
-        if(!is_front_page() && is_active_sidebar('sidebar-main') || is_page_template( 'page-templates/full-width.php' ) || is_page_template( 'page-templates/edd-store.php' ) || is_post_type_archive('download')) { 
-            $classes[] = 'container-wide';
-        }
- 
-        elseif (!is_front_page() || (is_home() && !is_active_sidebar('sidebar-main'))) {
-            $classes[]= 'container-slim';
-        }
-        
-        if ( is_page_template( 'page-templates/front-page.php' ) && !get_theme_mod( 'notepad_edd_front_featured_products' ) ){ 
-            $classes[]= 'no-featured-products'; 
-        }
-	// return the $classes array
-	return $classes;
-}
 
 
 /**
@@ -810,11 +787,7 @@ if ( ! function_exists( 'notepad_entry_meta' ) ) {
 			printf( wp_kses( __( '<i class="fa fa-tag"></i> %1$s', 'notepad' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
 		}
                 
-              $author = sprintf( '<i class="fa fa-pencil"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'notepad' ), get_the_author() ) ),
-			get_the_author()
-		);
+              
 	}
 }
 

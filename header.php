@@ -69,7 +69,7 @@
                 <div class="nav-container">
                     <nav id="site-navigation" class="main-navigation" role="navigation">
                             <div class="col grid_12_of_12">
-					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'notepad' ); ?></h3>
+					<h3 class="menu-toggle assistive-text"><i class="fa fa-bars"></i></h3>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
                             </div>
                     </nav> <!-- /.site-navigation.main-navigation -->

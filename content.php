@@ -55,6 +55,7 @@
 			// Only show the tags on the Single Post page
 			notepad_entry_meta();
 		} ?>
+                
             </div>
         <?php } ?>
             
