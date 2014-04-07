@@ -809,6 +809,12 @@ if ( ! function_exists( 'notepad_entry_meta' ) ) {
 		if ( $tag_list ) {
 			printf( wp_kses( __( '<i class="fa fa-tag"></i> %1$s', 'notepad' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
 		}
+                
+              $author = sprintf( '<i class="fa fa-pencil"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'notepad' ), get_the_author() ) ),
+			get_the_author()
+		);
 	}
 }
 

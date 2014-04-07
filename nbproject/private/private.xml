@@ -4,27 +4,26 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-aside.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/comments.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/header.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-postarchives.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/sidebar.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/js/jquery.infinitescroll.min.js</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-gallery.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-page.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/author.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/page.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/inc/customizer.php</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/author.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/functions.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/author-bio.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-quote.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/index.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/js/jquery.infinitescroll.js</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-quote.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-image.php</file>
-            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-audio.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content.php</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-audio.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/category.php</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-chat.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/style.css</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-video.php</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-link.php</file>
             <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/single.php</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/tag.php</file>
+            <file>file:/C:/xampp/htdocs/notepad/wp-content/themes/notepad/content-status.php</file>
         </group>
     </open-files>
 </project-private>
