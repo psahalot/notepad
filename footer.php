@@ -16,7 +16,7 @@
     <?php
     // Count how many footer sidebars are active so we can work out how many containers we need
     $footerSidebars = 0;
-    for ($x = 1; $x <= 4; $x++) {
+    for ($x = 1; $x <= 3; $x++) {
         if (is_active_sidebar('sidebar-footer' . $x)) {
             $footerSidebars++;
         }
@@ -31,7 +31,7 @@
             $containerClass = "grid_" . 12 / $footerSidebars . "_of_12";
 
             // Display the active footer sidebars
-            for ($x = 1; $x <= 4; $x++) {
+            for ($x = 1; $x <= 3; $x++) {
                 if (is_active_sidebar('sidebar-footer' . $x)) {
                     ?>
                     <div id="<?php echo 'footer-widget' . $x; ?>" class="col <?php echo $containerClass ?>">
