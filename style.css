@@ -2158,20 +2158,24 @@ li span.current {
 }
 
 .nav-menu {
-	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
         letter-spacing: 1px; 
+        text-align:center;
 }
 
-.main-navigation ul {
+.nav-menu ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-        text-align:center;
+}
+
+.nav-menu li ul {
+    text-align: left; 
 }
 
 .main-navigation li {
@@ -2263,7 +2267,11 @@ li span.current {
 
 .main-navigation ul ul a {
 	color: #fff; /* Nav bar dropdown link color */
-	width: 20rem; /* Nav bar dropdown width */
+	width: 25rem; /* Nav bar dropdown width */
+        font-size: 14px; 
+        font-size: 1.4rem; 
+        padding: 10px 20px; 
+        padding: 1rem 2rem; 
 }
 
 .main-navigation ul ul li {
