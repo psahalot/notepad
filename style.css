@@ -1038,6 +1038,7 @@ img.wp-post-image{
 
 .tag .archive-title{
     color:#fff;
+    font-size:25px;
 }
 
 .category .archive-title{
@@ -2397,7 +2398,8 @@ img#wpstats {
 }
 
 .notepad-red ::selection,
-.notepad-red .more-link:hover
+.notepad-red .more-link:hover,
+.notepad-red .page-links .page-numbers:hover
 {
     background:#ef7a7a;
     color:#fff;
@@ -2445,7 +2447,8 @@ img#wpstats {
 }
 
 .notepad-green ::selection,
-.notepad-green .more-link:hover
+.notepad-green .more-link:hover,
+.notepad-green .page-links .page-numbers:hover
 {
     background:#77dfba;
     color:#fff;
@@ -2493,7 +2496,8 @@ img#wpstats {
 }
 
 .notepad-pink ::selection,
-.notepad-pink .more-link:hover
+.notepad-pink .more-link:hover,
+.notepad-pink .page-links .page-numbers:hover
 {
     background:#ed409f;
     color:#fff;
@@ -2542,7 +2546,8 @@ img#wpstats {
 }
 
 .notepad-gray ::selection,
-.notepad-gray .more-link:hover
+.notepad-gray .more-link:hover,
+.notepad-gray .page-links .page-numbers:hover
 {
     background:#8e8e8e;
     color:#fff;
@@ -2591,7 +2596,8 @@ img#wpstats {
 }
 
 .notepad-brown ::selection,
-.notepad-brown .more-link:hover
+.notepad-brown .more-link:hover,
+.notepad-brown .page-links .page-numbers:hover
 {
     background:#875608;
     color:#fff;
@@ -2639,7 +2645,8 @@ img#wpstats {
 }
 
 .notepad-purple ::selection,
-.notepad-purple .more-link:hover
+.notepad-purple .more-link:hover,
+.notepad-purple .page-links .page-numbers:hover
 {
     background:#a678d3;
     color:#fff;
@@ -2687,7 +2694,8 @@ img#wpstats {
 }
 
 .notepad-orange ::selection,
-.notepad-orange .more-link:hover
+.notepad-orange .more-link:hover,
+.notepad-orange .page-links .page-numbers:hover
 {
     background:#fa7f53;
     color:#fff;
