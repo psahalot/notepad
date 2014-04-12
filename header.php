@@ -45,23 +45,18 @@
 
 		<header id="masthead" class="site-header row" role="banner">
 			<div class="col grid_12_of_12 site-title">
-				<h1>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
-						<?php 
-						$headerImg = get_header_image();
-						if( !empty( $headerImg ) ) { ?>
-							<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						<?php } 
-						else {
-							echo get_bloginfo( 'name' );
-						} ?>
-					</a>
-				</h1>
-                                <p class="site-description"> 
-                                    <?php if (empty($headerImg)) { 
-                                            echo get_bloginfo('description'); 
-                                    } ?>
-                                </p>
+                            <h1 class="site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" rel="home">
+                                    <?php echo get_bloginfo('name'); ?>	
+                                </a>
+                            </h1>
+                            <p class="site-description"> 
+                                <?php echo get_bloginfo('description'); ?>
+                            </p>
+
+                            <?php if (get_header_image()) : ?>
+                                <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+                            <?php endif; ?>
 			</div> <!-- /.col.grid_12_of_12 -->
                       
 		</header> <!-- /#masthead.site-header.row -->
