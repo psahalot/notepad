@@ -7,29 +7,14 @@
  */
 
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
-
-/* Include plugin activation file to install plugins */
-include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
-
-
-if (!class_exists('notepad_SL_Theme_Updater')) {
-    // Load our custom theme updater
-    include( dirname(__FILE__) . '/inc/theme-updater.php' );
-}
-
-
-// configuration file for theme licensing 
-
-// theme updater and licensing
-
-include(get_stylesheet_directory() . '/inc/theme-updater-config.php');
+require( get_stylesheet_directory() . '/inc/custom-header.php' ); // custom header support
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
  * @since Notepad 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 790; /* Default the embedded content width to 790px */
+	$content_width = 798; /* Default the embedded content width to 790px */
 
 
 /**
@@ -67,14 +52,6 @@ if ( ! function_exists( 'notepad_setup' ) ) {
 		// Create an extra image size for the Post featured image
 		add_image_size( 'post_feature_full_width', 680, 300, true );
                 
-                
-		// Create an extra image size for the Post thumbnail image
-		add_image_size( 'post_feature_thumb', 368, 243, true );
-                
-
-                // add support for widget customizer
-                add_theme_support( 'widget-customizer' );
-                
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
 				'primary' => esc_html__( 'Primary Menu', 'notepad' )
@@ -91,25 +68,6 @@ if ( ! function_exists( 'notepad_setup' ) ) {
 				'default-image' => ''
                                 
 			) );
-
-		// Enable support for Custom Headers (or in our case, a custom logo)
-		add_theme_support( 'custom-header', array(
-				// Header image default
-				'default-image' => '',
-				// Header text display default
-				'header-text' => true,
-				// Header text color default
-				'default-text-color' => '000',
-				// Flexible width
-				'flex-width' => true,
-				// Header image width (in pixels)
-				'width' => 300,
-				// Flexible height
-				'flex-height' => true,
-				// Header image height (in pixels)
-				'height' => 80
-			) );
-
 	}
 }
 add_action( 'after_setup_theme', 'notepad_setup' );
@@ -240,55 +198,6 @@ function notepad_scripts_styles() {
 	
 }
 add_action( 'wp_enqueue_scripts', 'notepad_scripts_styles' );
-
-
-
-/**
-
- * Infinite Scroll
-
- */
-
-function custom_infinite_scroll_js() {
-
-    if( ! is_singular() ) { ?>
-
-    <script>
-
-    var infinite_scroll = {
-
-        loading: {
-
-            img: "<?php echo get_template_directory_uri(); ?>/assets/images/ajax-loader.gif",
-
-            msgText: "<?php _e( 'Loading the next set of posts...', 'custom' ); ?>",
-
-            finishedMsg: "<?php _e( 'All posts loaded.', 'custom' ); ?>"
-
-        },
-
-        "nextSelector":"#nav-below .page-numbers a",
-
-        "navSelector":"#nav-below",
-
-        "itemSelector":".post",
-
-        "contentSelector":".main-content"
-
-    };
-
-    jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
-
-    </script>
-
-    <?php
-
-    }
-
-}
-
-// add_action( 'wp_footer', 'custom_infinite_scroll_js',100 );
-
 
 
 /**
@@ -767,7 +676,6 @@ if ( ! function_exists( 'notepad_entry_meta' ) ) {
 }
 
 
-
 /**
  * Change the "read more..." link so it links to the top of the page rather than part way down
  *
@@ -790,14 +698,14 @@ add_filter( 'the_content_more_link', 'notepad_remove_more_jump_link' );
 
 
 /**
- * Returns a "Continue Reading" link for excerpts
+ * Returns a "Read more" link for excerpts
  *
  * @since notepad 1.0
  *
- * @return string The 'Continue reading' link
+ * @return string The 'Read more' link
  */
 function notepad_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'notepad' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read more', 'notepad' ) . get_the_title() . ' ">' . wp_kses( __( 'Read more <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 
@@ -896,18 +804,6 @@ add_filter( 'meta_content', 'convert_chars'  );
 add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop'  );
 
-
-
-
-add_action( 'after_setup_theme', 'tgm_envira_define_license_key' );
-function tgm_envira_define_license_key() {
-    
-    // If the key has not already been defined, define it now.
-    if ( ! defined( 'ENVIRA_LICENSE_KEY' ) ) {
-        define( 'ENVIRA_LICENSE_KEY', 'f21b503f7793be583daab680a7f8bda7' );
-    }
-    
-}
 
 add_filter('body_class', 'notepad_body_classes');
 function notepad_body_classes($classes) {
