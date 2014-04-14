@@ -573,8 +573,12 @@ input[type="button"] {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
+<<<<<<< HEAD
     background-color: #fff;
     *background-color: #d9d9d9;
+=======
+	*background-color: #d9d9d9;
+>>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 .btn:first-child {
@@ -582,6 +586,7 @@ input[type="button"] {
 }
 
 .menu-toggle:hover,
+<<<<<<< HEAD
 .btn:hover{
     color: #333333;
     text-decoration: none;
@@ -593,6 +598,19 @@ input[type="button"] {
     -ms-transition: background-position 0.1s linear;
     -o-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear;
+=======
+.btn:hover,
+input[type="submit"]:hover {
+	color: #fff;
+	text-decoration: none;
+	*background-color: #d9d9d9; /* Buttons in IE7 don't get borders, so darken on hover */
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	-moz-transition: background-position 0.1s linear;
+	-ms-transition: background-position 0.1s linear;
+	-o-transition: background-position 0.1s linear;
+	transition: background-position 0.1s linear;
+>>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 .menu-toggle:focus,
@@ -667,6 +685,7 @@ input[type="submit"].btn-small {
 input,
 select,
 textarea {
+<<<<<<< HEAD
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 3px #eee inset;
@@ -674,6 +693,17 @@ textarea {
     padding: 16px;
     padding: 1.6rem;
     width: 100%;
+=======
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 3px #eee inset;
+	color: #222;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 10px;
+	padding: 1rem;
+>>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 input[type="checkbox"],
@@ -1004,6 +1034,7 @@ img.wp-post-image{
 
 .tag .archive-title{
     color:#fff;
+    font-size:25px;
 }
 
 .category .archive-title{
@@ -1753,6 +1784,16 @@ div.wpcf7{
 .wpcf7 p{
     line-height:2.5;
 }
+
+.wpcf7 input,
+.wpcf7 select,
+.wpcf7 textarea{
+    width:100%;
+}
+
+.wpcf7 input[type="submit"]{
+    width:auto;
+}
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -1862,6 +1903,18 @@ div.wpcf7{
     margin-bottom: 10px;
     margin-bottom: 1rem; 
     border-bottom: solid 1px #efefef;
+}
+
+.sidebar .widget .children li,
+.sidebar .widget .sub-menu li{
+    border-bottom:0;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+
+.sidebar .widget li ul{
+    padding-left:20px;
 }
 
 .sidebar .widget ul {
@@ -2338,7 +2391,361 @@ div.gform_body input[type="text"]
    ========================================================================== */
 
 img#wpstats {
+<<<<<<< HEAD
     display: none;
+=======
+	display: none;
+}
+
+
+/* ==========================================================================
+   Color Schemes
+   ========================================================================== */
+/* ! notepad red	*/
+
+
+.notepad-red #footercontainer,
+.notepad-red .pagination .page-numbers:hover,
+.notepad-red li span.current,
+.notepad-red li a:hover.page-numbers,
+.notepad-red button:hover,
+.notepad-red input:hover[type="button"],
+.notepad-red input:hover[type="reset"],
+.notepad-red input:hover[type="submit"],
+.notepad-red .button:hover,
+.notepad-red .entry-content .button:hover,
+.notepad-red .main-navigation ul ul
+	{
+	background: #ef7a7a;
+	}
+
+.notepad-red .footer-wrap
+{
+        background:#dd5d65;
+}
+
+.notepad-red ::selection,
+.notepad-red .more-link:hover,
+.notepad-red .page-links .page-numbers:hover
+{
+    background:#ef7a7a;
+    color:#fff;
+}
+
+.notepad-red .main-navigation ul ul a
+{
+    color:#fff;
+}
+.notepad-red .site-title a,
+.notepad-red .sidebar a,
+.notepad-red .entry-header .entry-title a,
+.notepad-red .entry-header .entry-title,
+.notepad-red .main-navigation ul ul a:hover,
+.notepad-red .entry-header h1 a:visited,
+.notepad-red .more-link
+{
+	color:#ef7a7a;
+}
+
+.notepad-red .entry-header h1 a:hover{
+    color:#111;
+}
+
+/* ! notepad green	*/
+
+.notepad-green #footercontainer,
+.notepad-green .pagination .page-numbers:hover,
+.notepad-green li span.current,
+.notepad-green li a:hover.page-numbers,
+.notepad-green button:hover,
+.notepad-green input:hover[type="button"],
+.notepad-green input:hover[type="reset"],
+.notepad-green input:hover[type="submit"],
+.notepad-green .button:hover,
+.notepad-green .entry-content .button:hover,
+.notepad-green .main-navigation ul ul
+	{
+	background: #77DFBA;
+	}
+
+.notepad-green .main-navigation ul ul a
+{
+    color:#fff;
+}
+
+.notepad-green ::selection,
+.notepad-green .more-link:hover,
+.notepad-green .page-links .page-numbers:hover
+{
+    background:#77dfba;
+    color:#fff;
+}
+
+.notepad-green .footer-wrap
+{
+        background:#5ec49e;
+}
+.notepad-green .site-title a,
+.notepad-green .sidebar a,
+.notepad-green .entry-header .entry-title a,
+.notepad-green .entry-header .entry-title,
+.notepad-green .main-navigation ul ul a:hover,
+.notepad-green .entry-header h1 a:visited,
+.notepad-green .more-link
+{
+	color:#77DFBA;
+}
+
+.notepad-green .entry-header h1 a:hover{
+    color:#111;
+}
+
+/* ! notepad pink	*/
+
+.notepad-pink #footercontainer,
+.notepad-pink .pagination .page-numbers:hover,
+.notepad-pink li span.current,
+.notepad-pink li a:hover.page-numbers,
+.notepad-pink button:hover,
+.notepad-pink input:hover[type="button"],
+.notepad-pink input:hover[type="reset"],
+.notepad-pink input:hover[type="submit"],
+.notepad-pink .button:hover,
+.notepad-pink .entry-content .button:hover,
+.notepad-pink .main-navigation ul ul
+	{
+	background: #ed409f;
+	}
+
+.notepad-pink .main-navigation ul ul a
+{
+    color:#fff;
+}
+
+.notepad-pink ::selection,
+.notepad-pink .more-link:hover,
+.notepad-pink .page-links .page-numbers:hover
+{
+    background:#ed409f;
+    color:#fff;
+}
+
+.notepad-pink .footer-wrap
+{
+        background:#ce3386;
+}
+.notepad-pink .site-title a,
+.notepad-pink .sidebar a,
+.notepad-pink .entry-header .entry-title a,
+.notepad-pink .entry-header .entry-title,
+.notepad-pink .main-navigation ul ul a:hover,
+.notepad-pink .entry-header h1 a:visited,
+.notepad-pink .more-link
+{
+	color:#ed409f;
+}
+
+.notepad-pink .entry-header h1 a:hover{
+    color:#111;
+}
+
+
+/* ! notepad gray	*/
+
+.notepad-gray #footercontainer,
+.notepad-gray .pagination .page-numbers:hover,
+.notepad-gray li span.current,
+.notepad-gray li a:hover.page-numbers,
+.notepad-gray button:hover,
+.notepad-gray input:hover[type="button"],
+.notepad-gray input:hover[type="reset"],
+.notepad-gray input:hover[type="submit"],
+.notepad-gray .button:hover,
+.notepad-gray .entry-content .button:hover,
+.notepad-gray .main-navigation ul ul
+	{
+	background: #8e8e8e;
+	}
+
+.notepad-gray .main-navigation ul ul a
+{
+    color:#fff;
+}
+
+.notepad-gray ::selection,
+.notepad-gray .more-link:hover,
+.notepad-gray .page-links .page-numbers:hover
+{
+    background:#8e8e8e;
+    color:#fff;
+}
+
+.notepad-gray .footer-wrap
+{
+        background:#837E7C;
+}
+.notepad-gray .site-title a,
+.notepad-gray .sidebar a,
+.notepad-gray .entry-header .entry-title a,
+.notepad-gray .entry-header .entry-title,
+.notepad-gray .main-navigation ul ul a:hover,
+.notepad-gray .entry-header h1 a:visited,
+.notepad-gray .more-link
+{
+	color:#8e8e8e;
+}
+
+.notepad-gray .entry-header h1 a:hover{
+    color:#111;
+}
+
+
+/* ! notepad brown	*/
+
+.notepad-brown #footercontainer,
+.notepad-brown .pagination .page-numbers:hover,
+.notepad-brown li span.current,
+.notepad-brown li a:hover.page-numbers,
+.notepad-brown button:hover,
+.notepad-brown input:hover[type="button"],
+.notepad-brown input:hover[type="reset"],
+.notepad-brown input:hover[type="submit"],
+.notepad-brown .button:hover,
+.notepad-brown .entry-content .button:hover,
+.notepad-brown .main-navigation ul ul
+	{
+	background: #875608;
+	}
+
+.notepad-brown .main-navigation ul ul a
+{
+    color:#fff;
+}
+
+.notepad-brown ::selection,
+.notepad-brown .more-link:hover,
+.notepad-brown .page-links .page-numbers:hover
+{
+    background:#875608;
+    color:#fff;
+}
+
+.notepad-brown .footer-wrap
+{
+        background:#704705;
+}
+.notepad-brown .site-title a,
+.notepad-brown .sidebar a,
+.notepad-brown .entry-header .entry-title a,
+.notepad-brown .entry-header .entry-title,
+.notepad-brown .main-navigation ul ul a:hover,
+.notepad-brown .entry-header h1 a:visited,
+.notepad-brown .more-link
+{
+	color:#875608;
+}
+
+.notepad-brown .entry-header h1 a:hover{
+    color:#111;
+}
+
+/* ! notepad purple	*/
+
+.notepad-purple #footercontainer,
+.notepad-purple .pagination .page-numbers:hover,
+.notepad-purple li span.current,
+.notepad-purple li a:hover.page-numbers,
+.notepad-purple button:hover,
+.notepad-purple input:hover[type="button"],
+.notepad-purple input:hover[type="reset"],
+.notepad-purple input:hover[type="submit"],
+.notepad-purple .button:hover,
+.notepad-purple .entry-content .button:hover,
+.notepad-purple .main-navigation ul ul
+	{
+	background: #a678d3;
+	}
+
+.notepad-purple .main-navigation ul ul a
+{
+    color:#fff;
+}
+
+.notepad-purple ::selection,
+.notepad-purple .more-link:hover,
+.notepad-purple .page-links .page-numbers:hover
+{
+    background:#a678d3;
+    color:#fff;
+}
+
+.notepad-purple .footer-wrap
+{
+        background:#8837ce;
+}
+.notepad-purple .site-title a,
+.notepad-purple .sidebar a,
+.notepad-purple .entry-header .entry-title a,
+.notepad-purple .entry-header .entry-title,
+.notepad-purple .main-navigation ul ul a:hover,
+.notepad-purple .entry-header h1 a:visited,
+.notepad-purple .more-link
+{
+	color:#a678d3;
+}
+
+.notepad-purple .entry-header h1 a:hover{
+    color:#111;
+}
+
+/* ! notepad Orange	*/
+
+.notepad-orange #footercontainer,
+.notepad-orange .pagination .page-numbers:hover,
+.notepad-orange li span.current,
+.notepad-orange li a:hover.page-numbers,
+.notepad-orange button:hover,
+.notepad-orange input:hover[type="button"],
+.notepad-orange input:hover[type="reset"],
+.notepad-orange input:hover[type="submit"],
+.notepad-orange .button:hover,
+.notepad-orange .entry-content .button:hover,
+.notepad-orange .main-navigation ul ul
+	{
+	background: #fa7f53;
+	}
+
+.notepad-orange .main-navigation ul ul a
+{
+    color:#fff;
+}
+
+.notepad-orange ::selection,
+.notepad-orange .more-link:hover,
+.notepad-orange .page-links .page-numbers:hover
+{
+    background:#fa7f53;
+    color:#fff;
+}
+
+.notepad-orange .footer-wrap
+{
+        background:#e06f4a;
+}
+.notepad-orange .site-title a,
+.notepad-orange .sidebar a,
+.notepad-orange .entry-header .entry-title a,
+.notepad-orange .entry-header .entry-title,
+.notepad-orange .main-navigation ul ul a:hover,
+.notepad-orange .entry-header h1 a:visited,
+.notepad-orange .more-link
+{
+	color:#fa7f53;
+}
+
+.notepad-orange .entry-header h1 a:hover{
+    color:#111;
+>>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 /* ==========================================================================
@@ -2458,8 +2865,7 @@ img#wpstats {
     }
 
     .menu-toggle.toggled-on{
-        color:#757575;
-        background:#e1e1e1;
+        color:#fff;
     }
 
     .page .site-content article{
@@ -2469,6 +2875,7 @@ img#wpstats {
 
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
+<<<<<<< HEAD
     img.size-full, 
     img.size-large, 
     img.header-image, 
@@ -2537,6 +2944,75 @@ img#wpstats {
     }
 
 
+=======
+        img.size-full, 
+        img.size-large, 
+        img.header-image, 
+        img.wp-post-image {
+                width: 100%; 
+        }
+	.grid_1_of_12,
+	.grid_2_of_12,
+	.grid_3_of_12,
+	.grid_4_of_12,
+	.grid_5_of_12,
+	.grid_6_of_12,
+	.grid_7_of_12,
+	.grid_8_of_12,
+	.grid_9_of_12,
+	.grid_10_of_12,
+	.grid_11_of_12,
+	.grid_12_of_12 {
+		width: 100%; 
+	}
+	.col {
+		margin: 0;
+	}
+        #headercontainer {
+                position: relative;
+        }
+        .site-title h1 {
+                text-align: center;
+        }
+        .nav-menu {
+                text-align: center;
+        }
+        .main-navigation li {
+                float: none;
+                display: inline-block; 
+        }
+       
+        #maincontentcontainer {
+                margin-top: 0px;
+                margin-bottom: 0px;
+        }
+        .site-content {
+                width: 100%; 
+        }
+        .sidebar { 
+                padding: 30px 30px 0;
+        }
+	.main-small-navigation .nav-menu, .nav-menu ul {
+		padding: 0;
+	}
+	.main-small-navigation .nav-menu ul {
+		padding-left: 16px;
+		padding-left: 1.6rem;
+	}
+        
+        
+        #footer-widget1,
+        #footer-widget2,
+        #footer-widget3{
+            border-bottom:1px solid #e3e3e3;
+        }
+        
+        .main-navigation{
+            width:100%;
+        }
+        
+     
+>>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 
@@ -2576,10 +3052,23 @@ img#wpstats {
 }
 
 @media only screen and (max-width: 320px) {
+<<<<<<< HEAD
     .author-description {
         float: left;
         width: 100%;
     }
+=======
+	.author-description {
+		float: left;
+		width: 100%;
+	}
+        
+        .nav-previous, .nav-next{
+            width:100%;
+            float:none;
+            margin-bottom:10px;
+        }
+>>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 
