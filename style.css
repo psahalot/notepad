@@ -1537,8 +1537,8 @@ img.wp-post-image{
 .comments-area article header cite,
 .comments-area article header time {
     display: block;
-    margin-left: 84px;
-    margin-left: 8.4rem;
+    margin-left: 0px;
+    margin-left: 0rem;
 }
 .comments-area article header cite {
     font-style: normal;
