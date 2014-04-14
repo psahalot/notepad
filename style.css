@@ -1186,7 +1186,7 @@ img.wp-post-image{
     margin:0 auto;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     background:#EF7A7A;
-    color:#fff;
+    color:#333;
     border-radius: 3px; 
 }
 
@@ -1458,8 +1458,6 @@ img.wp-post-image{
 
 .format-quote .entry-content blockquote {
     border: none;
-    margin-left: 40px;
-    margin-left: 4rem;
 }
 
 /* Audio */
@@ -2370,10 +2368,8 @@ div.gform_body input[type="text"]
    ========================================================================== */
 
 img#wpstats {
-<<<<<<< HEAD
+
     display: none;
-=======
-	display: none;
 }
 
 
@@ -2420,8 +2416,7 @@ img#wpstats {
 .notepad-red .entry-header .entry-title a,
 .notepad-red .entry-header .entry-title,
 .notepad-red .main-navigation ul ul a:hover,
-.notepad-red .entry-header h1 a:visited,
-.notepad-red .more-link
+.notepad-red .entry-header h1 a:visited
 {
 	color:#ef7a7a;
 }
@@ -2469,8 +2464,7 @@ img#wpstats {
 .notepad-green .entry-header .entry-title a,
 .notepad-green .entry-header .entry-title,
 .notepad-green .main-navigation ul ul a:hover,
-.notepad-green .entry-header h1 a:visited,
-.notepad-green .more-link
+.notepad-green .entry-header h1 a:visited
 {
 	color:#77DFBA;
 }
@@ -2518,8 +2512,7 @@ img#wpstats {
 .notepad-pink .entry-header .entry-title a,
 .notepad-pink .entry-header .entry-title,
 .notepad-pink .main-navigation ul ul a:hover,
-.notepad-pink .entry-header h1 a:visited,
-.notepad-pink .more-link
+.notepad-pink .entry-header h1 a:visited
 {
 	color:#ed409f;
 }
@@ -2568,8 +2561,7 @@ img#wpstats {
 .notepad-gray .entry-header .entry-title a,
 .notepad-gray .entry-header .entry-title,
 .notepad-gray .main-navigation ul ul a:hover,
-.notepad-gray .entry-header h1 a:visited,
-.notepad-gray .more-link
+.notepad-gray .entry-header h1 a:visited
 {
 	color:#8e8e8e;
 }
@@ -2618,8 +2610,7 @@ img#wpstats {
 .notepad-brown .entry-header .entry-title a,
 .notepad-brown .entry-header .entry-title,
 .notepad-brown .main-navigation ul ul a:hover,
-.notepad-brown .entry-header h1 a:visited,
-.notepad-brown .more-link
+.notepad-brown .entry-header h1 a:visited
 {
 	color:#875608;
 }
@@ -2667,8 +2658,7 @@ img#wpstats {
 .notepad-purple .entry-header .entry-title a,
 .notepad-purple .entry-header .entry-title,
 .notepad-purple .main-navigation ul ul a:hover,
-.notepad-purple .entry-header h1 a:visited,
-.notepad-purple .more-link
+.notepad-purple .entry-header h1 a:visited
 {
 	color:#a678d3;
 }
@@ -2716,8 +2706,7 @@ img#wpstats {
 .notepad-orange .entry-header .entry-title a,
 .notepad-orange .entry-header .entry-title,
 .notepad-orange .main-navigation ul ul a:hover,
-.notepad-orange .entry-header h1 a:visited,
-.notepad-orange .more-link
+.notepad-orange .entry-header h1 a:visited
 {
 	color:#fa7f53;
 }
