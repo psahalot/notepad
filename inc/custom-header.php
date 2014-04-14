@@ -55,9 +55,9 @@ add_action( 'after_setup_theme', 'notepad_custom_header_setup' );
  * @return void
  */
 function notepad_custom_header_fonts() {
-	$font_url = notepad_get_font_url();
+	$font_url = notepad_fonts_url();
 	if ( ! empty( $font_url ) )
-		wp_enqueue_style( 'twentytwelve-fonts', esc_url_raw( $font_url ), array(), null );
+		wp_enqueue_style( 'notepad-fonts', esc_url_raw( $font_url ), array(), null );
 }
 add_action( 'admin_print_styles-appearance_page_custom-header', 'notepad_custom_header_fonts' );
 

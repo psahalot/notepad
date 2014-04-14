@@ -48,11 +48,16 @@
 
 
     <div class="footer-wrap">
-        <?php if (get_theme_mod('notepad_footer_footer_text') == '') { ?>
-            <div class="row smallprint"><p><a href="http://ideaboxthemes.com/themes/notepad-wordpress-theme/"><?php _e('Notepad WordPress theme by IdeaBox', 'notepad'); ?></a></p></div>
-<?php } else { ?>   
+        <div class="row smallprint">
+            <p>
+               <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'ThemeURI' ); ?>">
+                        <?php _e('Notepad WordPress theme by IdeaBox','notepad'); ?>
+                </a>
+            </p>
+        </div>
+        <?php if (get_theme_mod('notepad_footer_footer_text') != '') { ?>
             <div class="row smallprint"><?php echo wpautop(get_theme_mod('notepad_footer_footer_text')); ?></div>
-<?php } ?> 
+       <?php } ?>
     </div> <!-- /.footer-wrap -->
 </div> <!-- /.footercontainer -->
 
