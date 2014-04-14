@@ -4,45 +4,11 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 ( function( $ ) {
-	// Site title and description.
-	wp.customize( 'blogname', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
-		} );
-	} );
+	// Site  description.
+	
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
-		} );
-	} );
-        wp.customize( 'notepad_edd_store_link_text', function( value ) {
-		value.bind( function( to ) {
-			$( '.notepad-store-button a' ).text( to );
-		} );
-	} );
-        wp.customize( 'notepad_edd_store_archives_title', function( value ) {
-		value.bind( function( to ) {
-			$( '.edd-store-info h2' ).text( to );
-		} );
-	} );
-         wp.customize( 'notepad_edd_store_archives_description', function( value ) {
-		value.bind( function( to ) {
-			$( '.store-description' ).text( to );
-		} );
-	} );
-        wp.customize( 'notepad_edd_front_featured_title', function( value ) {
-		value.bind( function( to ) {
-			$( '.featured-edd-title' ).text( to );
-		} );
-	} );
-        wp.customize( 'notepad_front_featured_posts_title', function( value ) {
-		value.bind( function( to ) {
-			$( '.featured-section-title' ).text( to );
-		} );
-	} );
-        wp.customize( 'notepad_front_featured_link_text', function( value ) {
-		value.bind( function( to ) {
-			$( '.feature-more-link' ).text( to );
 		} );
 	} );
         

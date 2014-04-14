@@ -3,11 +3,11 @@ Theme Name: Notepad
 Theme URI: http://ideaboxcreations.com
 Author: IdeaBox Themes
 Author URI: http://ideaboxcreations.com/
-Description: notepad is your basic building block for creating beautiful, responsive custom themes. It's not a convoluted or confusing framework that's hard to learn or even harder to modify. It's a simple and elegant starter theme built on HTML5 & CSS3. Its base is a responsive, 12 column grid. It incorporates custom Theme Options that are easy to modify, a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
+Description: Notepad is an elegant, mobile responsive blog theme with minimal design and unlimited color scheme options. 
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, gray, dark, blue, red, pink, orange, green, brown, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: black, gray, dark, blue, red, pink, orange, green, brown, light, one-column, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Text Domain: notepad
 */
 
@@ -24,9 +24,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 /* Using rem font sizing (Root em’s) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
 body { margin: 0; font-size: 16px; font-size: 1.6rem; line-height: 1.5; }
 
-::-webkit-selection { background: #00A9E0; color: #fff; text-shadow: none; }
-::-moz-selection { background: #00A9E0; color: #fff; text-shadow: none; }
-::selection { background: #00A9E0; color: #fff; text-shadow: none; }
+::-webkit-selection { background: #EF7A7A; color: #fff; text-shadow: none; }
+::-moz-selection { background: #EF7A7A; color: #fff; text-shadow: none; }
+::selection { background: #EF7A7A; color: #fff; text-shadow: none; }
 
 a { color: #EF7A7A; text-decoration: none; }
 /* a:visited { color: #EF7A7A; } */
@@ -94,12 +94,13 @@ html {
 body { 
     margin: 0 auto;
     padding: 0;
-    font: 16px/1.5 'Droid Serif';
-    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5; 
+    font-size: 17px;
+    font-size: 1.7rem;
     font-style: normal;
-    font-weight: 400;
-    color: #333;
-    text-align: left;
+    font-weight: 300;
+    color: #222;
 }
 
 /* Set the default behavior for touch-based browsing in IE10 on devices running Windows 8 */
@@ -232,17 +233,9 @@ hr {
 ol, ul {
     list-style: none outside none;
 }
-
 p, ol, ul, dl, address {
     margin: 0 0 24px 0;
     margin: 0 0 2.4rem 0;
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 1.7;
-}
-
-p{
-    line-height:2;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -250,25 +243,18 @@ ul ul, ul ol, ol ol, ol ul {
 }
 
 dt {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-style: normal;
     font-weight: 700;
 }
 
 b, strong { 
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-style: normal;
     font-weight: 700;
 }
 
 em {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-style: italic;
     font-weight: 400;
 }
 
 strong em, b em {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-style: italic;
     font-weight: 700;
 }
@@ -355,11 +341,6 @@ blockquote.pull-right {
 }
 
 blockquote p {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    font-size: 1.4rem;
     margin-bottom: 10px; 
     margin-bottom: 1rem;
 }
@@ -368,7 +349,6 @@ blockquote p {
     font-size:4rem;
     text-align:center;
     font-weight:700;
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .format-quote .author-description h2{
@@ -386,9 +366,6 @@ blockquote cite:before {
 }
 
 blockquote cite {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 300;
     font-size: 14px;
     font-size: 1.4rem;
     line-height: 1.125;
@@ -477,7 +454,7 @@ sub {
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 14px;
@@ -521,8 +498,6 @@ img.wp-smiley, .rsswidget img {
 }
 
 .menu-toggle, button {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     font-size: 1.6rem; 
@@ -696,9 +671,6 @@ textarea {
     border: 1px solid #ddd;
     box-shadow: 1px 1px 3px #eee inset;
     color: #222;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-size: 1.4rem;
     padding: 16px;
     padding: 1.6rem;
     width: 100%;
@@ -772,7 +744,7 @@ select {
 .page-title,
 .entry-content th,
 .comment-content th {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -792,9 +764,7 @@ select {
 #wrapper {
     width: 100%;
     position: relative;
-    text-align: left;
-    margin: 0 auto; 
-    background:#363D41;
+    margin: 0 auto;
 }
 
 #headercontainer {
@@ -825,7 +795,7 @@ select {
     color: #000;
 }
 
-.site-title{
+.site-title {
     text-align:center;
 }
 .site-title h1 {
@@ -1225,7 +1195,7 @@ img.wp-post-image{
 
 .entry-content dt,
 .comment-content dt {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 1.5;
@@ -1497,7 +1467,7 @@ img.wp-post-image{
 }
 
 .archive-meta {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: italic;
     font-weight: 400;
     color: #777;
@@ -1564,7 +1534,7 @@ img.wp-post-image{
 }
 
 .comments-area article header time {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8;
@@ -1729,7 +1699,7 @@ span.required {
 }
 
 form label.error {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     display:block;
@@ -1977,7 +1947,7 @@ div.wpcf7{
 }
 
 #wp-calendar caption {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
@@ -2007,7 +1977,7 @@ div.wpcf7{
 }
 
 .widget_search #s {
-    width: 80%; 
+    width: 79%; 
 }
 
 .widget_search #searchsubmit {
@@ -2209,7 +2179,6 @@ li span.current {
     speak: none;
     vertical-align: middle;
     font-size: 9px;
-    font-size: 0.5625rem;
     content: " \f078";
 }
 
@@ -2220,18 +2189,17 @@ li span.current {
     speak: none;
     vertical-align: middle;
     font-size: 9px;
-    font-size: 0.5625rem;
     content: " \f054";
 }
 
 .main-navigation ul a {
     padding: 10px; 
     padding: 1rem; /* Padding around each top level menu option (if needed) */
-    color:#748188;
+    color:#fff;
 }
 
 .main-navigation ul a:hover{
-    color:#fff;
+    color:#EF7A7A;
 }
 .main-navigation ul ul a {
     padding: 10px; /* Padding around each dropdown menu option */
@@ -2264,10 +2232,6 @@ li span.current {
     background-color: #EF7A7A; /* Nav bar dropdown background color */
 }
 
-.main-navigation ul ul a
-{
-    color:#fff;
-}
 .main-navigation ul ul ul {
     left: 100%;
     top: 0;

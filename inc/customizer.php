@@ -264,6 +264,8 @@ function notepad_color_style() {
                 }
 
                 ::selection,
+                ::-webkit-selection,
+                ::-moz-selection,
                 .more-link:hover,
                 .widget_search #searchsubmit
                 {
