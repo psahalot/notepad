@@ -220,9 +220,7 @@ function notepad_color_style() {
                 .button:hover,
                 .entry-content .button:hover,
                 .main-navigation ul ul,
-                
-                .more-link,
-                input
+                .more-link
                 {
                     background: <?php echo $primary_color; ?> ;
                 }
