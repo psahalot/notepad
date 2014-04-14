@@ -63,7 +63,7 @@ if ( ! function_exists( 'notepad_setup' ) ) {
 		// Enable support for Custom Backgrounds
 		add_theme_support( 'custom-background', array(
 				// Background color default
-				'default-color' => '',
+				'default-color' => '363d41',
 				// Background image default
 				'default-image' => '',
                                 'wp-head-callback' => 'notepad_background_callback'

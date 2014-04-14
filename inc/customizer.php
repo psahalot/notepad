@@ -181,17 +181,6 @@ function notepad_sanitize_custom_css( $input) {
     return $input;
 }	
 
-/* 
- * Sanitize numeric values 
- * 
- * @since Notepad 1.4
- */
-function notepad_sanitize_integer( $input ) {
-    if( is_numeric( $input ) ) {
-    return intval( $input );
-    }
-}
-
 /*
  * Escaping for input values
  * 
@@ -202,33 +191,6 @@ function notepad_sanitize_escaping( $input) {
     return $input;
 }
 
-
-/*
- * Sanitize Checkbox input values
- * 
- * @since Notepad 1.2
- */
-function notepad_sanitize_checkbox( $input ) {
-    if ( $input ) {
-            $output = '1';
-    } else {
-            $output = false;
-    }
-    return $output;
-}
-
-/*
- * Sanitize layout options 
- * 
- * @since Notepad 1.4
- */
-function notepad_sanitize_layout_option($layout_option){
-    if ( ! in_array( $layout_option, array( 'full-width','boxed' ) ) ) {
-		$layout_option = 'boxed';
-	}
-
-	return $layout_option;
-}
 
 /**
  * Change theme colors based on theme options from customizer.
