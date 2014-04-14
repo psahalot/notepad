@@ -216,11 +216,13 @@ function notepad_color_style() {
                 button:hover,
                 input:hover[type="button"],
                 input:hover[type="reset"],
-                input:hover[type="submit"],
+                input[type="submit"],
                 .button:hover,
                 .entry-content .button:hover,
                 .main-navigation ul ul,
-                .footer-wrap
+                
+                .more-link,
+                input
                 {
                     background: <?php echo $primary_color; ?> ;
                 }
@@ -240,7 +242,8 @@ function notepad_color_style() {
                 .entry-header .entry-title a,
                 .entry-header .entry-title,
                 .main-navigation ul ul a:hover,
-                .entry-header h1 a:visited {
+                .entry-header h1 a:visited,
+                .main-navigation ul a:hover{
                     color:<?php echo $primary_color; ?> ;
                 }
                 

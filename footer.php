@@ -45,21 +45,23 @@
         </footer> <!-- /.site-footer.row -->
 <?php } ?>
 
-
-
-    <div class="footer-wrap">
-        <div class="row smallprint">
-            <p>
-               <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'ThemeURI' ); ?>">
-                        <?php _e('Notepad WordPress theme by IdeaBox','notepad'); ?>
-                </a>
-            </p>
-        </div>
-        <?php if (get_theme_mod('notepad_footer_footer_text') != '') { ?>
-            <div class="row smallprint"><?php echo wpautop(get_theme_mod('notepad_footer_footer_text')); ?></div>
-       <?php } ?>
-    </div> <!-- /.footer-wrap -->
 </div> <!-- /.footercontainer -->
+
+    
+    <div class="footer-wrap">
+        <div class="footer-wrap-content">
+            <div class="row smallprint left">
+                <p>
+                   <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'ThemeURI' ); ?>">
+                            <?php _e('Notepad WordPress theme by IdeaBox','notepad'); ?>
+                    </a>
+                </p>
+            </div>
+            <?php if (get_theme_mod('notepad_footer_footer_text') != '') { ?>
+                <div class="row smallprint right"><?php echo wpautop(get_theme_mod('notepad_footer_footer_text')); ?></div>
+           <?php } ?>
+        </div>
+    </div> <!-- /.footer-wrap -->
 
 </div> <!-- /.#wrapper.hfeed.site -->
 

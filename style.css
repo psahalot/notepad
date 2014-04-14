@@ -719,9 +719,8 @@ input[type="submit"],
 .entry-content .button {
     background-color: #fff;
     border:1px solid #ccc;
-    border-radius: 3px;
     box-shadow: none;
-    color: #333;
+    color: #fff;
     cursor: pointer;
     padding: 10px 55px;
     padding: 1rem 1.5rem;
@@ -734,10 +733,9 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-    background-color: #EF7A7A;
     border: 1px solid #ccc;
     text-decoration: none;
-    color:#fff;
+    color:#333;
 }
 
 .button {
@@ -899,7 +897,7 @@ select {
     color: #EF7A7A;
 }
 
-.entry-header h1 a:hover {
+.entry-header .entry-title a:hover {
     color: #111;
 }
 
@@ -1827,17 +1825,22 @@ div.wpcf7{
 .site-footer .widget ul li{
     padding-bottom:10px;
     margin-bottom:10px;
+    border-bottom:dotted 1px;
 }
 
 #footer-widget1,
 #footer-widget2{
     padding-right:20px;
 }
+
+.footer-wrap-content{
+    max-width:1140px;
+    margin:0 auto;
+}
 .smallprint {
     color: #fff;
-    width: 90%;
-    max-width: 1140px;
-    text-align:center;
+    width: 50%;
+    clear:none;
 }
 
 .smallprint p {
@@ -1859,9 +1862,15 @@ div.wpcf7{
     color: #eee;
 }
 
-.footer-wrap{
-    background: #EF7A7A;
+.smallprint.left{
+    float:left;
 }
+
+.smallprint.right{
+    float:right;
+    text-align:right;
+}
+
 /* ==========================================================================
    Sidebar
    ========================================================================== */
