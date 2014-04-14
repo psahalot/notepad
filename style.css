@@ -95,9 +95,9 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    line-height: 1.5; 
-    font-size: 17px;
-    font-size: 1.7rem;
+    line-height: 1.7; 
+    font-size: 18px;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 300;
     color: #222;
@@ -573,12 +573,8 @@ input[type="button"] {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-<<<<<<< HEAD
     background-color: #fff;
-    *background-color: #d9d9d9;
-=======
-	*background-color: #d9d9d9;
->>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
+    
 }
 
 .btn:first-child {
@@ -586,7 +582,6 @@ input[type="button"] {
 }
 
 .menu-toggle:hover,
-<<<<<<< HEAD
 .btn:hover{
     color: #333333;
     text-decoration: none;
@@ -598,7 +593,9 @@ input[type="button"] {
     -ms-transition: background-position 0.1s linear;
     -o-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear;
-=======
+    
+}
+
 .btn:hover,
 input[type="submit"]:hover {
 	color: #fff;
@@ -610,7 +607,6 @@ input[type="submit"]:hover {
 	-ms-transition: background-position 0.1s linear;
 	-o-transition: background-position 0.1s linear;
 	transition: background-position 0.1s linear;
->>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 .menu-toggle:focus,
@@ -685,7 +681,6 @@ input[type="submit"].btn-small {
 input,
 select,
 textarea {
-<<<<<<< HEAD
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 3px #eee inset;
@@ -693,17 +688,6 @@ textarea {
     padding: 16px;
     padding: 1.6rem;
     width: 100%;
-=======
-	background-color: #fff;
-	border: 1px solid #ddd;
-	box-shadow: 1px 1px 3px #eee inset;
-	color: #222;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	font-size: 1.4rem;
-	padding: 10px;
-	padding: 1rem;
->>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 input[type="checkbox"],
@@ -870,12 +854,9 @@ select {
 .site-content {
     clear: both;
     width: 90%;
-    font-size: 16px;
-    font-size: 1.6rem;
     max-width: 1140px;
     margin: 0 auto;
     color: #333;
-    line-height: 1.5;
     position: relative;
 }
 
@@ -2034,7 +2015,7 @@ div.wpcf7{
 }
 
 .widget_search #searchsubmit {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat",Helvetica, Arial, sans-serif;
     font-size: 17px; 
     margin-left: 10px; 
     padding: 17px 45px; 
@@ -2129,7 +2110,7 @@ li span.page-numbers {
     color:#fff;
     font-size:20px;
     background:#333;
-    font-family:"Montserrat";
+    font-family:"Montserrat", Helvetica, Arial, sans-serif;
 }
 
 
@@ -2189,9 +2170,7 @@ li span.current {
 }
 
 .nav-menu {
-    font-family: "Montserrat", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -2745,7 +2724,6 @@ img#wpstats {
 
 .notepad-orange .entry-header h1 a:hover{
     color:#111;
->>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 /* ==========================================================================
@@ -2875,7 +2853,6 @@ img#wpstats {
 
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
-<<<<<<< HEAD
     img.size-full, 
     img.size-large, 
     img.header-image, 
@@ -2942,79 +2919,7 @@ img#wpstats {
     .main-navigation{
         width:100%;
     }
-
-
-=======
-        img.size-full, 
-        img.size-large, 
-        img.header-image, 
-        img.wp-post-image {
-                width: 100%; 
-        }
-	.grid_1_of_12,
-	.grid_2_of_12,
-	.grid_3_of_12,
-	.grid_4_of_12,
-	.grid_5_of_12,
-	.grid_6_of_12,
-	.grid_7_of_12,
-	.grid_8_of_12,
-	.grid_9_of_12,
-	.grid_10_of_12,
-	.grid_11_of_12,
-	.grid_12_of_12 {
-		width: 100%; 
-	}
-	.col {
-		margin: 0;
-	}
-        #headercontainer {
-                position: relative;
-        }
-        .site-title h1 {
-                text-align: center;
-        }
-        .nav-menu {
-                text-align: center;
-        }
-        .main-navigation li {
-                float: none;
-                display: inline-block; 
-        }
-       
-        #maincontentcontainer {
-                margin-top: 0px;
-                margin-bottom: 0px;
-        }
-        .site-content {
-                width: 100%; 
-        }
-        .sidebar { 
-                padding: 30px 30px 0;
-        }
-	.main-small-navigation .nav-menu, .nav-menu ul {
-		padding: 0;
-	}
-	.main-small-navigation .nav-menu ul {
-		padding-left: 16px;
-		padding-left: 1.6rem;
-	}
-        
-        
-        #footer-widget1,
-        #footer-widget2,
-        #footer-widget3{
-            border-bottom:1px solid #e3e3e3;
-        }
-        
-        .main-navigation{
-            width:100%;
-        }
-        
-     
->>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
-
 
 /*  Adjust the menu at less than 520px */
 @media only screen and (max-width: 520px) {
@@ -3052,13 +2957,7 @@ img#wpstats {
 }
 
 @media only screen and (max-width: 320px) {
-<<<<<<< HEAD
-    .author-description {
-        float: left;
-        width: 100%;
-    }
-=======
-	.author-description {
+        .author-description {
 		float: left;
 		width: 100%;
 	}
@@ -3068,7 +2967,6 @@ img#wpstats {
             float:none;
             margin-bottom:10px;
         }
->>>>>>> 15f628cfa6524986d5d0ce9dfd8c6ce2c8932eaf
 }
 
 
