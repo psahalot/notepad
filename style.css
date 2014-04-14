@@ -2485,7 +2485,7 @@ img#wpstats {
         background: #000;
         border: none;
         color: #fff;
-        font-size:30px;
+        font-size:20px;
     }
 
     .menu-menu-2-container{
@@ -2499,10 +2499,6 @@ img#wpstats {
 
     #maincontentcontainer{
         margin-top:0;
-    }
-
-    .menu-toggle.toggled-on{
-        color:#fff;
     }
 
     .page .site-content article{
