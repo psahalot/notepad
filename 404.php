@@ -16,6 +16,7 @@ get_header(); ?>
 
                     <div class="main-content">
 			<article id="post-0" class="post error404 no-results not-found">
+                            <div class="box-wrap">
 				<header class="entry-header">
 					<h1 class="entry-title"><i class="fa fa-frown-o fa-lg"></i> <?php esc_html_e( 'Uh Oh! This is somewhat embarrassing!', 'notepad' ); ?></h1>
 				</header>
@@ -23,6 +24,7 @@ get_header(); ?>
 					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'notepad' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- /.entry-content -->
+                            </div>
 			</article><!-- /#post -->
 
                     </div> <!-- /.main-content -->

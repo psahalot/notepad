@@ -958,6 +958,14 @@ img.wp-post-image{
     padding:4% 15%;
 }
 
+.error404 .box-wrap{
+    background:#fff;
+}
+
+.error404 input[type="text"]{
+    width:auto;
+    padding:1rem;
+}
 .single .box-wrap{
     border-bottom:1px solid #efefef;
 }
@@ -1836,6 +1844,16 @@ div.wpcf7{
 .footer-wrap-content{
     max-width:1140px;
     margin:0 auto;
+    width:90%;
+    padding:26px 0;
+}
+
+.footer-wrap-content:after{
+    content:".";
+    display:block;
+    visibility:hidden;
+    height:0px;
+    clear:both;
 }
 .smallprint {
     color: #fff;
@@ -2574,6 +2592,18 @@ img#wpstats {
     .main-navigation{
         width:100%;
     }
+    
+    .site-footer .widget ul li{
+        border-bottom:0;
+        margin-bottom:0;
+    }
+    
+    #footer-widget1,
+    #footer-widget2,
+    #footer-widget3{
+        padding-right:0;
+        padding-bottom:10px;
+    }
 }
 
 /*  Adjust the menu at less than 520px */
@@ -2607,7 +2637,17 @@ img#wpstats {
         color: #fff; /* Nav bar dropdown link color */
         width: 100%; /* Nav bar dropdown width */
     }
-
+    
+    .smallprint.left,
+    .smallprint.right{
+        width:100%;
+        float:none;
+        text-align:center;
+    }
+    
+    .error404 input[type="text"]{
+        width:100%;
+    }
 
 }
 
