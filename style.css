@@ -2488,7 +2488,6 @@ img#wpstats {
 
     .main-navigation li ul li {
         width: 100%;
-        border-left: 20px solid #111;
     }
 
 
@@ -2521,6 +2520,10 @@ img#wpstats {
 
     .page .site-content article{
         padding:4% 10%;
+    }
+    
+     .main-navigation ul ul li:first-child {
+        margin:0;
     }
 }
 
