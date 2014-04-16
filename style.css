@@ -352,6 +352,10 @@ blockquote p {
     color:#fff;
 }
 
+.format-quote blockquote a{
+    color:#fff;
+}
+
 .format-quote .author-description h2{
     color:#fff;
 }
