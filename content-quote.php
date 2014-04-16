@@ -14,10 +14,12 @@
 	</header> <!-- /.entry-header -->
 	<div class="entry-content">
 		<blockquote>
-			<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 
+                    
+			<a href="<?php the_permalink() ?>"><?php  the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 
 				'span' => array( 
 					'class' => array() )
-				) ) ); ?>
+				) ) ); ?></a>
+                   
 			<cite><?php the_author(); ?></cite>
 		</blockquote>
 		<?php wp_link_pages( array(

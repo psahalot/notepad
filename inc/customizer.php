@@ -19,8 +19,8 @@ function notepad_customize_organizer($wp_customize) {
 
     // reorganize background settings in customizer
     $wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-    $wp_customize->get_section( 'background_image'  )->title     = __('Background Settings','smartshop');
-    $wp_customize->get_section( 'background_image' )->description = __('Please note that background color and image settings work only for Boxed Layout','smartshop'); 
+    $wp_customize->get_section( 'background_image'  )->title     = __('Background Settings','notepad');
+    $wp_customize->get_section( 'background_image' )->description = __('Please note that background color and image settings work only for Boxed Layout','notepad'); 
     
     
     // Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
@@ -29,7 +29,7 @@ function notepad_customize_organizer($wp_customize) {
     // reorganize header settings in cusotmizer
     $wp_customize->get_control( 'header_textcolor'  )->section   = 'header_image';
     $wp_customize->get_control( 'display_header_text' )->section = 'header_image'; 
-    $wp_customize->get_section( 'header_image'  )->title     = __('Header Settings','smartshop');
+    $wp_customize->get_section( 'header_image'  )->title     = __('Header Settings','notepad');
     
     $wp_customize->get_section( 'header_image'  )->priority     = 30;
     $wp_customize->get_section( 'background_image' )->priority  = 30; 
@@ -88,18 +88,33 @@ function notepad_customize_register($wp_customize) {
         )
     ));
 
-    // Add setting for secondary color
-    $wp_customize->add_setting('notepad_theme_secondary_color', array(
+    // Add setting for link color
+    $wp_customize->add_setting('notepad_theme_link_color', array(
         'default' => '#FFF', 
         'sanitize_callback' => 'notepad_sanitize_hex_color',
         'sanitize_js_callback' => 'notepad_sanitize_escaping',
     ));
     
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'notepad_theme_secondary_color',
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'notepad_theme_link_color',
         array(
-            'label' => 'Secondary Color',
+            'label' => 'Link Color',
             'section' => 'notepad_theme_layout_settings',
-            'settings' => 'notepad_theme_secondary_color',
+            'settings' => 'notepad_theme_link_color',
+        )
+    ));
+    
+    // Add setting for link hover color
+    $wp_customize->add_setting('notepad_theme_linkhover_color', array(
+        'default' => '#333', 
+        'sanitize_callback' => 'notepad_sanitize_hex_color',
+        'sanitize_js_callback' => 'notepad_sanitize_escaping',
+    ));
+    
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'notepad_theme_linkhover_color',
+        array(
+            'label' => 'Link Hover Color',
+            'section' => 'notepad_theme_layout_settings',
+            'settings' => 'notepad_theme_linkhover_color',
         )
     ));
 
@@ -199,7 +214,8 @@ function notepad_sanitize_escaping( $input) {
  */
 function notepad_color_style() {
 	$primary_color = get_theme_mod('notepad_theme_primary_color');
-        $secondary_color = get_theme_mod('notepad_theme_secondary_color'); 
+        $link_color = get_theme_mod('notepad_theme_link_color');
+        $linkhover_color = get_theme_mod('notepad_theme_linkhover_color'); 
 
 	// If no custom options for text are set, let's bail
 	if ( $primary_color == '#ef7a7a' || $primary_color == '#EF7A7A' ) {
@@ -228,26 +244,34 @@ function notepad_color_style() {
                 ::selection,
                 ::-webkit-selection,
                 ::-moz-selection,
-                .more-link:hover,
                 .widget_search #searchsubmit
                 {
                     background:<?php echo $primary_color; ?> ;
-                    color:<?php echo $secondary_color; ?> ;
+                    color:<?php echo $link_color; ?> ;
                 }
-
+                
+                .more-link:hover,
+                .entry-header .entry-title a:hover,
+                .header-meta a:hover,
+                .widget_search #searchsubmit:hover
+                {
+                   color:<?php echo $linkhover_color; ?> ; 
+                }
+                
                 .site-title a,
                 .sidebar a,
                 .entry-header .entry-title a,
                 .entry-header .entry-title,
-                .main-navigation ul ul a:hover,
                 .entry-header h1 a:visited,
-                .main-navigation ul a:hover{
+                .main-navigation ul a:hover,
+                .main-navigation ul ul a:hover{
                     color:<?php echo $primary_color; ?> ;
                 }
                 
                 .main-navigation ul ul a,
-                .more-link {
-                    color:<?php echo $secondary_color; ?> ;
+                .more-link,
+                .main-navigation ul a{
+                    color:<?php echo $link_color; ?> ;
                 }
 
 	</style>
