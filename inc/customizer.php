@@ -236,7 +236,8 @@ function notepad_color_style() {
                 .button:hover,
                 .entry-content .button:hover,
                 .main-navigation ul ul,
-                .more-link
+                .more-link,
+                div.gform_wrapper .gform_footer input[type="submit"]
                 {
                     background: <?php echo $primary_color; ?> ;
                 }
@@ -253,7 +254,8 @@ function notepad_color_style() {
                 .more-link:hover,
                 .entry-header .entry-title a:hover,
                 .header-meta a:hover,
-                .widget_search #searchsubmit:hover
+                .widget_search #searchsubmit:hover,
+                div.gform_wrapper .gform_footer input[type="submit"]:hover
                 {
                    color:<?php echo $linkhover_color; ?> ; 
                 }
@@ -264,7 +266,9 @@ function notepad_color_style() {
                 .entry-header .entry-title,
                 .entry-header h1 a:visited,
                 .main-navigation ul a:hover,
-                .main-navigation ul ul a:hover{
+                .main-navigation ul ul a:hover,
+                .gform_wrapper .gfield_required,
+                .gform_wrapper h3.gform_title{
                     color:<?php echo $primary_color; ?> ;
                 }
                 

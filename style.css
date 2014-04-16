@@ -685,6 +685,36 @@ input[type="submit"].btn-small {
     font-size: 0.8125rem;
 }
 
+/* Gravity Form 
+--------------------------------------------- */
+
+.gform_wrapper{
+    padding: 20px;
+    background: #f7f7f7;
+    margin: 0;
+    max-width: 100% !important;
+    border-radius:3px;
+}
+
+.gform_wrapper h3.gform_title{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 36px !important;
+    line-height: 1.5;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+}
+
+.gform_wrapper .top_label .gfield_label{
+    font-weight:normal !important;
+}
+
+div.gform_wrapper .gform_footer input[type="submit"]{
+    padding: 1.2rem 4rem;
+    color: #fff;
+    font-size: 16px !important;
+}
+
 /* Form fields 
 --------------------------------------------- */
 
