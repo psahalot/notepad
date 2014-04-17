@@ -30,13 +30,15 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
+                        
+                                <?php notepad_content_nav( 'nav-below' ); ?>
+                        
 			<?php else : ?>
 
 				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
 			<?php endif; // end have_posts() check ?>
                         
-                        <?php notepad_content_nav( 'nav-below' ); ?>
                     </div> <!-- /.main-content -->
 
 		</div> <!-- /.col.grid_12_of_12 -->
