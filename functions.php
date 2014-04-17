@@ -6,8 +6,23 @@
  * @since Notepad 1.0
  */
 
-require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
-require( get_stylesheet_directory() . '/inc/custom-header.php' ); // custom header support
+require( get_template_directory() . '/inc/customizer.php' ); // new customizer options
+require( get_template_directory() . '/inc/custom-header.php' ); // custom header support
+
+//* Include widget class files
+require_once( get_template_directory() . '/inc/user-profile-widget.php' );
+
+add_action( 'widgets_init', 'notepad_load_widgets' );
+/**
+ * Register widgets for use in the Notepad theme.
+ *
+ * @since 1.7.0
+ */
+function notepad_load_widgets() {
+	register_widget( 'Notepad_User_Profile_Widget' );
+
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
