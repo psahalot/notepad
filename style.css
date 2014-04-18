@@ -1069,10 +1069,14 @@ img.wp-post-image{
     padding:1% 15%;
 }
 .category .archive-title{
-    color:#fff;
+    color:#333;
     font-weight:400;
     font-size:20px;
+}
 
+.category .archive-header{
+    background:#fff;
+    padding:1% 15%;
 }
 
 .tag .archive-meta{
