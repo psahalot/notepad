@@ -1060,10 +1060,14 @@ img.wp-post-image{
 }
 
 .tag .archive-title{
-    color:#fff;
+    color:#333;
     font-size:25px;
 }
 
+.tag .archive-header{
+    background:#fff;
+    padding:1% 15%;
+}
 .category .archive-title{
     color:#fff;
     font-weight:400;
