@@ -2580,6 +2580,12 @@ img#wpstats {
      .main-navigation ul ul li:first-child {
         margin:0;
     }
+    
+    .paging-navigation .assistive-text{
+        color:#fff;
+        text-align:center;
+        display:none;
+    }
 }
 
 /*  Go full Width at less than 650px */
