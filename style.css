@@ -2617,9 +2617,7 @@ img#wpstats {
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .site-content {
-        width: 100%; 
-    }
+    
     .sidebar {
         border-top: solid 1px #ddd; 
         padding: 30px 30px 0;
@@ -2639,9 +2637,7 @@ img#wpstats {
         border-bottom:1px solid #e3e3e3;
     }
 
-    .main-navigation{
-        width:100%;
-    }
+    
     
     .site-footer .widget ul li{
         border-bottom:0;
