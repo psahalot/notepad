@@ -52,7 +52,7 @@
         <div class="footer-wrap-content">
             <div class="row smallprint left">
                 <p>
-                   <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'ThemeURI' ); ?>">
+                   <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'AuthorURI' ); ?>">
                             <?php _e('Notepad WordPress theme by IdeaBox','notepad'); ?>
                     </a>
                 </p>

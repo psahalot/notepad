@@ -92,7 +92,7 @@ add_action( 'after_setup_theme', 'notepad_setup' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of Droid Serif and Montserrat by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
+ * The use of Lato and Montserrat by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
  *
  * @since Notepad 1.2.5
  *
@@ -102,15 +102,15 @@ function notepad_fonts_url() {
 	$fonts_url = '';
 	$subsets = 'latin';
 
-	/* translators: If there are characters in your language that are not supported by Droid Serif, translate this to 'off'.
+	/* translators: If there are characters in your language that are not supported by Lato, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$pt_sans = _x( 'on', 'Droid Serif font: on or off', 'notepad' );
+	$pt_sans = _x( 'on', 'Lato font: on or off', 'notepad' );
 
-	/* translators: To add an additional Droid Serif character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
+	/* translators: To add an additional Lato character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
 	 * Do not translate into your own language.
 	 */
-	$subset = _x( 'no-subset', 'Droid Serif font: add new subset (cyrillic)', 'notepad' );
+	$subset = _x( 'no-subset', 'Lato font: add new subset (cyrillic)', 'notepad' );
 
 	if ( 'cyrillic' == $subset )
 		$subsets .= ',cyrillic';
@@ -124,7 +124,7 @@ function notepad_fonts_url() {
 		$font_families = array();
 
 		if ( 'off' !== $pt_sans )
-			$font_families[] = 'Droid+Serif:400,400italic,700,700italic';
+			$font_families[] = 'Lata:300,400,400italic,700,700italic';
 
 		if ( 'off' !== $montserrat )
 			$font_families[] = 'Montserrat:400,700';
@@ -855,5 +855,3 @@ function tgm_envira_define_license_key() {
         define('ENVIRA_LICENSE_KEY', 'f21b503f7793be583daab680a7f8bda7');
     }
 }
-
-
