@@ -235,7 +235,6 @@ function notepad_color_style() {
                 input[type="submit"],
                 .button:hover,
                 .entry-content .button:hover,
-                .main-navigation ul ul,
                 .more-link,
                 div.gform_wrapper .gform_footer input[type="submit"]
                 {

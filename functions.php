@@ -198,7 +198,8 @@ function notepad_scripts_styles() {
 	}
 
 	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	wp_enqueue_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'assets/js/small-menu.js', array( 'jquery' ), '20130130', true );
+	
+        wp_enqueue_script( 'notepad-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
 	
 }
 add_action( 'wp_enqueue_scripts', 'notepad_scripts_styles' );
@@ -217,6 +218,8 @@ function notepad_enqueue_scripts() {
 	wp_enqueue_script( 'notepad-backstretch-set', get_bloginfo('stylesheet_directory').'/assets/js/backstretch-set.js' , array( 'jquery', 'notepad-backstretch' ), '1.0.0' );
 
 	wp_localize_script( 'notepad-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', get_background_image() ) ) );
+        
+        
 }
 
 //* Add custom background callback for background color
@@ -342,6 +345,19 @@ function notepad_mce_css( $mce_css ) {
 }
 add_filter( 'mce_css', 'notepad_mce_css' );
 
+if (!function_exists('notepad_footer_js')) {
+    function notepad_footer_js() { ?>
+            <script>     
+
+            jQuery(document).ready(function($) {   
+
+            $('#site-navigation .menu>ul').slicknav({prependTo:'#mobile-menu'});
+
+            });
+            </script>
+        <?php }
+}
+add_action( 'wp_footer', 'notepad_footer_js', 20, 1 );
 
 /**
  * Register widgetized areas
