@@ -2241,7 +2241,8 @@ li span.current {
     display: none;
     float: left;
     left: 0;
-    position: relative;
+    position:absolute;
+    z-index:-9999;
 }
 .main-navigation ul ul ul {
     left: 100%;
@@ -2486,6 +2487,11 @@ img#wpstats {
     
     .main-navigation{
         width:90%;
+    }
+    
+    .main-navigation ul ul{
+        position:relative;
+        top:0px;
     }
     .menu{
         display:none;
