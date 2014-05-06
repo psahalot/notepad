@@ -2224,10 +2224,12 @@ li span.current {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    text-align:center;
 }
 .main-navigation li {
-    float: left;
+    float: none;
     position: relative;
+    display:inline-block;
 }
 .main-navigation a {
     display: block;
@@ -2242,7 +2244,7 @@ li span.current {
     float: left;
     left: 0;
     position:absolute;
-    z-index:-9999;
+    z-index:101;
 }
 .main-navigation ul ul ul {
     left: 100%;
@@ -2284,14 +2286,14 @@ li span.current {
     text-align: left;
     padding: 12px 10px;
     font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin:0 10px;
 }
 .menu ul ul > li > a:hover {
     color: #333;
-    background: #fff;
+    
 }
-.menu ul ul > li, .widget .children > li, .widget .sub-menu > li {
-    border-bottom: 1px solid #e3e3e3;
-}
+
 
 .main-navigation ul ul > li:last-child {
     border-bottom: none;
@@ -2332,17 +2334,12 @@ li span.current {
 
 .slicknav_menu {
     font-size:16px;
-    margin-bottom: 1em;
 }
 /* Button */
 .slicknav_btn {
     margin: 5px 5px 6px;	
     text-decoration:none;	
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);	
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;  
-    background-color: #37414e;
+    background-color: #111;
     width: 100%;
 }
 /* Button Text */
@@ -2370,14 +2367,13 @@ li span.current {
     margin:0 0 0 20px;
 }
 .slicknav_nav .slicknav_item {
-    padding:5px 10px;
-    margin:2px 5px;
+    padding:20px;
 }
 .slicknav_nav a{
     padding:5px 10px;
-    margin:2px 5px;
     text-decoration:none;
     color:#fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .slicknav_nav .slicknav_item a {
     padding:0;
@@ -2387,14 +2383,12 @@ li span.current {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background:#37414e;
     color:#fff;	
 }
 .slicknav_nav a:hover{
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background:#37414e;
 }
 .slicknav_nav .slicknav_txtnode {
     margin-left:15px;   
@@ -2502,6 +2496,7 @@ img#wpstats {
     
     .slicknav_menu a{
         display:block;
+        padding:20px;
     }
     .slicknav_menu > a{
         display:inline-block;
@@ -2544,12 +2539,9 @@ img#wpstats {
         line-height: 1.42857143;
         width: 100%;
         text-align:left;
-        margin-bottom:10px;
     }
 
-    .main-navigation li:first-child {
-        margin: 10px 0;
-    }
+    
     .main-navigation li.last{
         border-bottom:0px;
     }
@@ -2566,7 +2558,11 @@ img#wpstats {
     .main-navigation ul ul{
         width:100%;
     }
-
+    
+    #mobile-menu .sub-menu{
+        background:none;
+        margin-left:10px;
+    }
     .menu-toggle{
         width:100%;
         text-align:left;
@@ -2603,6 +2599,7 @@ img#wpstats {
         text-align:center;
         display:none;
     }
+   
 }
 
 /*  Go full Width at less than 650px */
