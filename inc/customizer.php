@@ -268,7 +268,9 @@ function notepad_color_style() {
                 .main-navigation ul a:hover,
                 .main-navigation ul ul a:hover,
                 .gform_wrapper .gfield_required,
-                .gform_wrapper h3.gform_title{
+                .gform_wrapper h3.gform_title,
+                label .required,
+                span.required{
                     color:<?php echo $primary_color; ?> ;
                 }
                 

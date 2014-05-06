@@ -1060,15 +1060,23 @@ img.wp-post-image{
 }
 
 .tag .archive-title{
-    color:#fff;
+    color:#333;
     font-size:25px;
 }
 
+.tag .archive-header{
+    background:#fff;
+    padding:1% 15%;
+}
 .category .archive-title{
-    color:#fff;
+    color:#333;
     font-weight:400;
     font-size:20px;
+}
 
+.category .archive-header{
+    background:#fff;
+    padding:1% 15%;
 }
 
 .tag .archive-meta{
@@ -2205,198 +2213,185 @@ li span.current {
 
 
 
-/* ==========================================================================
-   Main Navigation
-   ========================================================================== */
+/* =Menu
+----------------------------------------------- */
 
-
-.main-navigation {
+.main-navigation{
     max-width:1140px;
-    width:90%;
-    text-align: left;
     margin:0 auto;
-    clear: right;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -khtml-transition: all 0.3s ease;
-    -moz-transitiokn: all 0.3s ease;
-    padding:1rem 0;
 }
-
-.main-navigation:after{
-    content:".";
-    height:0px;
-    display:block;
-    clear:both;
-    visibility:hidden;
-}
-.main-navigation h1 {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1.25;
-}
-
-.nav-menu {
-    font-weight: 300;
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    letter-spacing: 1px; 
-    text-align:center;
-}
-
-.nav-menu ul {
+.main-navigation ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-left: 0;
+    text-align:center;
 }
-
-.nav-menu li ul {
-    text-align: left; 
-}
-
 .main-navigation li {
     float: none;
-    display:inline-block;
     position: relative;
-    margin: 0 0 0 20px; /* Margin on the left side of each top level menu item (since it's floated right) */
-    margin: 0 0 0 2rem;
+    display:inline-block;
 }
-
-.main-navigation li:first-child {
-    margin: 0;
-}
-
-.main-navigation ul ul li {
-    margin: 0;
-}
-
-.main-navigation li.menu-parent-item > a:after { /* If you don't want the arrows on the top level drop down, simply remove this style */
-    font-family: 'FontAwesome';
-    font-weight: normal;
-    font-style: normal;
-    speak: none;
-    vertical-align: middle;
-    font-size: 9px;
-    content: " \f078";
-}
-
-.main-navigation ul li li.menu-parent-item > a:after { /* If you don't want the arrows on the sub-menu options, simply remove this style */
-    font-family: 'FontAwesome';
-    font-weight: normal;
-    font-style: normal;
-    speak: none;
-    vertical-align: middle;
-    font-size: 9px;
-    content: " \f054";
-}
-
-.main-navigation ul a {
-    padding: 10px; 
-    padding: 1rem; /* Padding around each top level menu option (if needed) */
-    color:#fff;
-}
-
-.main-navigation ul a:hover{
-    color:#EF7A7A;
-}
-.main-navigation ul ul a {
-    padding: 10px; /* Padding around each dropdown menu option */
-    padding: 1rem;
-}
-
 .main-navigation a {
     display: block;
     text-decoration: none;
-    color: #fff; /* Nav bar link color */
 }
 
-.main-small-navigation a
-{
-    display: block;
-    text-decoration: none;
-    color: #EF7A7A;
-}
-
-.main-small-navigation a:hover
-{
-    color:#333;
+.main-navigation a:hover{
+    color:#999;
 }
 .main-navigation ul ul {
     display: none;
-    position: absolute;
+    float: left;
     left: 0;
-    z-index: 99999;
-    line-height: 1.7;
-    background-color: #EF7A7A; /* Nav bar dropdown background color */
+    position:absolute;
+    z-index:101;
 }
-
 .main-navigation ul ul ul {
     left: 100%;
-    top: 0;
+    top: -2px;
 }
-
 .main-navigation ul ul a {
-    color: #fff; /* Nav bar dropdown link color */
-    width: 25rem; /* Nav bar dropdown width */
-    font-size: 14px; 
-    font-size: 1.4rem; 
-    padding: 10px 20px; 
-    padding: 1rem 2rem; 
+    width: 200px;
 }
-
-.main-navigation ul ul li {
-}
-
-
-.main-navigation ul ul :hover > a {
-    color: #333; /* Nav bar dropdown level 2 link color on level 3 hover */
-    background-color: #fff; /* Nav bar dropdown link background color on hover */
-}
-
-.main-navigation ul ul a:hover {
-    color: #EF7A7A; /* Nav bar dropdown link color on hover */
-}
-
 .main-navigation ul li:hover > ul {
     display: block;
 }
-
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a {
+}
+/* Add arrows to items with sub menu */
+.menu li > a:after {
+    content: ' \25BE';
+}
+.menu li > a:only-child:after {
+    content: '';
+}
+.menu ul ul li > a:after {
+    content: ' \25B8';
+}
+.menu ul ul li > a:only-child:after {
+    content: '';
 }
 
-.main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a,
-.main-navigation .current_page_item > a,
-.main-navigation .current_page_ancestor > a {
-    color: #fff; /* Nav bar link color for current menu item or ancestor */
+.menu ul > li > a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 87.5%;
+    padding: 26px 10px 23px;
+    text-align: center;
+    text-decoration: none;
+}
+.menu ul ul > li > a {
+    color: #fff;
+    text-align: left;
+    padding: 12px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin:0 10px;
+}
+.menu ul ul > li > a:hover {
+    color: #333;
+    
 }
 
-.main-navigation ul .divider {
-    border-bottom: 1px solid #aaa;
-    height: 0;
-    line-height: 0.0625;
-    overflow: hidden;
+
+.main-navigation ul ul > li:last-child {
+    border-bottom: none;
+}
+.main-navigation ul ul {
+    margin: 0;
+    padding: 0;  
 }
 
-.main-navigation ul li.dropdown-header a,
-.main-navigation ul li.current-menu-item ul .dropdown-header a {
-    color: #aaa; /* Nav bar dropdown header color */
-    background-color: #333; /* Nav bar dropdown header background color */
-}
 
-/* Small menu toggle for mobile devices */
-.menu-toggle {
-    cursor: pointer;
-}
+/*
+    Mobile Menu Core Style
+*/
 
-.main-small-navigation .nav-menu {
-    display: none;
-}
+.slicknav_btn { display: inline-block; vertical-align: middle; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
+.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_icon { float: right; margin: 0.188em 0 0 0.438em; }
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow { font-size: 0.8em; margin: 0 0 0 0.4em; }
+.slicknav_nav .slicknav_item { display: block; cursor: pointer; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* IE6/7 support */
+.slicknav_menu { *zoom: 1 }
 
-.main-navigation .fa{
-    margin-right:10px;
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+.slicknav_menu {
+    font-size:16px;
+}
+/* Button */
+.slicknav_btn {
+    margin: 5px 5px 6px;	
+    text-decoration:none;	
+    background-color: #111;
+    width: 100%;
+}
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {	
+    color: #FFF;
+    font-weight: bold;	
+    text-shadow: 0 1px 3px #000;	
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+    background-color: #f5f5f5;
+}
+.slicknav_nav {
+    color:#fff;
+    margin:0;	
+    padding:0;
+    font-size:0.875em;
+}
+.slicknav_nav, .slicknav_nav ul {
+    list-style: none;
+    overflow:hidden;
+}
+.slicknav_nav ul {
+    padding:0;
+    margin:0 0 0 20px;
+}
+.slicknav_nav .slicknav_item {
+    padding:20px;
+}
+.slicknav_nav a{
+    padding:5px 10px;
+    text-decoration:none;
+    color:#fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.slicknav_nav .slicknav_item a {
+    padding:0;
+    margin:0;
+}
+.slicknav_nav .slicknav_item:hover {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#fff;	
+}
+.slicknav_nav a:hover{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.slicknav_nav .slicknav_txtnode {
+    margin-left:15px;   
 }
 
 /* ==========================================================================
@@ -2447,7 +2442,10 @@ img#wpstats {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+/* Hide mobile menu */
+.slicknav_menu {
+    display:none;
+}
 /*  Breakpoints are set based on the design, not based on device sizes */
 @media only screen and (max-width: 1100px) {
     .site-title a {
@@ -2468,6 +2466,7 @@ img#wpstats {
         margin: 38px 0 0 0;
         margin: 2.375rem 0 0 0;
     }
+    
 }
 
 @media only screen and (max-width: 900px) {
@@ -2479,7 +2478,30 @@ img#wpstats {
 }
 
 @media only screen and (max-width: 800px) {
-
+    
+    .main-navigation{
+        width:90%;
+    }
+    
+    .main-navigation ul ul{
+        position:relative;
+        top:0px;
+    }
+    .menu{
+        display:none;
+    }
+    .slicknav_menu {
+        display:block;
+    }
+    
+    .slicknav_menu a{
+        display:block;
+        padding:20px;
+    }
+    .slicknav_menu > a{
+        display:inline-block;
+    }
+    
     .site-title h1, .site-description
     {
         text-align:center
@@ -2515,16 +2537,11 @@ img#wpstats {
         margin: 0px;
         font-size: 14px;
         line-height: 1.42857143;
-        float: none;;
         width: 100%;
-        border-bottom: 1px solid #3f3f3f;
         text-align:left;
-        margin-bottom:10px;
     }
 
-    .main-navigation li:first-child {
-        margin: 10px 0;
-    }
+    
     .main-navigation li.last{
         border-bottom:0px;
     }
@@ -2541,7 +2558,11 @@ img#wpstats {
     .main-navigation ul ul{
         width:100%;
     }
-
+    
+    #mobile-menu .sub-menu{
+        background:none;
+        margin-left:10px;
+    }
     .menu-toggle{
         width:100%;
         text-align:left;
@@ -2572,6 +2593,13 @@ img#wpstats {
      .main-navigation ul ul li:first-child {
         margin:0;
     }
+    
+    .paging-navigation .assistive-text{
+        color:#fff;
+        text-align:center;
+        display:none;
+    }
+   
 }
 
 /*  Go full Width at less than 650px */
@@ -2617,9 +2645,7 @@ img#wpstats {
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .site-content {
-        width: 100%; 
-    }
+    
     .sidebar {
         border-top: solid 1px #ddd; 
         padding: 30px 30px 0;
@@ -2639,9 +2665,7 @@ img#wpstats {
         border-bottom:1px solid #e3e3e3;
     }
 
-    .main-navigation{
-        width:100%;
-    }
+    
     
     .site-footer .widget ul li{
         border-bottom:0;
@@ -2662,6 +2686,10 @@ img#wpstats {
 
 /*  Adjust the menu at less than 520px */
 @media only screen and (max-width: 520px) {
+    
+    .slicknav_menu {
+        display:block;
+    }
     .site-title h1 {
         text-align: center;
     }

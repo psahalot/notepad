@@ -62,11 +62,11 @@
 		</header> <!-- /#masthead.site-header.row -->
                 
                 <div class="nav-container">
-                    <nav id="site-navigation" class="main-navigation" role="navigation">
-                            <div class="col grid_12_of_12">
-					<h3 class="menu-toggle assistive-text"><i class="fa fa-bars"></i>Menu</h3>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-                            </div>
+                    <nav id="site-navigation" class="main-navigation row" role="navigation">
+                            
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'primary-menu', 'container_class' => 'menu' ) ); ?>
+                            
+                        <div id="mobile-menu"></div>
                     </nav> <!-- /.site-navigation.main-navigation -->
                 </div><!-- /.nav-container -->
 	</div> <!-- /#headercontainer -->
