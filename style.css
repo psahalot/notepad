@@ -2337,7 +2337,7 @@ li span.current {
 }
 /* Button */
 .slicknav_btn {
-    margin: 5px 5px 6px;	
+    margin: 5px 0px 0px;	
     text-decoration:none;	
     background-color: #111;
     width: 100%;
