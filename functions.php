@@ -214,8 +214,8 @@ function notepad_enqueue_scripts() {
 	if ( ! get_background_image() )
 		return;
 
-	wp_enqueue_script( 'notepad-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/assets/js/backstretch.js', array( 'jquery' ), '1.0.0' );
-	wp_enqueue_script( 'notepad-backstretch-set', get_bloginfo('stylesheet_directory').'/assets/js/backstretch-set.js' , array( 'jquery', 'notepad-backstretch' ), '1.0.0' );
+	wp_enqueue_script( 'notepad-backstretch', get_template_directory_uri() . '/assets/js/backstretch.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( 'notepad-backstretch-set', get_template_directory_uri() .'/assets/js/backstretch-set.js' , array( 'jquery', 'notepad-backstretch' ), '1.0.0' );
 
 	wp_localize_script( 'notepad-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', get_background_image() ) ) );
         
