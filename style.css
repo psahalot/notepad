@@ -1,7 +1,7 @@
 /*
 Theme Name: Notepad
 Theme URI: http://ideaboxthemes.com/themes/notepad-wordpress-theme/
-Author: Nidhi - IdeaBox Themes
+Author: IdeaBox Themes
 Author URI: http://ideaboxthemes.com/
 Description: Notepad is an elegant, mobile responsive blog theme with minimal design, unlimited color scheme options and a custom user profile widget to display your bio and link to about and author archives pages. It's a perfect fit for bloggers, writers, authors and publishers. Theme customizer allows users to easily change the color scheme, update footer text or add custom CSS.
 Version: 1.0
@@ -91,11 +91,11 @@ html {
     font-size: 62.5%; /* 10px browser default */
 }
 
-body { 
+body {
     margin: 0 auto;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    line-height: 1.7; 
+    line-height: 1.7;
     font-size: 18px;
     font-size: 1.8rem;
     font-style: normal;
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-h1 { 
+h1 {
     margin-bottom: 15px;
     margin-bottom: 1.5rem;
     font-size: 36px;
@@ -171,38 +171,38 @@ h1 {
     line-height: 1.5;
 }
 
-h2 { 
+h2 {
     margin-bottom: 15px;
     margin-bottom: 1.5rem;
     margin-top: 15px;
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
     font-size: 28px;
     font-size: 2.8rem;
     line-height: 1.1666;
 }
 
-h3 { 
+h3 {
     margin-bottom: 15px;
     margin-bottom: 1.5rem;
     margin-top: 15px;
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
     font-size: 24px;
     font-size: 2.4rem;
     line-height: 1.2857;
 }
 
 
-h4 { 
+h4 {
     margin-bottom: 15px;
     margin-bottom: 1.5rem;
     margin-top: 15px;
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 1.25;
 }
 
-h5 { 
+h5 {
     margin-bottom: 15px;
     margin-bottom: 1.5rem;
     margin-top: 15px;
@@ -212,11 +212,11 @@ h5 {
     line-height: 1.25;
 }
 
-h6 { 
+h6 {
     margin-bottom: 15px;
     margin-bottom: 1.5rem;
     margin-top: 15px;
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
     font-size: 14px;
     font-size: 1.4rem;
     line-height: 1.2142;
@@ -246,7 +246,7 @@ dt {
     font-weight: 700;
 }
 
-b, strong { 
+b, strong {
     font-weight: 700;
 }
 
@@ -264,31 +264,31 @@ ins {
     text-decoration: none;
 }
 
-a { 
+a {
     color: #333;
     outline: none;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;      
+    -moz-transitiokn: all 0.5s ease;
 }
 
 ul{
     padding-left:0px;
 }
 
-a:focus { 
+a:focus {
     outline: thin dotted;
     color: #111;
 }
 
-a:hover, a:active { 
+a:hover, a:active {
     outline: 0;
     color: #222146;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;    
+    -moz-transitiokn: all 0.5s ease;
 }
 
 .alignleft {
@@ -341,7 +341,7 @@ blockquote.pull-right {
 }
 
 blockquote p {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     margin-bottom: 1rem;
 }
 
@@ -376,8 +376,8 @@ blockquote cite {
     line-height: 1.125;
     color: #999;
     display: block;
-    padding-top: 10px; 
-    padding-top: 1rem; 
+    padding-top: 10px;
+    padding-top: 1rem;
 }
 
 table {
@@ -510,7 +510,7 @@ input[type="password"]#pwbox-1168{
 .menu-toggle, button {
     font-weight: 400;
     font-size: 16px;
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     line-height: 1.25;
     margin: 0;
     font-size: 100%;
@@ -584,7 +584,7 @@ input[type="button"] {
 .btn.disabled,
 .btn[disabled] {
     background-color: #fff;
-    
+
 }
 
 .btn:first-child {
@@ -603,7 +603,7 @@ input[type="button"] {
     -ms-transition: background-position 0.1s linear;
     -o-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear;
-    
+
 }
 
 .btn:hover,
@@ -685,7 +685,7 @@ input[type="submit"].btn-small {
     font-size: 0.8125rem;
 }
 
-/* Gravity Form 
+/* Gravity Form
 --------------------------------------------- */
 
 .gform_wrapper{
@@ -715,7 +715,7 @@ div.gform_wrapper .gform_footer input[type="submit"]{
     font-size: 16px !important;
 }
 
-/* Form fields 
+/* Form fields
 --------------------------------------------- */
 
 input,
@@ -821,9 +821,9 @@ select {
 
 #headercontainer {
     width: 100%;
-    top: 0px; 
-    margin: 0 auto; 
-    z-index: 1; 
+    top: 0px;
+    margin: 0 auto;
+    z-index: 1;
 }
 
 #headercontainer:after{
@@ -854,8 +854,8 @@ select {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     margin-top: 20px;
     margin-top: 2rem;
-    margin-bottom: 0px; 
-    margin-bottom: 0rem; 
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -khtml-transition: all 0.3s ease;
@@ -870,10 +870,10 @@ select {
     color: #EF7A7A;
     font-size: 30px;
     font-size: 3rem;
-    font-weight: 400; 
+    font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 6px; 
+    letter-spacing: 6px;
 }
 
 .site-title .site-description{
@@ -882,7 +882,7 @@ select {
 
 #maincontentcontainer {
     width: 100%;
-    margin-top: 140px; 
+    margin-top: 140px;
     margin-top: 4rem;
     margin-bottom: 60px;
     margin-bottom: 6rem;
@@ -930,7 +930,7 @@ select {
     text-decoration: none;
     color: #EF7A7A;
     margin-bottom: 16px;
-    margin-bottom: 1.6rem; 
+    margin-bottom: 1.6rem;
 }
 
 .entry-header h1 a:visited {
@@ -954,9 +954,9 @@ article.sticky .featured-post {
 }
 
 article.sticky {
-    margin-top: 0px; 
-    margin-top: 0rem;  
-    padding: 20px 30px; 
+    margin-top: 0px;
+    margin-top: 0rem;
+    padding: 20px 30px;
     padding: 2rem 3rem;
     background: #eee;
 }
@@ -1141,8 +1141,8 @@ img.wp-post-image{
 .header-meta a {
     color: #999;
     text-decoration:none;
-    letter-spacing: 1px; 
-    font-weight: 300; 
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .header-meta a:visited {
@@ -1180,7 +1180,7 @@ img.wp-post-image{
 .post-tags a {
     background: none;
     padding: 3px 10px;
-    padding: 0.3rem 1rem; 
+    padding: 0.3rem 1rem;
     border: 0;
     color: #999;
     display:inline-block;
@@ -1188,7 +1188,7 @@ img.wp-post-image{
 
 .entry-header address,
 .comment-content address {
-    font-style: normal; 
+    font-style: normal;
     font-weight: 400;
     display: block;
 }
@@ -1210,15 +1210,15 @@ img.wp-post-image{
     line-height: 1.75;
     color: #999;
     padding: 2rem 0;
-    border-top: solid 1px #ddd; 
+    border-top: solid 1px #ddd;
 }
 
 .page-links .page-numbers {
     padding: 5px 20px;
     padding: 0.5rem 2rem;
     border: 1px solid #999;
-    margin-left: 10px; 
-    margin-left: 1rem; 
+    margin-left: 10px;
+    margin-left: 1rem;
 }
 
 .page-links a {
@@ -1240,7 +1240,7 @@ img.wp-post-image{
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     background:#EF7A7A;
     color:#fff;
-    border-radius: 3px; 
+    border-radius: 3px;
 }
 
 .more-link:hover{
@@ -1302,9 +1302,9 @@ img.wp-post-image{
 .entry-content table th {
     background: #eee;
     font-weight: bold;
-    padding: 10px; 
-    padding: 1rem; 
-    border: solid 1px #ddd; 
+    padding: 10px;
+    padding: 1rem;
+    border: solid 1px #ddd;
 }
 
 .entry-content ol,
@@ -1342,8 +1342,8 @@ img.wp-post-image{
 .comment-content li {
     margin: 0 0 0 28px;
     margin: 0 0 0 2.8rem;
-    padding-top: 10px; 
-    padding-top: 1rem; 
+    padding-top: 10px;
+    padding-top: 1rem;
     line-height:2;
 }
 
@@ -1396,13 +1396,13 @@ img.wp-post-image{
     text-decoration: none;
 }
 
-.author-link a:visited { 
+.author-link a:visited {
     color: #666;
 }
 
 .author-link a:focus,
 .author-link a:hover,
-.author-link a:active { 
+.author-link a:active {
     outline: 0;
     color: #111;
 }
@@ -1836,7 +1836,7 @@ div.wpcf7{
 
 #footercontainer {
     background: #EF7A7A;
-    width: 100%;	
+    width: 100%;
 }
 
 .site-footer {
@@ -1851,23 +1851,23 @@ div.wpcf7{
     color: #fff;
 }
 
-.site-footer h3 { 
+.site-footer h3 {
     color: #fff;
 }
 
-.site-footer a { 
+.site-footer a {
     color: #fff;
 }
 
-.site-footer a:visited { 
+.site-footer a:visited {
     color: #fff;
 }
 
-.site-footer a:hover { 
+.site-footer a:hover {
     color: #eee;
 }
 
-.site-footer a:focus { 
+.site-footer a:focus {
     outline: thin dotted;
     color: rgb(0,0,0);
 }
@@ -1915,15 +1915,15 @@ div.wpcf7{
     margin:0;
 }
 
-.smallprint a { 
+.smallprint a {
     color: #fff;
 }
 
-.smallprint a:visited { 
+.smallprint a:visited {
     color: #fff;
 }
 
-.smallprint a:hover { 
+.smallprint a:hover {
     color: #eee;
 }
 
@@ -1951,14 +1951,14 @@ div.wpcf7{
 
 .sidebar .widget {
     margin-bottom: 50px;
-    margin-bottom: 5rem; 
+    margin-bottom: 5rem;
 }
 
 .sidebar .widget li {
     padding-bottom: 10px;
     padding-bottom: 1rem;
     margin-bottom: 10px;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     border-bottom: solid 1px #efefef;
 }
 
@@ -1976,7 +1976,7 @@ div.wpcf7{
 
 .sidebar .widget ul {
     margin: 0;
-    padding-left:0; 
+    padding-left:0;
     list-style: none outside none;
 }
 
@@ -1986,7 +1986,7 @@ div.wpcf7{
 
 .widget-area .widget-title,
 .sidebar .widget-title {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-bottom: 2rem;
     font-size: 15px;
     font-size: 1.5rem;
@@ -1999,7 +1999,7 @@ div.wpcf7{
 .widget-area ul {
     list-style: none outside none;
     padding-left: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 .widget-area .widget {
@@ -2087,16 +2087,16 @@ div.wpcf7{
 }
 
 .widget_search #s {
-    width: 79%; 
+    width: 79%;
 }
 
 .widget_search #searchsubmit {
     font-family: "Montserrat",Helvetica, Arial, sans-serif;
-    font-size: 17px; 
-    margin-left: 10px; 
-    padding: 17px 45px; 
-    color: #fff; 
-    border: none; 
+    font-size: 17px;
+    margin-left: 10px;
+    padding: 17px 45px;
+    color: #fff;
+    border: none;
 }
 .widget_twitter li {
     list-style-type: none;
@@ -2116,8 +2116,8 @@ div.wpcf7{
     clear: both;
     line-height: 2;
     overflow: hidden;
-    padding: 30px 0px; 
-    padding: 3rem 0rem; 
+    padding: 30px 0px;
+    padding: 3rem 0rem;
 }
 
 #nav-above {
@@ -2291,7 +2291,7 @@ li span.current {
 }
 .menu ul ul > li > a:hover {
     color: #333;
-    
+
 }
 
 
@@ -2300,7 +2300,7 @@ li span.current {
 }
 .main-navigation ul ul {
     margin: 0;
-    padding: 0;  
+    padding: 0;
 }
 
 
@@ -2327,7 +2327,7 @@ li span.current {
 /* IE6/7 support */
 .slicknav_menu { *zoom: 1 }
 
-/* 
+/*
     User Default Style
     Change the following styles to modify the appearance of the menu.
 */
@@ -2337,16 +2337,16 @@ li span.current {
 }
 /* Button */
 .slicknav_btn {
-    margin: 5px 0px 0px;	
-    text-decoration:none;	
+    margin: 5px 0px 0px;
+    text-decoration:none;
     background-color: #111;
     width: 100%;
 }
 /* Button Text */
-.slicknav_menu  .slicknav_menutxt {	
+.slicknav_menu  .slicknav_menutxt {
     color: #FFF;
-    font-weight: bold;	
-    text-shadow: 0 1px 3px #000;	
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000;
 }
 /* Button Lines */
 .slicknav_menu .slicknav_icon-bar {
@@ -2354,7 +2354,7 @@ li span.current {
 }
 .slicknav_nav {
     color:#fff;
-    margin:0;	
+    margin:0;
     padding:0;
     font-size:0.875em;
 }
@@ -2383,7 +2383,7 @@ li span.current {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color:#fff;	
+    color:#fff;
 }
 .slicknav_nav a:hover{
     -webkit-border-radius: 3px;
@@ -2391,7 +2391,7 @@ li span.current {
     border-radius: 3px;
 }
 .slicknav_nav .slicknav_txtnode {
-    margin-left:15px;   
+    margin-left:15px;
 }
 
 /* ==========================================================================
@@ -2452,7 +2452,7 @@ img#wpstats {
         font-size: 52px;
         font-size: 3.25rem;
     }
-    
+
     .error404 .screen-reader-text{
         width: 100%;
         display: block;
@@ -2466,7 +2466,7 @@ img#wpstats {
         margin: 38px 0 0 0;
         margin: 2.375rem 0 0 0;
     }
-    
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -2478,11 +2478,11 @@ img#wpstats {
 }
 
 @media only screen and (max-width: 800px) {
-    
+
     .main-navigation{
         width:90%;
     }
-    
+
     .main-navigation ul ul{
         position:relative;
         top:0px;
@@ -2493,7 +2493,7 @@ img#wpstats {
     .slicknav_menu {
         display:block;
     }
-    
+
     .slicknav_menu a{
         display:block;
         padding:20px;
@@ -2501,13 +2501,13 @@ img#wpstats {
     .slicknav_menu > a{
         display:inline-block;
     }
-    
+
     .site-title h1, .site-description
     {
         text-align:center
     }
     header .grid_5_of_12 {
-        width: 100%; 
+        width: 100%;
     }
     header .grid_7_of_12 {
         width: 100%;
@@ -2541,7 +2541,7 @@ img#wpstats {
         text-align:left;
     }
 
-    
+
     .main-navigation li.last{
         border-bottom:0px;
     }
@@ -2558,7 +2558,7 @@ img#wpstats {
     .main-navigation ul ul{
         width:100%;
     }
-    
+
     #mobile-menu .sub-menu{
         background:none;
         margin-left:10px;
@@ -2589,26 +2589,26 @@ img#wpstats {
     .page .site-content article{
         padding:4% 10%;
     }
-    
+
      .main-navigation ul ul li:first-child {
         margin:0;
     }
-    
+
     .paging-navigation .assistive-text{
         color:#fff;
         text-align:center;
         display:none;
     }
-   
+
 }
 
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
-    img.size-full, 
-    img.size-large, 
-    img.header-image, 
+    img.size-full,
+    img.size-large,
+    img.header-image,
     img.wp-post-image {
-        width: 100%; 
+        width: 100%;
     }
     .grid_1_of_12,
     .grid_2_of_12,
@@ -2622,7 +2622,7 @@ img#wpstats {
     .grid_10_of_12,
     .grid_11_of_12,
     .grid_12_of_12 {
-        width: 100%; 
+        width: 100%;
     }
     .col {
         margin: 0;
@@ -2638,16 +2638,16 @@ img#wpstats {
     }
     .main-navigation li {
         float: none;
-        display: inline-block; 
+        display: inline-block;
     }
 
     #maincontentcontainer {
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    
+
     .sidebar {
-        border-top: solid 1px #ddd; 
+        border-top: solid 1px #ddd;
         padding: 30px 30px 0;
     }
     .main-small-navigation .nav-menu, .nav-menu ul {
@@ -2665,20 +2665,20 @@ img#wpstats {
         border-bottom:1px solid #e3e3e3;
     }
 
-    
-    
+
+
     .site-footer .widget ul li{
         border-bottom:0;
         margin-bottom:0;
     }
-    
+
     #footer-widget1,
     #footer-widget2,
     #footer-widget3{
         padding-right:0;
         padding-bottom:10px;
     }
-    
+
     .error404 input[type="text"]{
         width:100%;
     }
@@ -2686,7 +2686,7 @@ img#wpstats {
 
 /*  Adjust the menu at less than 520px */
 @media only screen and (max-width: 520px) {
-    
+
     .slicknav_menu {
         display:block;
     }
@@ -2706,7 +2706,7 @@ img#wpstats {
     .main-small-navigation {
         text-align: center;
         margin-bottom: 20px;
-        margin-bottom: 2rem; 
+        margin-bottom: 2rem;
     }
 
     .main-navigation ul ul, .main-navigation ul ul li ul {
@@ -2719,14 +2719,14 @@ img#wpstats {
         color: #fff; /* Nav bar dropdown link color */
         width: 100%; /* Nav bar dropdown width */
     }
-    
+
     .smallprint.left,
     .smallprint.right{
         width:100%;
         float:none;
         text-align:center;
     }
-    
+
     .error404 input[type="text"]{
         width:100%;
     }
@@ -2738,7 +2738,7 @@ img#wpstats {
 		float: left;
 		width: 100%;
 	}
-        
+
         .nav-previous, .nav-next{
             width:100%;
             float:none;

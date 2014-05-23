@@ -1,5 +1,5 @@
 === Notepad ===
-Contributors: Nidhi - IdeaBox Themes
+Contributors: Nidhi Jain , Puneet Sahalot - IdeaBox Themes
 Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
