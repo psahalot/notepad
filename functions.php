@@ -173,8 +173,8 @@ function notepad_scripts_styles() {
 	// Enqueue the default WordPress stylesheet
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.2.3', 'all' );
         
-        // Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-        wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
+    // Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
+    wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
             
 	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -197,9 +197,9 @@ function notepad_scripts_styles() {
 		);
 	}
 
+	wp_enqueue_script('jquery'); 
 	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	
-        wp_enqueue_script( 'notepad-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
+	wp_enqueue_script( 'notepad-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
 	
 }
 add_action( 'wp_enqueue_scripts', 'notepad_scripts_styles' );
