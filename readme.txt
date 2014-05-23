@@ -3,7 +3,7 @@ Contributors: Nidhi - IdeaBox Themes
 Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -68,6 +68,7 @@ Notepad utilises the following awesomeness:
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
 [Lato font](http://www.google.com/fonts/specimen/Lato), which is licensed under SIL Open Font License 1.1
 [Montserrat font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
+[Slicknav] (https://github.com/ComputerWolf/SlickNav), which is licensed under MIT license 
 
 = 1.0 =
 - Initial version
