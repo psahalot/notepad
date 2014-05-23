@@ -69,6 +69,7 @@ Notepad utilises the following awesomeness:
 [Lato font](http://www.google.com/fonts/specimen/Lato), which is licensed under SIL Open Font License 1.1
 [Montserrat font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
 [Slicknav] (https://github.com/ComputerWolf/SlickNav), which is licensed under MIT license 
+[Image] Bulbs image in theme screenshot by Kenny Louie https://www.flickr.com/photos/kwl/8601795375/
 
 = 1.0 =
 - Initial version
