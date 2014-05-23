@@ -1,4 +1,4 @@
-=== Notepad ===
+=== Notepad Pro ===
 Contributors: Nidhi Jain , Puneet Sahalot - IdeaBox Themes
 Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -8,12 +8,12 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Notepad is a minimal mobile responsive theme. It's a perfect fit for bloggers and authors.It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
+Notepad Pro is a minimal mobile responsive theme. It's a perfect fit for bloggers and authors.It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
 
 == Description ==
 
-Notepad is a minimal mobile responsive WordPress theme. It's a perfect fit for bloggers and authors.
+Notepad Pro is a minimal mobile responsive WordPress theme. It's a perfect fit for bloggers and authors.
 It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
 
