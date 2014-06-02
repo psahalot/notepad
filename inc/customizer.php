@@ -218,7 +218,7 @@ function solo_color_style() {
         $linkhover_color = get_theme_mod('solo_theme_linkhover_color'); 
 
 	// If no custom options for text are set, let's bail
-	if ( $primary_color == '#ef7a7a' || $primary_color == '#EF7A7A' ) {
+	if ( ($primary_color == '#ef7a7a' || $primary_color == '#EF7A7A') && ($link_color == '#FFF' || $link_color == '#fff' || $link_color == '#ffffff' || $link_color == '#FFFFFF') && ($linkhover_color == '#333' || $linkhover_color == '#333333') ) {
             return;
         }
 	// If we get this far, we have custom styles.

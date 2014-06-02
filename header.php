@@ -64,7 +64,7 @@
                 <div class="nav-container">
                     <nav id="site-navigation" class="main-navigation row" role="navigation">
                             
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'primary-menu', 'container_class' => 'menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu', 'container_class' => 'menu' ) ); ?>
                             
                         <div id="mobile-menu"></div>
                     </nav> <!-- /.site-navigation.main-navigation -->

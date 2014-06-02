@@ -2237,6 +2237,7 @@ li span.current {
     color:#999;
 }
 .main-navigation ul ul {
+    background: #EF7A7A;
     display: none;
     float: left;
     left: 0;
@@ -2270,17 +2271,15 @@ li span.current {
     content: '';
 }
 
-.menu ul > li > a,
-.main-navigation ul > li > a {
+.menu ul > li > a {
     color: #fff;
     display: block;
-    font-size: 87.5%;
+    font-size: 16px;
     padding: 26px 10px 23px;
     text-align: center;
     text-decoration: none;
 }
 .menu ul ul > li > a {
-    color: #fff;
     text-align: left;
     padding: 12px 10px;
     font-size: 14px;
@@ -2485,7 +2484,8 @@ img#wpstats {
         position:relative;
         top:0px;
     }
-    .menu{
+    .menu,
+    .primary-menu {
         display:none;
     }
     .slicknav_menu {
