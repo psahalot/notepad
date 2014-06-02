@@ -1,4 +1,4 @@
-=== Notepad Pro ===
+=== Stream ===
 Contributors: Nidhi Jain , Puneet Sahalot - IdeaBox Themes
 Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -8,12 +8,12 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Notepad Pro is a minimal mobile responsive theme. It's a perfect fit for bloggers and authors.It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
+Stream is a minimal mobile responsive theme. It's a perfect fit for bloggers and authors.It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
 
 == Description ==
 
-Notepad Pro is a minimal mobile responsive WordPress theme. It's a perfect fit for bloggers and authors.
+Stream is a minimal mobile responsive WordPress theme. It's a perfect fit for bloggers and authors.
 It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
 
@@ -23,21 +23,21 @@ There are three ways to install your theme. It can be installed by manually uplo
 it can be installed by downloading from the WordPress Theme Directory within the Dashboard or it can be installed by uploading the theme zip
 file that you downloaded.
 
-Use the following instructions to install & activate notepad using your preferred method.
+Use the following instructions to install & activate stream using your preferred method.
 
 Manual installation:
 
-1. Unzip the files from the notepad zip file that you downloaded
-2. Upload the notepad folder to your /wp-content/themes/ directory
+1. Unzip the files from the stream zip file that you downloaded
+2. Upload the stream folder to your /wp-content/themes/ directory
 3. Click on the Appearance > Themes menu option in the WordPress Dashboard
-4. Click the Activate link below the notepad preview thumbnail
+4. Click the Activate link below the stream preview thumbnail
 
 Install from the WordPress Theme Directory:
 
 1. Click on the Appearance > Themes menu option in the WordPress Dashboard
 2. Click the Install Themes tab at the top of the page
-3. Type 'notepad' in the search field, without the quotes, and then click the Search button
-4. Click the Install Now link below the notepad preview thumbnail
+3. Type 'stream' in the search field, without the quotes, and then click the Search button
+4. Click the Install Now link below the stream preview thumbnail
 5. Once the theme has been installed, click the Activate link
 
 Install by uploading the theme zip file:

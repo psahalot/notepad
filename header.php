@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="maincontentcontainer">
  *
- * @package notepad
- * @since notepad 1.0
+ * @package stream
+ * @since stream 1.0
  */
 ?><!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -39,7 +39,7 @@
 
 <div id="wrapper" class="hfeed site">
 
-	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'notepad' ); ?>"><?php esc_html_e( 'Skip to main content', 'notepad' ); ?></a></div>
+	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'stream' ); ?>"><?php esc_html_e( 'Skip to main content', 'stream' ); ?></a></div>
 
 	<div id="headercontainer">
 

@@ -2,8 +2,8 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package notepad
- * @since notepad 1.0
+ * @package stream
+ * @since stream 1.0
  */
 ?>
 <?php if(is_active_sidebar('sidebar-main')) { ?>

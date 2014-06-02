@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package notepad
- * @since notepad 1.0
+ * @package stream
+ * @since stream 1.0
  */
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
                                 }
                                 ?>
 
-                                <?php notepad_content_nav( 'nav-below' ); ?>
+                                <?php stream_content_nav( 'nav-below' ); ?>
 \
 
                             </div> <!-- /.main-content -->

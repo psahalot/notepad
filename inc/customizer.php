@@ -13,29 +13,29 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function notepad_customize_organizer($wp_customize) {
+function stream_customize_organizer($wp_customize) {
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
 
     // reorganize background settings in customizer
     $wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-    $wp_customize->get_section( 'background_image'  )->title     = __('Background Settings','notepad');
-    $wp_customize->get_section( 'background_image' )->description = __('Please note that background color and image settings work only for Boxed Layout','notepad'); 
+    $wp_customize->get_section( 'background_image'  )->title     = __('Background Settings','stream');
+    $wp_customize->get_section( 'background_image' )->description = __('Please note that background color and image settings work only for Boxed Layout','stream'); 
     
     
     // Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
-    $wp_customize->get_control('display_header_text')->label = __('Display Site Title &amp; Tagline', 'notepad');
+    $wp_customize->get_control('display_header_text')->label = __('Display Site Title &amp; Tagline', 'stream');
     
     // reorganize header settings in cusotmizer
     $wp_customize->get_control( 'header_textcolor'  )->section   = 'header_image';
     $wp_customize->get_control( 'display_header_text' )->section = 'header_image'; 
-    $wp_customize->get_section( 'header_image'  )->title     = __('Header Settings','notepad');
+    $wp_customize->get_section( 'header_image'  )->title     = __('Header Settings','stream');
     
     $wp_customize->get_section( 'header_image'  )->priority     = 30;
     $wp_customize->get_section( 'background_image' )->priority  = 30; 
 }
 
-add_action('customize_register', 'notepad_customize_organizer', 12);
+add_action('customize_register', 'stream_customize_organizer', 12);
 
 
 /**
@@ -45,12 +45,12 @@ add_action('customize_register', 'notepad_customize_organizer', 12);
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function notepad_customize_register($wp_customize) {
+function stream_customize_register($wp_customize) {
 
     /** ===============
      * Extends CONTROLS class to add textarea
      */
-    class notepad_customize_textarea_control extends WP_Customize_Control {
+    class stream_customize_textarea_control extends WP_Customize_Control {
 
         public $type = 'textarea';
 
@@ -68,97 +68,97 @@ function notepad_customize_register($wp_customize) {
     }
 
     // Add new section for theme layout and color schemes
-    $wp_customize->add_section('notepad_theme_layout_settings', array(
-        'title' => __('Color Scheme', 'notepad'),
+    $wp_customize->add_section('stream_theme_layout_settings', array(
+        'title' => __('Color Scheme', 'stream'),
         'priority' => 30,
     ));
 
       // Add setting for primary color
-    $wp_customize->add_setting('notepad_theme_primary_color', array(
+    $wp_customize->add_setting('stream_theme_primary_color', array(
         'default' => '#EF7A7A', 
-        'sanitize_callback' => 'notepad_sanitize_hex_color',
-        'sanitize_js_callback' => 'notepad_sanitize_escaping',
+        'sanitize_callback' => 'stream_sanitize_hex_color',
+        'sanitize_js_callback' => 'stream_sanitize_escaping',
     ));
     
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'notepad_theme_primary_color',
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'stream_theme_primary_color',
         array(
             'label' => 'Primary Color',
-            'section' => 'notepad_theme_layout_settings',
-            'settings' => 'notepad_theme_primary_color',
+            'section' => 'stream_theme_layout_settings',
+            'settings' => 'stream_theme_primary_color',
         )
     ));
 
     // Add setting for link color
-    $wp_customize->add_setting('notepad_theme_link_color', array(
+    $wp_customize->add_setting('stream_theme_link_color', array(
         'default' => '#FFF', 
-        'sanitize_callback' => 'notepad_sanitize_hex_color',
-        'sanitize_js_callback' => 'notepad_sanitize_escaping',
+        'sanitize_callback' => 'stream_sanitize_hex_color',
+        'sanitize_js_callback' => 'stream_sanitize_escaping',
     ));
     
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'notepad_theme_link_color',
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'stream_theme_link_color',
         array(
             'label' => 'Link Color',
-            'section' => 'notepad_theme_layout_settings',
-            'settings' => 'notepad_theme_link_color',
+            'section' => 'stream_theme_layout_settings',
+            'settings' => 'stream_theme_link_color',
         )
     ));
     
     // Add setting for link hover color
-    $wp_customize->add_setting('notepad_theme_linkhover_color', array(
+    $wp_customize->add_setting('stream_theme_linkhover_color', array(
         'default' => '#333', 
-        'sanitize_callback' => 'notepad_sanitize_hex_color',
-        'sanitize_js_callback' => 'notepad_sanitize_escaping',
+        'sanitize_callback' => 'stream_sanitize_hex_color',
+        'sanitize_js_callback' => 'stream_sanitize_escaping',
     ));
     
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'notepad_theme_linkhover_color',
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'stream_theme_linkhover_color',
         array(
             'label' => 'Link Hover Color',
-            'section' => 'notepad_theme_layout_settings',
-            'settings' => 'notepad_theme_linkhover_color',
+            'section' => 'stream_theme_layout_settings',
+            'settings' => 'stream_theme_linkhover_color',
         )
     ));
 
     // Add footer text section
-    $wp_customize->add_section('notepad_footer', array(
+    $wp_customize->add_section('stream_footer', array(
         'title' => 'Footer Text', // The title of section
         'priority' => 75,
     ));
 
-    $wp_customize->add_setting('notepad_footer_footer_text', array(
+    $wp_customize->add_setting('stream_footer_footer_text', array(
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
-        'sanitize_js_callback' => 'notepad_sanitize_escaping',
+        'sanitize_js_callback' => 'stream_sanitize_escaping',
     ));
     
-    $wp_customize->add_control(new notepad_customize_textarea_control($wp_customize, 'notepad_footer_footer_text', array(
-        'section' => 'notepad_footer', // id of section to which the setting belongs
-        'settings' => 'notepad_footer_footer_text',
+    $wp_customize->add_control(new stream_customize_textarea_control($wp_customize, 'stream_footer_footer_text', array(
+        'section' => 'stream_footer', // id of section to which the setting belongs
+        'settings' => 'stream_footer_footer_text',
     )));
     
     // Add custom CSS section 
     $wp_customize->add_section(
-        'notepad_custom_css_section', array(
+        'stream_custom_css_section', array(
         'title' => __('Custom CSS', 'smartshop'),
         'priority' => 80,
     ));
 
     $wp_customize->add_setting(
-        'notepad_custom_css', array(
+        'stream_custom_css', array(
         'default' => '',
-        'sanitize_callback' => 'notepad_sanitize_custom_css',
-        'sanitize_js_callback' => 'notepad_sanitize_escaping',
+        'sanitize_callback' => 'stream_sanitize_custom_css',
+        'sanitize_js_callback' => 'stream_sanitize_escaping',
     ));
 
     $wp_customize->add_control(
-        new notepad_customize_textarea_control(
-        $wp_customize, 'notepad_custom_css', array(
+        new stream_customize_textarea_control(
+        $wp_customize, 'stream_custom_css', array(
         'label' => __('Add your custom css here and design live! (for advanced users)', 'smartshop'),
-        'section' => 'notepad_custom_css_section',
-        'settings' => 'notepad_custom_css'
+        'section' => 'stream_custom_css_section',
+        'settings' => 'stream_custom_css'
     )));
 }
 
-add_action('customize_register', 'notepad_customize_register');
+add_action('customize_register', 'stream_customize_register');
 
 
 /**
@@ -166,11 +166,11 @@ add_action('customize_register', 'notepad_customize_register');
  *
  * @since Notepad 1.0
  */
-function notepad_customize_preview_js() {
-    wp_enqueue_script('notepad_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), '20131205', true);
+function stream_customize_preview_js() {
+    wp_enqueue_script('stream_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), '20131205', true);
 }
 
-add_action('customize_preview_init', 'notepad_customize_preview_js');
+add_action('customize_preview_init', 'stream_customize_preview_js');
 
 /* 
  * Sanitize Hex Color for 
@@ -178,7 +178,7 @@ add_action('customize_preview_init', 'notepad_customize_preview_js');
  * 
  * @since Notepad 1.4
  */
-function notepad_sanitize_hex_color( $color ) {
+function stream_sanitize_hex_color( $color ) {
     if ( $unhashed = sanitize_hex_color_no_hash( $color ) ) {
         return '#' . $unhashed;
     }
@@ -191,7 +191,7 @@ function notepad_sanitize_hex_color( $color ) {
  * @since Notepad 1.4
  */
 
-function notepad_sanitize_custom_css( $input) {
+function stream_sanitize_custom_css( $input) {
     $input = wp_kses_stripslashes( $input);
     return $input;
 }	
@@ -201,7 +201,7 @@ function notepad_sanitize_custom_css( $input) {
  * 
  * @since Notepad 1.4
  */
-function notepad_sanitize_escaping( $input) {
+function stream_sanitize_escaping( $input) {
     $input = esc_attr( $input);
     return $input;
 }
@@ -212,10 +212,10 @@ function notepad_sanitize_escaping( $input) {
  *
  * @since Notepad 1.0
  */
-function notepad_color_style() {
-	$primary_color = get_theme_mod('notepad_theme_primary_color');
-        $link_color = get_theme_mod('notepad_theme_link_color');
-        $linkhover_color = get_theme_mod('notepad_theme_linkhover_color'); 
+function stream_color_style() {
+	$primary_color = get_theme_mod('stream_theme_primary_color');
+        $link_color = get_theme_mod('stream_theme_link_color');
+        $linkhover_color = get_theme_mod('stream_theme_linkhover_color'); 
 
 	// If no custom options for text are set, let's bail
 	if ( $primary_color == '#ef7a7a' || $primary_color == '#EF7A7A' ) {
@@ -223,7 +223,7 @@ function notepad_color_style() {
         }
 	// If we get this far, we have custom styles.
 	?>
-	<style type="text/css" id="notepad-colorscheme-css">
+	<style type="text/css" id="stream-colorscheme-css">
 
                 #footercontainer,
                 .pagination .page-numbers:hover,
@@ -281,9 +281,9 @@ function notepad_color_style() {
                 }
 
 	</style>
-        <style type="text/css" id="notepad-custom-css">
-            <?php echo trim( get_theme_mod( 'notepad_custom_css' ) ); ?>
+        <style type="text/css" id="stream-custom-css">
+            <?php echo trim( get_theme_mod( 'stream_custom_css' ) ); ?>
         </style>
 	<?php
 }
-add_action('wp_head','notepad_color_style');
+add_action('wp_head','stream_color_style');

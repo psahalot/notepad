@@ -2,23 +2,23 @@
 /**
  * The template for displaying posts in the Aside post format
  *
- * @package notepad
- * @since notepad 1.0
+ * @package stream
+ * @since stream 1.0
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="box-wrap">
 	<header class="entry-header">
-		<?php notepad_posted_on(); ?>
+		<?php stream_posted_on(); ?>
 	</header> <!-- /.entry-header -->
 	<div class="entry-content">
-		<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'notepad' ), array( 
+		<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'stream' ), array( 
 			'span' => array( 
 				'class' => array() )
 			) ) ); ?>
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'notepad' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stream' ),
 			'after' => '</div>',
 			'link_before' => '<span class="page-numbers">',
 			'link_after' => '</span>'
@@ -30,7 +30,7 @@
         <div class="tag-meta">
              <?php if ( is_singular() ) {
 			// Only show the tags on the Single Post page
-			notepad_entry_meta();
+			stream_entry_meta();
 		} ?>
         </div>
     <?php } ?>

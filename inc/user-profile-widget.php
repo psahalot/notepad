@@ -18,7 +18,7 @@
  *
  * @package Notepad\Widgets
  */
-class Notepad_User_Profile_Widget extends WP_Widget {
+class stream_User_Profile_Widget extends WP_Widget {
 
 	/**
 	 * Holds widget settings defaults, populated in constructor.
@@ -119,7 +119,7 @@ class Notepad_User_Profile_Widget extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 
 		$new_instance['title']          = strip_tags( $new_instance['title'] );
-		$new_instance['bio_text']       = current_user_can( 'unfiltered_html' ) ? $new_instance['bio_text'] : notepad_formatting_kses( $new_instance['bio_text'] );
+		$new_instance['bio_text']       = current_user_can( 'unfiltered_html' ) ? $new_instance['bio_text'] : stream_formatting_kses( $new_instance['bio_text'] );
 		$new_instance['page_link_text'] = strip_tags( $new_instance['page_link_text'] );
 
 		return $new_instance;
@@ -152,7 +152,7 @@ class Notepad_User_Profile_Widget extends WP_Widget {
 			<select id="<?php echo $this->get_field_id( 'size' ); ?>" name="<?php echo $this->get_field_name( 'size' ); ?>">
 				<?php
 				$sizes = array( __( 'Small', 'genesis' ) => 45, __( 'Medium', 'genesis' ) => 65, __( 'Large', 'genesis' ) => 85, __( 'Extra Large', 'genesis' ) => 125 );
-				$sizes = apply_filters( 'notepad_gravatar_sizes', $sizes );
+				$sizes = apply_filters( 'stream_gravatar_sizes', $sizes );
 				foreach ( (array) $sizes as $label => $size ) { ?>
 					<option value="<?php echo absint( $size ); ?>" <?php selected( $size, $instance['size'] ); ?>><?php printf( '%s (%spx)', $label, $size ); ?></option>
 				<?php } ?>

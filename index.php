@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package notepad
- * @since notepad 1.0
+ * @package stream
+ * @since stream 1.0
  */
 
 get_header(); ?>                             
@@ -29,7 +29,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content ?>
 				<?php endwhile; ?>
 
-				<?php notepad_content_nav( 'nav-below' ); ?>
+				<?php stream_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
