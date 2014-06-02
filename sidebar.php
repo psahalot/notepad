@@ -2,8 +2,8 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package stream
- * @since stream 1.0
+ * @package solo
+ * @since solo 1.0
  */
 ?>
 <?php if(is_active_sidebar('sidebar-main')) { ?>

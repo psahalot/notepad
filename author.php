@@ -2,8 +2,8 @@
 /**
  * The template for displaying an archive page for Categories.
  *
- * @package stream
- * @since stream 1.0
+ * @package solo
+ * @since solo 1.0
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 				?>
                                <div class="archive-author">
                                     <header class="archive-header">
-                                            <h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'stream' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
+                                            <h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'solo' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
                                     </header><!-- .archive-header -->
 
                                     <?php // If a user has filled out their description, show a bio on their entries.
@@ -43,7 +43,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php stream_content_nav( 'nav-below' ); ?>
+				<?php solo_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

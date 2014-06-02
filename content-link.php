@@ -2,23 +2,23 @@
 /**
  * The template for displaying posts in the Link post format
  *
- * @package stream
- * @since stream 1.0
+ * @package solo
+ * @since solo 1.0
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="box-wrap">
 	<header class="entry-header">
-		<?php stream_posted_on(); ?>
+		<?php solo_posted_on(); ?>
 	</header> <!-- /.entry-header -->
 	<div class="entry-content">
-		<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'stream' ), array( 
+		<?php the_content( wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'solo' ), array( 
 			'span' => array( 
 				'class' => array() )
 			) ) ); ?>
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stream' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'solo' ),
 			'after' => '</div>',
 			'link_before' => '<span class="page-numbers">',
 			'link_after' => '</span>'
@@ -30,7 +30,7 @@
             <div class="tag-meta">
                 <?php if ( is_singular() ) {
 			// Only show the tags on the Single Post page
-			stream_entry_meta();
+			solo_entry_meta();
 		} ?>
             </div>
         <?php } ?>

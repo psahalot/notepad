@@ -2,8 +2,8 @@
 /**
  * The template for displaying Search Results.
  *
- * @package stream
- * @since stream 1.0
+ * @package solo
+ * @since solo 1.0
  */
 
 get_header(); ?>
@@ -21,7 +21,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'stream' ), '<span>&ldquo;' . get_search_query() . '&rdquo;</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'solo' ), '<span>&ldquo;' . get_search_query() . '&rdquo;</span>' ); ?></h1>
 				</header>
 
 				<?php // Start the Loop ?>
@@ -29,7 +29,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php stream_content_nav( 'nav-below' ); ?>
+				<?php solo_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

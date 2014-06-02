@@ -2,8 +2,8 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package stream
- * @since stream 1.0
+ * @package solo
+ * @since solo 1.0
  */
 
 get_header(); ?>
@@ -18,10 +18,10 @@ get_header(); ?>
 			<article id="post-0" class="post error404 no-results not-found">
                             <div class="box-wrap">
 				<header class="entry-header">
-					<h1 class="entry-title"><i class="fa fa-frown-o fa-lg"></i> <?php esc_html_e( 'Uh Oh! This is somewhat embarrassing!', 'stream' ); ?></h1>
+					<h1 class="entry-title"><i class="fa fa-frown-o fa-lg"></i> <?php esc_html_e( 'Uh Oh! This is somewhat embarrassing!', 'solo' ); ?></h1>
 				</header>
 				<div class="entry-content">
-					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'stream' ); ?></p>
+					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'solo' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- /.entry-content -->
                             </div>

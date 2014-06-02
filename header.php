@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="maincontentcontainer">
  *
- * @package stream
- * @since stream 1.0
+ * @package solo
+ * @since solo 1.0
  */
 ?><!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -39,7 +39,7 @@
 
 <div id="wrapper" class="hfeed site">
 
-	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'stream' ); ?>"><?php esc_html_e( 'Skip to main content', 'stream' ); ?></a></div>
+	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'solo' ); ?>"><?php esc_html_e( 'Skip to main content', 'solo' ); ?></a></div>
 
 	<div id="headercontainer">
 

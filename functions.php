@@ -1,9 +1,9 @@
 <?php
 /**
- * Notepad functions and definitions
+ * Solo functions and definitions
  *
- * @package Notepad
- * @since Notepad 1.0
+ * @package Solo
+ * @since Solo 1.0
  */
 
 require( get_template_directory() . '/inc/customizer.php' ); // new customizer options
@@ -12,21 +12,21 @@ require( get_template_directory() . '/inc/custom-header.php' ); // custom header
 //* Include widget class files
 require_once( get_template_directory() . '/inc/user-profile-widget.php' );
 
-add_action( 'widgets_init', 'stream_load_widgets' );
+add_action( 'widgets_init', 'solo_load_widgets' );
 /**
- * Register widgets for use in the Notepad theme.
+ * Register widgets for use in the Solo theme.
  *
  * @since 1.7.0
  */
-function stream_load_widgets() {
-	register_widget( 'stream_User_Profile_Widget' );
+function solo_load_widgets() {
+	register_widget( 'solo_User_Profile_Widget' );
 
 }
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 684; /* Default the embedded content width to 790px */
@@ -39,21 +39,21 @@ if ( ! isset( $content_width ) )
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  *
  * @return void
  */
-if ( ! function_exists( 'stream_setup' ) ) {
-	function stream_setup() {
+if ( ! function_exists( 'solo_setup' ) ) {
+	function solo_setup() {
 		global $content_width;
 
 		/**
 		 * Make theme available for translation
 		 * Translations can be filed in the /languages/ directory
-		 * If you're building a theme based on Notepad, use a find and replace
-		 * to change 'stream' to the name of your theme in all the template files
+		 * If you're building a theme based on Solo, use a find and replace
+		 * to change 'solo' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'stream', trailingslashit( get_template_directory() ) . 'languages' );
+		load_theme_textdomain( 'solo', trailingslashit( get_template_directory() ) . 'languages' );
 
 		// This theme styles the visual editor with editor-style.css to match the theme style.
 		add_editor_style();
@@ -69,7 +69,7 @@ if ( ! function_exists( 'stream_setup' ) ) {
                 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'stream' )
+				'primary' => esc_html__( 'Primary Menu', 'solo' )
 			) );
 
 		// This theme supports a variety of post formats
@@ -81,12 +81,12 @@ if ( ! function_exists( 'stream_setup' ) ) {
 				'default-color' => '363d41',
 				// Background image default
 				'default-image' => '',
-                                'wp-head-callback' => 'stream_background_callback'
+                                'wp-head-callback' => 'solo_background_callback'
                                 
 			) );
 	}
 }
-add_action( 'after_setup_theme', 'stream_setup' );
+add_action( 'after_setup_theme', 'solo_setup' );
 
 
 /**
@@ -94,23 +94,23 @@ add_action( 'after_setup_theme', 'stream_setup' );
  *
  * The use of Lato and Montserrat by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
  *
- * @since Notepad 1.2.5
+ * @since Solo 1.2.5
  *
  * @return string Font stylesheet or empty string if disabled.
  */
-function stream_fonts_url() {
+function solo_fonts_url() {
 	$fonts_url = '';
 	$subsets = 'latin';
 
 	/* translators: If there are characters in your language that are not supported by Lato, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$pt_sans = _x( 'on', 'Lato font: on or off', 'stream' );
+	$pt_sans = _x( 'on', 'Lato font: on or off', 'solo' );
 
 	/* translators: To add an additional Lato character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
 	 * Do not translate into your own language.
 	 */
-	$subset = _x( 'no-subset', 'Lato font: add new subset (cyrillic)', 'stream' );
+	$subset = _x( 'no-subset', 'Lato font: add new subset (cyrillic)', 'solo' );
 
 	if ( 'cyrillic' == $subset )
 		$subsets .= ',cyrillic';
@@ -118,7 +118,7 @@ function stream_fonts_url() {
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$montserrat = _x( 'on', 'Montserrat font: on or off', 'stream' );
+	$montserrat = _x( 'on', 'Montserrat font: on or off', 'solo' );
 
 	if ( 'off' !== $pt_sans || 'off' !== $montserrat ) {
 		$font_families = array();
@@ -145,11 +145,11 @@ function stream_fonts_url() {
 /**
  * Enqueue scripts and styles
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  *
  * @return void
  */
-function stream_scripts_styles() {
+function solo_scripts_styles() {
 
 	// Register and enqueue our icon font
 	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
@@ -161,13 +161,13 @@ function stream_scripts_styles() {
 	 *
 	 * To disable in a child theme, use wp_dequeue_style()
 	 * function mytheme_dequeue_fonts() {
-	 *     wp_dequeue_style( 'stream-fonts' );
+	 *     wp_dequeue_style( 'solo-fonts' );
 	 * }
 	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
 	 */
-	$fonts_url = stream_fonts_url();
+	$fonts_url = solo_fonts_url();
 	if ( !empty( $fonts_url ) ) {
-		wp_enqueue_style( 'stream-fonts', esc_url_raw( $fonts_url ), array(), null );
+		wp_enqueue_style( 'solo-fonts', esc_url_raw( $fonts_url ), array(), null );
 	}
 
 	// Enqueue the default WordPress stylesheet
@@ -191,39 +191,39 @@ function stream_scripts_styles() {
 		wp_enqueue_script( 'commentvalidate' );
 		wp_localize_script( 'commentvalidate', 'comments_object', array(
 			'req' => get_option( 'require_name_email' ),
-			'author'  => esc_html__( 'Please enter your name', 'stream' ),
-			'email'  => esc_html__( 'Please enter a valid email address', 'stream' ),
-			'comment' => esc_html__( 'Please add a comment', 'stream' ) )
+			'author'  => esc_html__( 'Please enter your name', 'solo' ),
+			'email'  => esc_html__( 'Please enter a valid email address', 'solo' ),
+			'comment' => esc_html__( 'Please add a comment', 'solo' ) )
 		);
 	}
 
 	wp_enqueue_script('jquery'); 
 	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	wp_enqueue_script( 'stream-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
+	wp_enqueue_script( 'solo-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
 	
 }
-add_action( 'wp_enqueue_scripts', 'stream_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'solo_scripts_styles' );
 
 
 
 //* Enqueue Backstretch script and prepare images for loading
-add_action( 'wp_enqueue_scripts', 'stream_enqueue_scripts' );
-function stream_enqueue_scripts() {
+add_action( 'wp_enqueue_scripts', 'solo_enqueue_scripts' );
+function solo_enqueue_scripts() {
 
 	//* Load scripts only if custom background is being used
 	if ( ! get_background_image() )
 		return;
 
-	wp_enqueue_script( 'stream-backstretch', get_template_directory_uri() . '/assets/js/backstretch.js', array( 'jquery' ), '1.0.0' );
-	wp_enqueue_script( 'stream-backstretch-set', get_template_directory_uri() .'/assets/js/backstretch-set.js' , array( 'jquery', 'stream-backstretch' ), '1.0.0' );
+	wp_enqueue_script( 'solo-backstretch', get_template_directory_uri() . '/assets/js/backstretch.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( 'solo-backstretch-set', get_template_directory_uri() .'/assets/js/backstretch-set.js' , array( 'jquery', 'solo-backstretch' ), '1.0.0' );
 
-	wp_localize_script( 'stream-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', get_background_image() ) ) );
+	wp_localize_script( 'solo-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', get_background_image() ) ) );
         
         
 }
 
 //* Add custom background callback for background color
-function stream_background_callback() {
+function solo_background_callback() {
 
 	if ( ! get_background_color() )
 		return;
@@ -263,16 +263,16 @@ add_action( 'wp', 'custom_paged_404_fix' );
 
 
 // Add and save meta boxes for post links
-add_action( 'add_meta_boxes', 'stream_meta_box_add' );
-function stream_meta_box_add() {
-	add_meta_box( 'postaudio-box', __('Post format audio url', 'stream'), 'stream_meta_box_cb', 'post', 'side', 'high' );
-	add_meta_box( 'postvideo-box', __('Post format video url', 'stream'), 'stream_meta_box_cc', 'post', 'side', 'high' );
+add_action( 'add_meta_boxes', 'solo_meta_box_add' );
+function solo_meta_box_add() {
+	add_meta_box( 'postaudio-box', __('Post format audio url', 'solo'), 'solo_meta_box_cb', 'post', 'side', 'high' );
+	add_meta_box( 'postvideo-box', __('Post format video url', 'solo'), 'solo_meta_box_cc', 'post', 'side', 'high' );
 }
 
-function stream_meta_box_cb( $post ) {
+function solo_meta_box_cb( $post ) {
 	$values = get_post_custom( $post->ID );
 	$text_audiourl = isset( $values['audiourl'] ) ? esc_attr( $values['audiourl'][0] ) : '';
-	wp_nonce_field( 'stream_meta_box_nonce', 'meta_box_nonce' );
+	wp_nonce_field( 'solo_meta_box_nonce', 'meta_box_nonce' );
 	?>
 		<p>
 			<input type="text" name="audiourl" id="audiourl" value="<?php echo $text_audiourl; ?>" />
@@ -280,10 +280,10 @@ function stream_meta_box_cb( $post ) {
 	<?php		
 }
 
-function stream_meta_box_cc( $post ) {
+function solo_meta_box_cc( $post ) {
 	$values = get_post_custom( $post->ID );
 	$text_videourl = isset( $values['videourl'] ) ? esc_attr( $values['videourl'][0] ) : '';
-	wp_nonce_field( 'stream_meta_box_nonce', 'meta_box_nonce' );
+	wp_nonce_field( 'solo_meta_box_nonce', 'meta_box_nonce' );
 	?>
 		<p>
 			<input type="text" name="videourl" id="videourl" value="<?php echo $text_videourl; ?>" />
@@ -291,14 +291,14 @@ function stream_meta_box_cc( $post ) {
 	<?php		
 }
 
-add_action( 'save_post', 'stream_meta_box_save' );
+add_action( 'save_post', 'solo_meta_box_save' );
 
-function stream_meta_box_save( $post_id ) {
+function solo_meta_box_save( $post_id ) {
 	// Bail if we're doing an auto save
 	if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	
 	// if our nonce isn't there, or we can't verify it, bail
-	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'stream_meta_box_nonce' ) ) return;
+	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'solo_meta_box_nonce' ) ) return;
 	
 	// if our current user can't edit this post, bail
 	if( !current_user_can( 'edit_post' ) ) return;
@@ -323,13 +323,13 @@ function stream_meta_box_save( $post_id ) {
 /**
  * Adds additional stylesheets to the TinyMCE editor if needed.
  *
- * @since Notepad 1.2.5
+ * @since Solo 1.2.5
  *
  * @param string $mce_css CSS path to load in TinyMCE.
  * @return string The filtered CSS paths list.
  */
-function stream_mce_css( $mce_css ) {
-	$fonts_url = stream_fonts_url();
+function solo_mce_css( $mce_css ) {
+	$fonts_url = solo_fonts_url();
 
 	if ( empty( $fonts_url ) ) {
 		return $mce_css;
@@ -343,10 +343,10 @@ function stream_mce_css( $mce_css ) {
 
 	return $mce_css;
 }
-add_filter( 'mce_css', 'stream_mce_css' );
+add_filter( 'mce_css', 'solo_mce_css' );
 
-if (!function_exists('stream_footer_js')) {
-    function stream_footer_js() { ?>
+if (!function_exists('solo_footer_js')) {
+    function solo_footer_js() { ?>
             <script>     
 
             jQuery(document).ready(function($) {   
@@ -357,20 +357,20 @@ if (!function_exists('stream_footer_js')) {
             </script>
         <?php }
 }
-add_action( 'wp_footer', 'stream_footer_js', 20, 1 );
+add_action( 'wp_footer', 'solo_footer_js', 20, 1 );
 
 /**
  * Register widgetized areas
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  *
  * @return void
  */
-function stream_widgets_init() {
+function solo_widgets_init() {
 	register_sidebar( array(
-			'name' => esc_html__( 'Main Sidebar', 'stream' ),
+			'name' => esc_html__( 'Main Sidebar', 'solo' ),
 			'id' => 'sidebar-main',
-			'description' => esc_html__( 'Appears in the sidebar on posts and pages except the optional Front Page template, which has its own widgets', 'stream' ),
+			'description' => esc_html__( 'Appears in the sidebar on posts and pages except the optional Front Page template, which has its own widgets', 'solo' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -378,9 +378,9 @@ function stream_widgets_init() {
 		) );
         
 	register_sidebar( array(
-			'name' => esc_html__( 'Footer #1', 'stream' ),
+			'name' => esc_html__( 'Footer #1', 'solo' ),
 			'id' => 'sidebar-footer1',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'stream' ),
+			'description' => esc_html__( 'Appears in the footer sidebar', 'solo' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -388,9 +388,9 @@ function stream_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Footer #2', 'stream' ),
+			'name' => esc_html__( 'Footer #2', 'solo' ),
 			'id' => 'sidebar-footer2',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'stream' ),
+			'description' => esc_html__( 'Appears in the footer sidebar', 'solo' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -398,9 +398,9 @@ function stream_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Footer #3', 'stream' ),
+			'name' => esc_html__( 'Footer #3', 'solo' ),
 			'id' => 'sidebar-footer3',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'stream' ),
+			'description' => esc_html__( 'Appears in the footer sidebar', 'solo' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -408,20 +408,20 @@ function stream_widgets_init() {
 		) );
 
 }
-add_action( 'widgets_init', 'stream_widgets_init' );
+add_action( 'widgets_init', 'solo_widgets_init' );
 
 
 /**
  * Creates a nicely formatted and more specific title element text
  * for output in head of document, based on current view.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function stream_wp_title( $title, $sep ) {
+function solo_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() ) {
@@ -439,24 +439,24 @@ function stream_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'stream' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'solo' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', 'stream_wp_title', 10, 2 );
+add_filter( 'wp_title', 'solo_wp_title', 10, 2 );
 
 
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  *
  * @param string html ID
  * @return void
  */
-if ( ! function_exists( 'stream_content_nav' ) ) {
-	function stream_content_nav( $nav_id ) {
+if ( ! function_exists( 'solo_content_nav' ) ) {
+	function solo_content_nav( $nav_id ) {
 		global $wp_query;
 		$big = 999999999; // need an unlikely integer
 
@@ -466,12 +466,12 @@ if ( ! function_exists( 'stream_content_nav' ) ) {
 		}
 		?>
 		<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-			<h3 class="assistive-text"><?php esc_html_e( 'Post navigation', 'stream' ); ?></h3>
+			<h3 class="assistive-text"><?php esc_html_e( 'Post navigation', 'solo' ); ?></h3>
 
 			<?php if ( is_single() ) { // navigation links for single posts ?>
 
-				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fa fa-angle-left"></i>', 'Previous post link', 'stream' ) . '</span> %title' ); ?>
-				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fa fa-angle-right"></i>', 'Next post link', 'stream' ) . '</span>' ); ?>
+				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fa fa-angle-left"></i>', 'Previous post link', 'solo' ) . '</span> %title' ); ?>
+				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fa fa-angle-right"></i>', 'Next post link', 'solo' ) . '</span>' ); ?>
 
 			<?php } 
 			elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) { // navigation links for home, archive, and search pages ?>
@@ -482,9 +482,9 @@ if ( ! function_exists( 'stream_content_nav' ) ) {
 					'current' => max( 1, get_query_var( 'paged' ) ),
 					'total' => $wp_query->max_num_pages,
 					'type' => 'list',
-					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left"></i> Previous', 'stream' ), array( 'i' => array( 
+					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left"></i> Previous', 'solo' ), array( 'i' => array( 
 						'class' => array() ) ) ),
-					'next_text' => wp_kses( __( 'Next <i class="fa fa-angle-right"></i>', 'stream' ), array( 'i' => array( 
+					'next_text' => wp_kses( __( 'Next <i class="fa fa-angle-right"></i>', 'solo' ), array( 'i' => array( 
 						'class' => array() ) ) )
 				) ); ?>
 
@@ -500,20 +500,20 @@ if ( ! function_exists( 'stream_content_nav' ) ) {
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own stream_comment(), and that function will be used instead.
+ * simply create your own solo_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  * (Note the lack of a trailing </li>. WordPress will add it itself once it's done listing any children and whatnot)
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  *
  * @param array Comment
  * @param array Arguments
  * @param integer Comment depth
  * @return void
  */
-if ( ! function_exists( 'stream_comment' ) ) {
-	function stream_comment( $comment, $args, $depth ) {
+if ( ! function_exists( 'solo_comment' ) ) {
+	function solo_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) {
 		case 'pingback' :
@@ -521,7 +521,7 @@ if ( ! function_exists( 'stream_comment' ) ) {
 			// Display trackbacks differently than normal comments ?>
 			<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 				<article id="comment-<?php comment_ID(); ?>" class="pingback">
-					<p><?php esc_html_e( 'Pingback:', 'stream' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_html__( '(Edit)', 'stream' ), '<span class="edit-link">', '</span>' ); ?></p>
+					<p><?php esc_html_e( 'Pingback:', 'solo' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_html__( '(Edit)', 'solo' ), '<span class="edit-link">', '</span>' ); ?></p>
 				</article> <!-- #comment-##.pingback -->
 			<?php
 			break;
@@ -536,28 +536,28 @@ if ( ! function_exists( 'stream_comment' ) ) {
 						printf( '<cite class="fn">%1$s %2$s</cite>',
 							get_comment_author_link(),
 							// If current post author is also comment author, make it known visually.
-							( $comment->user_id === $post->post_author ) ? '<span> ' . esc_html__( 'Post author', 'stream' ) . '</span>' : '' );
+							( $comment->user_id === $post->post_author ) ? '<span> ' . esc_html__( 'Post author', 'solo' ) . '</span>' : '' );
 						printf( '<a href="%1$s" title="Posted %2$s"><time itemprop="datePublished" datetime="%3$s">%4$s</time></a>',
 							esc_url( get_comment_link( $comment->comment_ID ) ),
-							sprintf( esc_html__( '%1$s @ %2$s', 'stream' ), esc_html( get_comment_date() ), esc_attr( get_comment_time() ) ),
+							sprintf( esc_html__( '%1$s @ %2$s', 'solo' ), esc_html( get_comment_date() ), esc_attr( get_comment_time() ) ),
 							get_comment_time( 'c' ),
 							/* Translators: 1: date, 2: time */
-							sprintf( esc_html__( '%1$s at %2$s', 'stream' ), get_comment_date(), get_comment_time() )
+							sprintf( esc_html__( '%1$s at %2$s', 'solo' ), get_comment_date(), get_comment_time() )
 						);
 						?>
 					</header> <!-- .comment-meta -->
 
 					<?php if ( '0' == $comment->comment_approved ) { ?>
-						<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'stream' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'solo' ); ?></p>
 					<?php } ?>
 
 					<section class="comment-content comment">
 						<?php comment_text(); ?>
-						<?php edit_comment_link( esc_html__( 'Edit', 'stream' ), '<p class="edit-link">', '</p>' ); ?>
+						<?php edit_comment_link( esc_html__( 'Edit', 'solo' ), '<p class="edit-link">', '</p>' ); ?>
 					</section> <!-- .comment-content -->
 
 					<div class="reply">
-						<?php comment_reply_link( array_merge( $args, array( 'reply_text' => wp_kses( __( 'Reply <span>&darr;</span>', 'stream' ), array( 'span' => array() ) ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+						<?php comment_reply_link( array_merge( $args, array( 'reply_text' => wp_kses( __( 'Reply <span>&darr;</span>', 'solo' ), array( 'span' => array() ) ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 					</div> <!-- .reply -->
 				</article> <!-- #comment-## -->
 			<?php
@@ -570,57 +570,57 @@ if ( ! function_exists( 'stream_comment' ) ) {
 /**
  * Update the Comments form so that the 'required' span is contained within the form label.
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @param string Comment form fields html
  * @return string The updated comment form fields html
  */
-function stream_comment_form_default_fields( $fields ) {
+function solo_comment_form_default_fields( $fields ) {
 
 	$commenter = wp_get_current_commenter();
 	$req = get_option( 'require_name_email' );
 	$aria_req = ( $req ? ' aria-required="true"' : "" );
 
-	$fields[ 'author' ] = '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'stream' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
+	$fields[ 'author' ] = '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'solo' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
 
-	$fields[ 'email' ] =  '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'stream' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
+	$fields[ 'email' ] =  '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'solo' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
 
-	$fields[ 'url' ] =  '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'stream' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
+	$fields[ 'url' ] =  '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'solo' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
 
 	return $fields;
 
 }
-add_action( 'comment_form_default_fields', 'stream_comment_form_default_fields' );
+add_action( 'comment_form_default_fields', 'solo_comment_form_default_fields' );
 
 
 /**
  * Update the Comments form to add a 'required' span to the Comment textarea within the form label, because it's pointless 
  * submitting a comment that doesn't actually have any text in the comment field!
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @param string Comment form textarea html
  * @return string The updated comment form textarea html
  */
-function stream_comment_form_field_comment( $field ) {
+function solo_comment_form_field_comment( $field ) {
 
-	$field = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'stream' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
+	$field = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'solo' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
 
 	return $field;
 
 }
-add_action( 'comment_form_field_comment', 'stream_comment_form_field_comment' );
+add_action( 'comment_form_field_comment', 'solo_comment_form_field_comment' );
 
 
 /**
  * Prints HTML with meta information for current post: author and date
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @return void
  */
-if ( ! function_exists( 'stream_posted_on' ) ) {
-	function stream_posted_on() {
+if ( ! function_exists( 'solo_posted_on' ) ) {
+	function solo_posted_on() {
 		$post_icon = '';
 		switch ( get_post_format() ) {
 			case 'aside':
@@ -659,7 +659,7 @@ if ( ! function_exists( 'stream_posted_on' ) ) {
 		$date = sprintf( '<i class="fa %1$s"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
 			$post_icon,
 			esc_url( get_permalink() ),
-			sprintf( esc_html__( '%1$s @ %2$s', 'stream' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
+			sprintf( esc_html__( '%1$s @ %2$s', 'solo' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() )
 		);
@@ -667,22 +667,22 @@ if ( ! function_exists( 'stream_posted_on' ) ) {
 		// Translators: 1: Date link 2: Author link 3: Categories 4: No. of Comments
 		$author = sprintf( '<i class="fa fa-pencil"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'stream' ), get_the_author() ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'solo' ), get_the_author() ) ),
 			get_the_author()
 		);
 
 		// Return the Categories as a list
-		$categories_list = get_the_category_list( esc_html__( ' ', 'stream' ) );
+		$categories_list = get_the_category_list( esc_html__( ' ', 'solo' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
 		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_comments_link() ),
 			esc_attr( esc_html__( 'Comment on ' . the_title_attribute( 'echo=0' ) ) ),
-			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number() ), get_comments_number() ) : esc_html__( 'No Comments', 'stream' ) )
+			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number() ), get_comments_number() ) : esc_html__( 'No Comments', 'solo' ) )
 		);
 
 		// Translators: 1: Date 2: Author 3: Categories 4: Comments
-		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'stream' ), array( 
+		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'solo' ), array( 
 			'div' => array ( 
 				'class' => array() ), 
 			'span' => array( 
@@ -699,21 +699,21 @@ if ( ! function_exists( 'stream_posted_on' ) ) {
 /**
  * Prints HTML with meta information for current post: categories, tags, permalink
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @return void
  */
-if ( ! function_exists( 'stream_entry_meta' ) ) {
-	function stream_entry_meta() {
+if ( ! function_exists( 'solo_entry_meta' ) ) {
+	function solo_entry_meta() {
 		// Return the Tags as a list
 		$tag_list = "";
 		if ( get_the_tag_list() ) {
-			$tag_list = get_the_tag_list( '<span class="post-tags">', esc_html__( ' ', 'stream' ), '</span>' );
+			$tag_list = get_the_tag_list( '<span class="post-tags">', esc_html__( ' ', 'solo' ), '</span>' );
 		}
 
 		// Translators: 1 is tag
 		if ( $tag_list ) {
-			printf( wp_kses( __( '<i class="fa fa-tag"></i> %1$s', 'stream' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
+			printf( wp_kses( __( '<i class="fa fa-tag"></i> %1$s', 'solo' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
 		}
                 
               
@@ -724,12 +724,12 @@ if ( ! function_exists( 'stream_entry_meta' ) ) {
 /**
  * Change the "read more..." link so it links to the top of the page rather than part way down
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @param string The 'Read more' link
  * @return string The link to the post url without the more tag appended on the end
  */
-function stream_remove_more_jump_link( $link ) {
+function solo_remove_more_jump_link( $link ) {
 	$offset = strpos( $link, '#more-' );
 	if ( $offset ) {
 		$end = strpos( $link, '"', $offset );
@@ -739,45 +739,45 @@ function stream_remove_more_jump_link( $link ) {
 	}
 	return $link;
 }
-add_filter( 'the_content_more_link', 'stream_remove_more_jump_link' );
+add_filter( 'the_content_more_link', 'solo_remove_more_jump_link' );
 
 
 /**
  * Returns a "Read more" link for excerpts
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @return string The 'Read more' link
  */
-function stream_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read more', 'stream' ) . get_the_title() . ' ">' . wp_kses( __( 'Read more <span class="meta-nav">&rarr;</span>', 'stream' ), array( 'span' => array( 
+function solo_continue_reading_link() {
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read more', 'solo' ) . get_the_title() . ' ">' . wp_kses( __( 'Read more <span class="meta-nav">&rarr;</span>', 'solo' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with the stream_continue_reading_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with the solo_continue_reading_link().
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @param string Auto generated excerpt
  * @return string The filtered excerpt
  */
-function stream_auto_excerpt_more( $more ) {
-	return stream_continue_reading_link();
+function solo_auto_excerpt_more( $more ) {
+	return solo_continue_reading_link();
 }
-add_filter( 'excerpt_more', 'stream_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'solo_auto_excerpt_more' );
 
 
 /**
  * Extend the user contact methods to include Twitter, Facebook and Google+
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @param array List of user contact methods
  * @return array The filtered list of updated user contact methods
  */
-function stream_new_contactmethods( $contactmethods ) {
+function solo_new_contactmethods( $contactmethods ) {
 	// Add Twitter
 	$contactmethods['twitter'] = 'Twitter';
 
@@ -789,19 +789,19 @@ function stream_new_contactmethods( $contactmethods ) {
 
 	return $contactmethods;
 }
-add_filter( 'user_contactmethods', 'stream_new_contactmethods', 10, 1 );
+add_filter( 'user_contactmethods', 'solo_new_contactmethods', 10, 1 );
 
 
 /**
  * Add a filter for wp_nav_menu to add an extra class for menu items that have children (ie. sub menus)
  * This allows us to perform some nicer styling on our menu items that have multiple levels (eg. dropdown menu arrows)
  *
- * @since stream 1.0
+ * @since solo 1.0
  *
  * @param Menu items
  * @return array An extra css class is on menu items with children
  */
-function stream_add_menu_parent_class( $items ) {
+function solo_add_menu_parent_class( $items ) {
 
 	$parents = array();
 	foreach ( $items as $item ) {
@@ -818,20 +818,20 @@ function stream_add_menu_parent_class( $items ) {
 
 	return $items;
 }
-add_filter( 'wp_nav_menu_objects', 'stream_add_menu_parent_class' );
+add_filter( 'wp_nav_menu_objects', 'solo_add_menu_parent_class' );
 
 
 /**
  * Add Filter to allow Shortcodes to work in the Sidebar
  *
- * @since stream 1.0
+ * @since solo 1.0
  */
 add_filter( 'widget_text', 'do_shortcode' );
 
 /** 
  * Additional settings for Easy Digital Downloads
  * 
- * @since stream 1.0
+ * @since solo 1.0
  */
 
 
@@ -841,7 +841,7 @@ add_filter( 'widget_text', 'do_shortcode' );
  * We don't include an add_filter for 'prepend_attachment' as it causes an image to appear in the content, on attachment pages.
  * Also, since the Theme Options editor doesn't allow you to add images anyway, no big deal.
  *
- * @since stream 1.0
+ * @since solo 1.0
  */
 add_filter( 'meta_content', 'wptexturize' );
 add_filter( 'meta_content', 'convert_smilies' );
@@ -850,11 +850,11 @@ add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop'  );
 
 
-add_filter('body_class', 'stream_body_classes');
-function stream_body_classes($classes) {
+add_filter('body_class', 'solo_body_classes');
+function solo_body_classes($classes) {
    
-        $slug = strtolower(get_theme_mod('stream_color_scheme'));
-        $classes[] = 'stream-' . $slug;
+        $slug = strtolower(get_theme_mod('solo_color_scheme'));
+        $classes[] = 'solo-' . $slug;
     
     return $classes; 
     
