@@ -1,25 +1,25 @@
 <?php
 /**
- * Implement an optional custom header for Notepad
+ * Implement an optional custom header for Solo
  *
  * See http://codex.wordpress.org/Custom_Headers
  *
  * @package WordPress
- * @subpackage Notepad
- * @since Notepad 1.0
+ * @subpackage Solo
+ * @since Solo 1.0
  */
 
 /**
  * Set up the WordPress core custom header arguments and settings.
  *
  * @uses add_theme_support() to register support for 3.4 and up.
- * @uses notepad_header_style() to style front-end.
- * @uses notepad_admin_header_style() to style wp-admin form.
- * @uses notepad_admin_header_image() to add custom markup to wp-admin form.
+ * @uses solo_header_style() to style front-end.
+ * @uses solo_admin_header_style() to style wp-admin form.
+ * @uses solo_admin_header_image() to add custom markup to wp-admin form.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  */
-function notepad_custom_header_setup() {
+function solo_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
 		'default-text-color'     => 'EF7A7A',
@@ -38,37 +38,37 @@ function notepad_custom_header_setup() {
 		'random-default'         => false,
 
 		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'       => 'notepad_header_style',
-		'admin-head-callback'    => 'notepad_admin_header_style',
-		'admin-preview-callback' => 'notepad_admin_header_image',
+		'wp-head-callback'       => 'solo_header_style',
+		'admin-head-callback'    => 'solo_admin_header_style',
+		'admin-preview-callback' => 'solo_admin_header_image',
 	);
 
 	add_theme_support( 'custom-header', $args );
 }
-add_action( 'after_setup_theme', 'notepad_custom_header_setup' );
+add_action( 'after_setup_theme', 'solo_custom_header_setup' );
 
 /**
  * Load our special font CSS file.
  *
- * @since Notepad 1.2
+ * @since Solo 1.2
  *
  * @return void
  */
-function notepad_custom_header_fonts() {
-	$font_url = notepad_fonts_url();
+function solo_custom_header_fonts() {
+	$font_url = solo_fonts_url();
 	if ( ! empty( $font_url ) )
-		wp_enqueue_style( 'notepad-fonts', esc_url_raw( $font_url ), array(), null );
+		wp_enqueue_style( 'solo-fonts', esc_url_raw( $font_url ), array(), null );
 }
-add_action( 'admin_print_styles-appearance_page_custom-header', 'notepad_custom_header_fonts' );
+add_action( 'admin_print_styles-appearance_page_custom-header', 'solo_custom_header_fonts' );
 
 /**
  * Style the header text displayed on the blog.
  *
  * get_header_textcolor() options: 515151 is default, hide text (returns 'blank'), or any hex value.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  */
-function notepad_header_style() {
+function solo_header_style() {
 	$text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -104,9 +104,9 @@ function notepad_header_style() {
 /**
  * Style the header image displayed on the Appearance > Header admin panel.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  */
-function notepad_admin_header_style() {
+function solo_admin_header_style() {
 ?>
 	<style type="text/css" id="twentytwelve-admin-header-css">
 	.appearance_page_custom-header #headimg {
@@ -146,9 +146,9 @@ function notepad_admin_header_style() {
  *
  * This callback overrides the default markup displayed there.
  *
- * @since Notepad 1.0
+ * @since Solo 1.0
  */
-function notepad_admin_header_image() {
+function solo_admin_header_image() {
 	?>
 	<div id="headimg">
 		<?php

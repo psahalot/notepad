@@ -6,8 +6,8 @@
  * There are also four footer widgets displayed. These will be displayed from
  * one to four columns, depending on how many widgets are active.
  *
- * @package notepad
- * @since notepad 1.0
+ * @package solo
+ * @since solo 1.0
  */
 ?>
 
@@ -53,12 +53,12 @@
             <div class="row smallprint left">
                 <p>
                    <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'AuthorURI' ); ?>">
-                            <?php _e('Notepad WordPress theme by IdeaBox','notepad'); ?>
+                            <?php _e('Solo WordPress theme by IdeaBox','solo'); ?>
                     </a>
                 </p>
             </div>
-            <?php if (get_theme_mod('notepad_footer_footer_text') != '') { ?>
-                <div class="row smallprint right"><?php echo wpautop(get_theme_mod('notepad_footer_footer_text')); ?></div>
+            <?php if (get_theme_mod('solo_footer_footer_text') != '') { ?>
+                <div class="row smallprint right"><?php echo wpautop(get_theme_mod('solo_footer_footer_text')); ?></div>
            <?php } ?>
         </div>
     </div> <!-- /.footer-wrap -->

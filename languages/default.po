@@ -1,0 +1,452 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Solo\n"
+"POT-Creation-Date: 2014-05-23 15:28+0530\n"
+"PO-Revision-Date: 2014-05-23 15:28+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:21
+msgid "Uh Oh! This is somewhat embarrassing!"
+msgstr ""
+
+#: 404.php:24 no-results.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: author-bio.php:15
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: author-bio.php:33
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: author.php:28
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: category.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:30
+#, php-format
+msgid "One response on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:41
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:42
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:43
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:16 content-audio.php:39 content-chat.php:16
+#: content-gallery.php:24 content-image.php:16 content-link.php:16
+#: content-quote.php:18 content-status.php:16 content-video.php:47
+#: content.php:38
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:21 content-audio.php:44 content-chat.php:21
+#: content-gallery.php:29 content-image.php:21 content-link.php:21
+#: content-page.php:22 content-postarchives.php:33 content-quote.php:26
+#: content-status.php:20 content-video.php:52 content.php:42
+msgid "Pages:"
+msgstr ""
+
+#: content-audio.php:32 content-gallery.php:18 content-video.php:41
+#: content.php:13 content.php:24
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-postarchives.php:19
+msgid "Archives by Category"
+msgstr ""
+
+#: content-postarchives.php:28
+msgid "Archives by Month"
+msgstr ""
+
+#: content-postarchives.php:36 functions.php:556
+msgid "Edit"
+msgstr ""
+
+#: footer.php:56
+msgid "Solo WordPress theme by IdeaBox"
+msgstr ""
+
+#: functions.php:72
+msgid "Primary Menu"
+msgstr ""
+
+#. translators: If there are characters in your language that are not supported by Lato, translate this to 'off'.
+#. * Do not translate into your own language.
+#.
+#: functions.php:108
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr ""
+
+#. translators: To add an additional Lato character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
+#. * Do not translate into your own language.
+#.
+#: functions.php:113
+msgctxt "Lato font: add new subset (cyrillic)"
+msgid "no-subset"
+msgstr ""
+
+#. translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'.
+#. * Do not translate into your own language.
+#.
+#: functions.php:121
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:194
+msgid "Please enter your name"
+msgstr ""
+
+#: functions.php:195
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: functions.php:196
+msgid "Please add a comment"
+msgstr ""
+
+#: functions.php:268
+msgid "Post format audio url"
+msgstr ""
+
+#: functions.php:269
+msgid "Post format video url"
+msgstr ""
+
+#: functions.php:371
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:373
+msgid ""
+"Appears in the sidebar on posts and pages except the optional Front Page "
+"template, which has its own widgets"
+msgstr ""
+
+#: functions.php:381
+msgid "Footer #1"
+msgstr ""
+
+#: functions.php:383 functions.php:393 functions.php:403
+msgid "Appears in the footer sidebar"
+msgstr ""
+
+#: functions.php:391
+msgid "Footer #2"
+msgstr ""
+
+#: functions.php:401
+msgid "Footer #3"
+msgstr ""
+
+#: functions.php:442
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:469
+msgid "Post navigation"
+msgstr ""
+
+#: functions.php:473
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>"
+msgstr ""
+
+#: functions.php:474
+msgctxt "Next post link"
+msgid "<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: functions.php:485
+msgid "<i class=\"fa fa-angle-left\"></i> Previous"
+msgstr ""
+
+#: functions.php:487
+msgid "Next <i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: functions.php:524
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:524
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:539
+msgid "Post author"
+msgstr ""
+
+#: functions.php:542 functions.php:662
+#, php-format
+msgid "%1$s @ %2$s"
+msgstr ""
+
+#: functions.php:545
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:551
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:560
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#: functions.php:584
+msgid "Name"
+msgstr ""
+
+#: functions.php:586
+msgid "Email"
+msgstr ""
+
+#: functions.php:588
+msgid "Website"
+msgstr ""
+
+#: functions.php:607
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: functions.php:670
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: functions.php:675 functions.php:711
+msgid " "
+msgstr ""
+
+#: functions.php:680
+msgid "Comment on "
+msgstr ""
+
+#: functions.php:681
+#, php-format
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:681
+msgid "No Comments"
+msgstr ""
+
+#: functions.php:685
+#, php-format
+msgid ""
+"<div class=\"header-meta\">%1$s%2$s<span class=\"post-categories\">%3$s</"
+"span>%4$s</div>"
+msgstr ""
+
+#: functions.php:716
+#, php-format
+msgid "<i class=\"fa fa-tag\"></i> %1$s"
+msgstr ""
+
+#: functions.php:753
+msgid "Read more"
+msgstr ""
+
+#: functions.php:753
+msgid "Read more <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: header.php:42
+msgid "Skip to main content"
+msgstr ""
+
+#: inc/customizer.php:22
+msgid "Background Settings"
+msgstr ""
+
+#: inc/customizer.php:23
+msgid ""
+"Please note that background color and image settings work only for Boxed "
+"Layout"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Display Site Title &amp; Tagline"
+msgstr ""
+
+#: inc/customizer.php:32
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "Add your custom css here and design live! (for advanced users)"
+msgstr ""
+
+#: inc/user-profile-widget.php:43
+msgid "Read More"
+msgstr ""
+
+#: inc/user-profile-widget.php:49
+msgid "Displays user profile block with Gravatar"
+msgstr ""
+
+#: inc/user-profile-widget.php:58
+msgid "Solo - User Profile"
+msgstr ""
+
+#: inc/user-profile-widget.php:102
+msgid "View My Blog Posts"
+msgstr ""
+
+#: inc/user-profile-widget.php:141
+msgid "Title"
+msgstr ""
+
+#: inc/user-profile-widget.php:146
+msgid ""
+"Select a user. The email address for this account will be used to pull the "
+"Gravatar image."
+msgstr ""
+
+#: inc/user-profile-widget.php:151
+msgid "Gravatar Size"
+msgstr ""
+
+#: inc/user-profile-widget.php:154
+msgid "Small"
+msgstr ""
+
+#: inc/user-profile-widget.php:154
+msgid "Medium"
+msgstr ""
+
+#: inc/user-profile-widget.php:154
+msgid "Large"
+msgstr ""
+
+#: inc/user-profile-widget.php:154
+msgid "Extra Large"
+msgstr ""
+
+#: inc/user-profile-widget.php:163
+msgid "Gravatar Alignment"
+msgstr ""
+
+#: inc/user-profile-widget.php:165 inc/user-profile-widget.php:185
+msgid "None"
+msgstr ""
+
+#: inc/user-profile-widget.php:166
+msgid "Left"
+msgstr ""
+
+#: inc/user-profile-widget.php:167
+msgid "Right"
+msgstr ""
+
+#: inc/user-profile-widget.php:172
+msgid "Select which text you would like to use as the author description"
+msgstr ""
+
+#: inc/user-profile-widget.php:175
+msgid "Author Bio"
+msgstr ""
+
+#: inc/user-profile-widget.php:177
+msgid "Custom Text (below)"
+msgstr ""
+
+#: inc/user-profile-widget.php:178
+msgid "Custom Text Content"
+msgstr ""
+
+#: inc/user-profile-widget.php:184
+msgid ""
+"Choose your extended \"About Me\" page from the list below. This will be the "
+"page linked to at the end of the about me section."
+msgstr ""
+
+#: inc/user-profile-widget.php:189
+msgid "Extended page link text"
+msgstr ""
+
+#: inc/user-profile-widget.php:195
+msgid "Show Author Archive Link?"
+msgstr ""
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: search.php:24
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: tag.php:22
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""

@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="maincontentcontainer">
  *
- * @package notepad
- * @since notepad 1.0
+ * @package solo
+ * @since solo 1.0
  */
 ?><!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -39,7 +39,7 @@
 
 <div id="wrapper" class="hfeed site">
 
-	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'notepad' ); ?>"><?php esc_html_e( 'Skip to main content', 'notepad' ); ?></a></div>
+	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'solo' ); ?>"><?php esc_html_e( 'Skip to main content', 'solo' ); ?></a></div>
 
 	<div id="headercontainer">
 
@@ -64,7 +64,7 @@
                 <div class="nav-container">
                     <nav id="site-navigation" class="main-navigation row" role="navigation">
                             
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'primary-menu', 'container_class' => 'menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu', 'container_class' => 'menu' ) ); ?>
                             
                         <div id="mobile-menu"></div>
                     </nav> <!-- /.site-navigation.main-navigation -->
