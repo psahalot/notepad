@@ -22,7 +22,7 @@ get_header(); ?>
                                 
                                 <?php endwhile; // end of the loop. ?>
                                 
-                                <?php get_sidebar(); ?>
+                                
 
                                 <?php
                                 // If comments are open or we have at least one comment, load up the comment template
@@ -30,6 +30,7 @@ get_header(); ?>
                                         comments_template( '', true );
                                 }
                                 ?>
+                                <?php get_sidebar(); ?>
 
                                 <?php solo_content_nav( 'nav-below' ); ?>
 \

@@ -242,7 +242,7 @@ function solo_background_callback() {
 
  */
 
-function custom_paged_404_fix( ) {
+function solo_custom_paged_404_fix( ) {
 
     global $wp_query;
 
@@ -258,7 +258,7 @@ function custom_paged_404_fix( ) {
 
 }
 
-add_action( 'wp', 'custom_paged_404_fix' );
+add_action( 'wp', 'solo_custom_paged_404_fix' );
 
 
 
