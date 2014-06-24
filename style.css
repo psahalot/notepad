@@ -2086,6 +2086,7 @@ div.wpcf7{
     font-size: 14px;
     font-size: 1.4rem;
     line-height: 1.5;
+    margin-bottom: 10px; 
 }
 
 .widget_search #s {
@@ -2093,6 +2094,7 @@ div.wpcf7{
 }
 
 .widget_search #searchsubmit {
+    background: #EF7A7A; 
     font-family: "Montserrat",Helvetica, Arial, sans-serif;
     font-size: 17px;
     margin-left: 10px;
