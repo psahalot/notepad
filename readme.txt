@@ -4,7 +4,7 @@ Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
 Tested up to: 3.9
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ Solo utilises the following awesomeness:
 [Montserrat font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
 [Slicknav] (https://github.com/ComputerWolf/SlickNav), which is licensed under MIT license 
 [Image] Bulbs image in theme screenshot by Kenny Louie https://www.flickr.com/photos/kwl/8601795375/
+
+= 1.0.2 =
+- Fixed header already sent error
 
 = 1.0.1 =
 - Fixed read more tag issue

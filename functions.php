@@ -23,13 +23,6 @@ function solo_load_widgets() {
 
 }
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- *
- * @since Solo 1.0
- */
-if ( ! isset( $content_width ) )
-	$content_width = 684; /* Default the embedded content width to 790px */
 
 
 /**
@@ -46,6 +39,14 @@ if ( ! isset( $content_width ) )
 if ( ! function_exists( 'solo_setup' ) ) {
 	function solo_setup() {
 		global $content_width;
+
+                /**
+                 * Set the content width based on the theme's design and stylesheet.
+                 *
+                 * @since Solo 1.0
+                 */
+                if ( ! isset( $content_width ) )
+                        $content_width = 798; /* Default the embedded content width to 798px */
 
 		/**
 		 * Make theme available for translation
@@ -242,7 +243,7 @@ function solo_background_callback() {
 
  */
 
-function custom_paged_404_fix( ) {
+function solo_custom_paged_404_fix( ) {
 
     global $wp_query;
 
@@ -258,7 +259,7 @@ function custom_paged_404_fix( ) {
 
 }
 
-add_action( 'wp', 'custom_paged_404_fix' );
+add_action( 'wp', 'solo_custom_paged_404_fix' );
 
 
 
@@ -301,7 +302,7 @@ function solo_meta_box_save( $post_id ) {
 	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'solo_meta_box_nonce' ) ) return;
 	
 	// if our current user can't edit this post, bail
-	if( !current_user_can( 'edit_post' ) ) return;
+	if( !current_user_can( 'edit_posts' ) ) return;
 	
 	// now we can actually save the data
 	$allowed = array( 
@@ -311,11 +312,13 @@ function solo_meta_box_save( $post_id ) {
 	);
 	
 	// Probably a good idea to make sure the data is set		
-	if( isset( $_POST['audiourl'] ) )
-		update_post_meta( $post_id, 'audiourl', wp_kses( $_POST['audiourl'], $allowed ) );		
+	if( isset( $_POST['audiourl'] ) ) { 
+            update_post_meta( $post_id, 'audiourl', wp_kses( $_POST['audiourl'], $allowed ) );		
+        }
 
-	if( isset( $_POST['videourl'] ) )
+	if( isset( $_POST['videourl'] ) ) {
 		update_post_meta( $post_id, 'videourl', wp_kses( $_POST['videourl'], $allowed ) );		
+        }
 
 }
 
@@ -828,11 +831,6 @@ add_filter( 'wp_nav_menu_objects', 'solo_add_menu_parent_class' );
  */
 add_filter( 'widget_text', 'do_shortcode' );
 
-/** 
- * Additional settings for Easy Digital Downloads
- * 
- * @since solo 1.0
- */
 
 
 /**

@@ -4,7 +4,7 @@ Theme URI: http://ideaboxthemes.com/themes/solo-wordpress-theme/
 Author: IdeaBox Themes
 Author URI: http://ideaboxthemes.com/
 Description: Solo is an elegant, mobile responsive blog theme with minimal design, unlimited color scheme options and a custom user profile widget to display your bio and link to about and author archives pages. It's a perfect fit for bloggers, writers, authors and publishers. Theme customizer allows users to easily change the color scheme, update footer text or add custom CSS.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, gray, dark, blue, red, pink, orange, green, brown, light, one-column, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -755,8 +755,8 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .entry-content .button {
-    background-color: #fff;
-    border:1px solid #ccc;
+    background-color: #EF7A7A;
+    border:none;
     box-shadow: none;
     cursor: pointer;
     padding: 10px 55px;
@@ -2088,7 +2088,6 @@ div.wpcf7{
 }
 
 .widget_search #searchsubmit {
-    font-family: "Montserrat",Helvetica, Arial, sans-serif;
     font-size: 17px;
     margin-left: 10px;
     padding: 17px 45px;
