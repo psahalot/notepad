@@ -4,12 +4,22 @@ Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
 Tested up to: 3.9
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Solo is a minimal mobile responsive theme. It's a perfect fit for bloggers and authors.It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
+
+Theme Customizer
+
+Additional Theme Customization Options can be found in the Appearance > Customize menu option. These include options for:
+Specifying color schemes 
+Add background color or image
+Add header image
+Change header text color 
+Changing the footer credit text
+Adding custom CSS
 
 == Description ==
 
@@ -70,6 +80,12 @@ Solo utilises the following awesomeness:
 [Montserrat font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
 [Slicknav] (https://github.com/ComputerWolf/SlickNav), which is licensed under MIT license 
 [Image] Bulbs image in theme screenshot by Kenny Louie https://www.flickr.com/photos/kwl/8601795375/
+
+= 1.0.1 =
+- Fixed read more tag issue
+- Added prefix for 404 page function in functions.php
+- Fixed styling for multi level dropdown
+- Repositioned sidebar 
 
 = 1.0 =
 - Initial version
