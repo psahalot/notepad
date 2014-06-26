@@ -221,6 +221,7 @@ function solo_color_style() {
 	if ( ($primary_color == '#ef7a7a' || $primary_color == '#EF7A7A') && ($link_color == '#FFF' || $link_color == '#fff' || $link_color == '#ffffff' || $link_color == '#FFFFFF') && ($linkhover_color == '#333' || $linkhover_color == '#333333') ) {
             return;
         }
+        else {
 	// If we get this far, we have custom styles.
 	?>
 	<style type="text/css" id="solo-colorscheme-css">
@@ -285,5 +286,6 @@ function solo_color_style() {
             <?php echo trim( get_theme_mod( 'solo_custom_css' ) ); ?>
         </style>
 	<?php
+        }
 }
 add_action('wp_head','solo_color_style');

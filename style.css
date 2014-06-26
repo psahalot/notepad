@@ -1977,6 +1977,11 @@ div.wpcf7{
     list-style: none outside none;
 }
 
+.sidebar .menu ul li a{
+    color:#111;
+    display:inline;
+}
+
 /* ==========================================================================
    Widgets
    ========================================================================== */
@@ -2081,6 +2086,7 @@ div.wpcf7{
     font-size: 14px;
     font-size: 1.4rem;
     line-height: 1.5;
+    margin-bottom: 10px; 
 }
 
 .widget_search #s {
@@ -2245,7 +2251,7 @@ li span.current {
 }
 .main-navigation ul ul ul {
     left: 100%;
-    top: -2px;
+    top: 0px;
 }
 .main-navigation ul ul a {
     width: 200px;

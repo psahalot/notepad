@@ -92,3 +92,5 @@ Solo utilises the following awesomeness:
 
 = 1.0 =
 - Initial version
+- Modified styling for navigation
+- moved widgets after the commmets
