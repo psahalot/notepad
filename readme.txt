@@ -4,9 +4,22 @@ Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
 Tested up to: 3.9
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Solo WordPress Theme, Copyright (C) 2014 IdeaBox Themes
+Solo is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
 Solo is a minimal mobile responsive theme. It's a perfect fit for bloggers and authors.It incorporates Theme Customizer with unlimited color schemes and other useful features like Custom CSS and Custom Footer text, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
@@ -68,17 +81,31 @@ This program is free software; you can redistribute it and/or modify it under th
 Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 
-== Credits ==
+== License ==
+
+Solo WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
+Solo WordPress Theme is distributed under the terms of the GNU GPL
 
 Solo utilises the following awesomeness:
 
-[Modernizr](http://modernizr.com), which is licensed under the MIT license
-[Normalize.css](https://github.com/necolas/normalize.css), which is licensed under the MIT license
-[jQuery Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation) which is dual licensed under the MIT license and GPL licenses
+Modernizr is licensed under the MIT license
+Source: http://modernizr.com
+
+Normalize.css Copyright Nicolas Gallagher 
+Normalize.css is licensed under the MIT license
+Source: https://github.com/necolas/normalize.css
+
+jQuery Validation Copyright 2013 Jorn Zaefferer 
+jQuery Validation is licensed under the MIT license
+Source: http://bassistance.de/jquery-plugins/jquery-plugin-validation
+
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
 [Lato font](http://www.google.com/fonts/specimen/Lato), which is licensed under SIL Open Font License 1.1
 [Montserrat font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
 [Slicknav] (https://github.com/ComputerWolf/SlickNav), which is licensed under MIT license 
+
+== Credits ==
+Solo uses the following images licensed under Creative Commons public domain deed CC0
 [Image] Bulbs image in theme screenshot by Kenny Louie https://www.flickr.com/photos/kwl/8601795375/
 
 = 1.0.2 =
