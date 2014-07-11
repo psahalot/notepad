@@ -99,10 +99,21 @@ jQuery Validation Copyright 2013 Jorn Zaefferer
 jQuery Validation is licensed under the MIT license
 Source: http://bassistance.de/jquery-plugins/jquery-plugin-validation
 
-[Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
-[Lato font](http://www.google.com/fonts/specimen/Lato), which is licensed under SIL Open Font License 1.1
-[Montserrat font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
-[Slicknav] (https://github.com/ComputerWolf/SlickNav), which is licensed under MIT license 
+Font Awesome Copyright Dave Gandy
+Font Awesome is licensed under the MIT license
+source: http://fortawesome.github.io/Font-Awesome
+
+Lato font Copyright Łukasz Dziedzic
+Lato font is licensed under SIL Open Font License 1.1
+source: http://www.google.com/fonts/specimen/Lato
+
+Montserrat font Copyright Julieta Ulanovsky
+Montserrat font is licensed under SIL Open Font License 1.1
+source: http://www.google.com/fonts/specimen/Montserrat
+
+Slicknav Copyright 2014 Josh Cope
+Slicknav is licensed under MIT License
+source: https://github.com/ComputerWolf/SlickNav 
 
 == Credits ==
 Solo uses the following images licensed under Creative Commons public domain deed CC0
